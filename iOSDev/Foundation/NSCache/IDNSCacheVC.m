@@ -7,8 +7,11 @@
 //
 
 #import "IDNSCacheVC.h"
+#import "IDCacheItem.h"
 
 @interface IDNSCacheVC ()
+
+@property (nonatomic, strong, nonnull) NSCache *cache;
 
 @end
 
@@ -16,9 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    NSCache *cache = [[NSCache alloc] init];
-    [cache setObject:@"handy" forKey:@"wang"];
+
+    _cache = [[NSCache alloc] init];
+    [_cache setObject:[IDCacheItem new] forKey:@"key1"];
+    [_cache setEvictsObjectsWithDiscardedContent:NO];//Default YES
 }
 
 @end

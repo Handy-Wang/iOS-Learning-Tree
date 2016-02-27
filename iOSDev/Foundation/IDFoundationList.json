@@ -1,5 +1,7 @@
 {
     "items" : [
+               {"title" : "GenericsType", "className" : "IDGenericsTypeVC"},
+               {"title" : "NSArray", "className" : "IDNSArrayVC"},
                {"title" : "NSCache", "className" : "IDNSCacheVC"},
                {"title" : "NSDictionary", "className" : "IDNSDictionaryVC"},
                {"title" : "NSRunLoop", "className" : "IDNSRunLoopVC"}

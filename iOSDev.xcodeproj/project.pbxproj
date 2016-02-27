@@ -30,6 +30,9 @@
 		56E0BE7B1C813F6100F6E7DA /* IDNSRunLoopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E0BE7A1C813F6100F6E7DA /* IDNSRunLoopVC.m */; };
 		56E0BE7F1C813FB700F6E7DA /* IDBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E0BE7E1C813FB700F6E7DA /* IDBaseVC.m */; };
 		56E0BE841C8140F000F6E7DA /* IDBaseTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E0BE831C8140F000F6E7DA /* IDBaseTableVC.m */; };
+		56E0BE871C81538C00F6E7DA /* IDCacheItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E0BE861C81538C00F6E7DA /* IDCacheItem.m */; };
+		56E0BE8B1C815BBD00F6E7DA /* IDNSArrayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E0BE8A1C815BBD00F6E7DA /* IDNSArrayVC.m */; };
+		56E0BE8F1C8160ED00F6E7DA /* IDGenericsTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E0BE8E1C8160ED00F6E7DA /* IDGenericsTypeVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,12 @@
 		56E0BE801C81400300F6E7DA /* iOSDevPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSDevPrefixHeader.pch; sourceTree = "<group>"; };
 		56E0BE821C8140F000F6E7DA /* IDBaseTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDBaseTableVC.h; sourceTree = "<group>"; };
 		56E0BE831C8140F000F6E7DA /* IDBaseTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDBaseTableVC.m; sourceTree = "<group>"; };
+		56E0BE851C81538C00F6E7DA /* IDCacheItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDCacheItem.h; sourceTree = "<group>"; };
+		56E0BE861C81538C00F6E7DA /* IDCacheItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDCacheItem.m; sourceTree = "<group>"; };
+		56E0BE891C815BBD00F6E7DA /* IDNSArrayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDNSArrayVC.h; sourceTree = "<group>"; };
+		56E0BE8A1C815BBD00F6E7DA /* IDNSArrayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDNSArrayVC.m; sourceTree = "<group>"; };
+		56E0BE8D1C8160ED00F6E7DA /* IDGenericsTypeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDGenericsTypeVC.h; sourceTree = "<group>"; };
+		56E0BE8E1C8160ED00F6E7DA /* IDGenericsTypeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDGenericsTypeVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +272,8 @@
 				568F89AC1C8037D3009A27C5 /* IDFoundationListVC.h */,
 				568F89AE1C8037D3009A27C5 /* IDFoundationListVC.m */,
 				568F89AD1C8037D3009A27C5 /* IDFoundationList.json */,
+				56E0BE8C1C8160C600F6E7DA /* GenericsType */,
+				56E0BE881C815B9A00F6E7DA /* NSArray */,
 				568F89B11C803877009A27C5 /* NSCache */,
 				568F89B51C804648009A27C5 /* NSDictionary */,
 				56E0BE781C813F4200F6E7DA /* NSRunLoop */,
@@ -275,6 +286,8 @@
 			children = (
 				568F89B21C803883009A27C5 /* IDNSCacheVC.h */,
 				568F89B31C803883009A27C5 /* IDNSCacheVC.m */,
+				56E0BE851C81538C00F6E7DA /* IDCacheItem.h */,
+				56E0BE861C81538C00F6E7DA /* IDCacheItem.m */,
 			);
 			path = NSCache;
 			sourceTree = "<group>";
@@ -313,6 +326,24 @@
 				56E0BE831C8140F000F6E7DA /* IDBaseTableVC.m */,
 			);
 			path = IDBaseTableVC;
+			sourceTree = "<group>";
+		};
+		56E0BE881C815B9A00F6E7DA /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				56E0BE891C815BBD00F6E7DA /* IDNSArrayVC.h */,
+				56E0BE8A1C815BBD00F6E7DA /* IDNSArrayVC.m */,
+			);
+			path = NSArray;
+			sourceTree = "<group>";
+		};
+		56E0BE8C1C8160C600F6E7DA /* GenericsType */ = {
+			isa = PBXGroup;
+			children = (
+				56E0BE8D1C8160ED00F6E7DA /* IDGenericsTypeVC.h */,
+				56E0BE8E1C8160ED00F6E7DA /* IDGenericsTypeVC.m */,
+			);
+			path = GenericsType;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,10 +478,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56E0BE8F1C8160ED00F6E7DA /* IDGenericsTypeVC.m in Sources */,
 				56E0BE7B1C813F6100F6E7DA /* IDNSRunLoopVC.m in Sources */,
 				568F89301C7FF49F009A27C5 /* AppDelegate.m in Sources */,
+				56E0BE7F1C813FB700F6E7DA /* IDBaseVC.m in Sources */,
 				568F89B41C803883009A27C5 /* IDNSCacheVC.m in Sources */,
 				568F896A1C7FFA05009A27C5 /* IDHomeListVC.m in Sources */,
+				56E0BE871C81538C00F6E7DA /* IDCacheItem.m in Sources */,
 				568F89B01C8037D3009A27C5 /* IDFoundationListVC.m in Sources */,
 				568F892D1C7FF49F009A27C5 /* main.m in Sources */,
 				568F899F1C8006A5009A27C5 /* IDAlgorithmListVC.m in Sources */,
@@ -459,7 +493,7 @@
 				568F89B81C80464F009A27C5 /* IDNSDictionaryVC.m in Sources */,
 				568F89981C8005BA009A27C5 /* IDTechListModel.m in Sources */,
 				56E0BE841C8140F000F6E7DA /* IDBaseTableVC.m in Sources */,
-				56E0BE7F1C813FB700F6E7DA /* IDBaseVC.m in Sources */,
+				56E0BE8B1C815BBD00F6E7DA /* IDNSArrayVC.m in Sources */,
 				568F89971C8005BA009A27C5 /* IDTechListItemModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -598,7 +632,7 @@
 					"$(PROJECT_DIR)/Libs",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/xiaoshan/Home/面试准备/开源项目/iOSDev/iOSDev/iOSDevPrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSDev/iOSDevPrefixHeader.pch";
 				INFOPLIST_FILE = iOSDev/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
@@ -616,7 +650,7 @@
 					"$(PROJECT_DIR)/Libs",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/xiaoshan/Home/面试准备/开源项目/iOSDev/iOSDev/iOSDevPrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSDev/iOSDevPrefixHeader.pch";
 				INFOPLIST_FILE = iOSDev/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
