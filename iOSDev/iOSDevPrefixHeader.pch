@@ -1,0 +1,20 @@
+//
+//  iOSDevPrefixHeader.pch
+//  iOSDev
+//
+//  Created by XiaoShan on 2/27/16.
+//  Copyright © 2016 XiaoShan. All rights reserved.
+//
+
+#ifndef iOSDevPrefixHeader_pch
+#define iOSDevPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "IDBaseVC.h"
+#import "IDBaseTableVC.h"
+#import <JSONModelLib/JSONModelLib.h>
+#import <TSCategories/TSCategories.h>
+
+#endif /* iOSDevPrefixHeader_pch */

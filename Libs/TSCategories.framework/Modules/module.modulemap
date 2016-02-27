@@ -1,0 +1,6 @@
+framework module TSCategories {
+  umbrella header "TSCategories.h"
+
+  export *
+  module * { export * }
+}

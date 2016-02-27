@@ -1,0 +1,6 @@
+{
+    "items" : [
+               {"title" : "Foundation", "className" : "IDFoundationListVC"},
+               {"title" : "算法", "className" : "IDAlgorithmListVC"}
+               ]
+}
