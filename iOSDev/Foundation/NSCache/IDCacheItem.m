@@ -11,7 +11,7 @@
 @implementation IDCacheItem
 
 - (void)dealloc {
-    NSLog(@"dealloc...");
+    NSLog(@"dealloc img %@...", self);
 }
 
 @end

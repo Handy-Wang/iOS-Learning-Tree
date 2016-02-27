@@ -33,6 +33,7 @@
 		56E0BE871C81538C00F6E7DA /* IDCacheItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E0BE861C81538C00F6E7DA /* IDCacheItem.m */; };
 		56E0BE8B1C815BBD00F6E7DA /* IDNSArrayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E0BE8A1C815BBD00F6E7DA /* IDNSArrayVC.m */; };
 		56E0BE8F1C8160ED00F6E7DA /* IDGenericsTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E0BE8E1C8160ED00F6E7DA /* IDGenericsTypeVC.m */; };
+		56E0BE911C81AD2A00F6E7DA /* WeChat_1456306696.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 56E0BE901C81AD2A00F6E7DA /* WeChat_1456306696.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		56E0BE8A1C815BBD00F6E7DA /* IDNSArrayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDNSArrayVC.m; sourceTree = "<group>"; };
 		56E0BE8D1C8160ED00F6E7DA /* IDGenericsTypeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDGenericsTypeVC.h; sourceTree = "<group>"; };
 		56E0BE8E1C8160ED00F6E7DA /* IDGenericsTypeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDGenericsTypeVC.m; sourceTree = "<group>"; };
+		56E0BE901C81AD2A00F6E7DA /* WeChat_1456306696.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = WeChat_1456306696.jpeg; path = ../../../../../../../Desktop/WeChat_1456306696.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +290,7 @@
 				568F89B31C803883009A27C5 /* IDNSCacheVC.m */,
 				56E0BE851C81538C00F6E7DA /* IDCacheItem.h */,
 				56E0BE861C81538C00F6E7DA /* IDCacheItem.m */,
+				56E0BE901C81AD2A00F6E7DA /* WeChat_1456306696.jpeg */,
 			);
 			path = NSCache;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				568F899E1C8006A5009A27C5 /* IDAlgorithmList.json in Resources */,
 				568F899A1C800649009A27C5 /* IDHomeList.json in Resources */,
 				568F893B1C7FF4A0009A27C5 /* LaunchScreen.storyboard in Resources */,
+				56E0BE911C81AD2A00F6E7DA /* WeChat_1456306696.jpeg in Resources */,
 				568F89381C7FF4A0009A27C5 /* Assets.xcassets in Resources */,
 				568F89AF1C8037D3009A27C5 /* IDFoundationList.json in Resources */,
 			);
