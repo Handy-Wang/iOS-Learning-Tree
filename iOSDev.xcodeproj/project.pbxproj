@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		564BA8CA1C82C1E4001A0A07 /* IDCALayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 564BA8C91C82C1E4001A0A07 /* IDCALayerView.m */; };
 		568F892D1C7FF49F009A27C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 568F892C1C7FF49F009A27C5 /* main.m */; };
 		568F89301C7FF49F009A27C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 568F892F1C7FF49F009A27C5 /* AppDelegate.m */; };
 		568F89381C7FF4A0009A27C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 568F89371C7FF4A0009A27C5 /* Assets.xcassets */; };
@@ -34,6 +35,8 @@
 		56E0BE8B1C815BBD00F6E7DA /* IDNSArrayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E0BE8A1C815BBD00F6E7DA /* IDNSArrayVC.m */; };
 		56E0BE8F1C8160ED00F6E7DA /* IDGenericsTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E0BE8E1C8160ED00F6E7DA /* IDGenericsTypeVC.m */; };
 		56E0BE911C81AD2A00F6E7DA /* WeChat_1456306696.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 56E0BE901C81AD2A00F6E7DA /* WeChat_1456306696.jpeg */; };
+		56E0BE951C81CF2000F6E7DA /* IDCALayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E0BE941C81CF2000F6E7DA /* IDCALayerVC.m */; };
+		56E0BE981C81CFE300F6E7DA /* IDCALayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E0BE971C81CFE300F6E7DA /* IDCALayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		564BA8C81C82C1E4001A0A07 /* IDCALayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDCALayerView.h; sourceTree = "<group>"; };
+		564BA8C91C82C1E4001A0A07 /* IDCALayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDCALayerView.m; sourceTree = "<group>"; };
 		568F89281C7FF49F009A27C5 /* iOSDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		568F892C1C7FF49F009A27C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		568F892E1C7FF49F009A27C5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -104,6 +109,10 @@
 		56E0BE8D1C8160ED00F6E7DA /* IDGenericsTypeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDGenericsTypeVC.h; sourceTree = "<group>"; };
 		56E0BE8E1C8160ED00F6E7DA /* IDGenericsTypeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDGenericsTypeVC.m; sourceTree = "<group>"; };
 		56E0BE901C81AD2A00F6E7DA /* WeChat_1456306696.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = WeChat_1456306696.jpeg; path = ../../../../../../../Desktop/WeChat_1456306696.jpeg; sourceTree = "<group>"; };
+		56E0BE931C81CF2000F6E7DA /* IDCALayerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDCALayerVC.h; sourceTree = "<group>"; };
+		56E0BE941C81CF2000F6E7DA /* IDCALayerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDCALayerVC.m; sourceTree = "<group>"; };
+		56E0BE961C81CFE300F6E7DA /* IDCALayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDCALayer.h; sourceTree = "<group>"; };
+		56E0BE971C81CFE300F6E7DA /* IDCALayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDCALayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +283,7 @@
 				568F89AC1C8037D3009A27C5 /* IDFoundationListVC.h */,
 				568F89AE1C8037D3009A27C5 /* IDFoundationListVC.m */,
 				568F89AD1C8037D3009A27C5 /* IDFoundationList.json */,
+				56E0BE921C81CF0900F6E7DA /* CALayer */,
 				56E0BE8C1C8160C600F6E7DA /* GenericsType */,
 				56E0BE881C815B9A00F6E7DA /* NSArray */,
 				568F89B11C803877009A27C5 /* NSCache */,
@@ -347,6 +357,19 @@
 				56E0BE8E1C8160ED00F6E7DA /* IDGenericsTypeVC.m */,
 			);
 			path = GenericsType;
+			sourceTree = "<group>";
+		};
+		56E0BE921C81CF0900F6E7DA /* CALayer */ = {
+			isa = PBXGroup;
+			children = (
+				56E0BE931C81CF2000F6E7DA /* IDCALayerVC.h */,
+				56E0BE941C81CF2000F6E7DA /* IDCALayerVC.m */,
+				564BA8C81C82C1E4001A0A07 /* IDCALayerView.h */,
+				564BA8C91C82C1E4001A0A07 /* IDCALayerView.m */,
+				56E0BE961C81CFE300F6E7DA /* IDCALayer.h */,
+				56E0BE971C81CFE300F6E7DA /* IDCALayer.m */,
+			);
+			path = CALayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -489,12 +512,15 @@
 				568F89B41C803883009A27C5 /* IDNSCacheVC.m in Sources */,
 				568F896A1C7FFA05009A27C5 /* IDHomeListVC.m in Sources */,
 				56E0BE871C81538C00F6E7DA /* IDCacheItem.m in Sources */,
+				56E0BE951C81CF2000F6E7DA /* IDCALayerVC.m in Sources */,
 				568F89B01C8037D3009A27C5 /* IDFoundationListVC.m in Sources */,
+				56E0BE981C81CFE300F6E7DA /* IDCALayer.m in Sources */,
 				568F892D1C7FF49F009A27C5 /* main.m in Sources */,
 				568F899F1C8006A5009A27C5 /* IDAlgorithmListVC.m in Sources */,
 				568F89A21C80085B009A27C5 /* IDBinaryTreeVC.m in Sources */,
 				568F89A51C80089C009A27C5 /* IDBinaryTreeNode.m in Sources */,
 				568F89B81C80464F009A27C5 /* IDNSDictionaryVC.m in Sources */,
+				564BA8CA1C82C1E4001A0A07 /* IDCALayerView.m in Sources */,
 				568F89981C8005BA009A27C5 /* IDTechListModel.m in Sources */,
 				56E0BE841C8140F000F6E7DA /* IDBaseTableVC.m in Sources */,
 				56E0BE8B1C815BBD00F6E7DA /* IDNSArrayVC.m in Sources */,
