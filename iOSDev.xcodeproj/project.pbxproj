@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		564BA8CA1C82C1E4001A0A07 /* IDCALayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 564BA8C91C82C1E4001A0A07 /* IDCALayerView.m */; };
+		564BA8CE1C82DFA5001A0A07 /* IDUIViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 564BA8CD1C82DFA5001A0A07 /* IDUIViewVC.m */; };
+		5652167B1C86BEED00A8E5A9 /* IDMRCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5652167A1C86BEED00A8E5A9 /* IDMRCVC.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5652167E1C86C52400A8E5A9 /* IDPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5652167D1C86C52400A8E5A9 /* IDPerson.m */; };
 		568F892D1C7FF49F009A27C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 568F892C1C7FF49F009A27C5 /* main.m */; };
 		568F89301C7FF49F009A27C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 568F892F1C7FF49F009A27C5 /* AppDelegate.m */; };
 		568F89381C7FF4A0009A27C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 568F89371C7FF4A0009A27C5 /* Assets.xcassets */; };
@@ -28,6 +31,8 @@
 		568F89B01C8037D3009A27C5 /* IDFoundationListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 568F89AE1C8037D3009A27C5 /* IDFoundationListVC.m */; };
 		568F89B41C803883009A27C5 /* IDNSCacheVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 568F89B31C803883009A27C5 /* IDNSCacheVC.m */; };
 		568F89B81C80464F009A27C5 /* IDNSDictionaryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 568F89B71C80464F009A27C5 /* IDNSDictionaryVC.m */; };
+		56DFB26F1C84164600F750E8 /* IDCAAnimationTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DFB26E1C84164600F750E8 /* IDCAAnimationTestView.m */; };
+		56DFB2721C84165400F750E8 /* IDCAAnimationTestLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DFB2711C84165400F750E8 /* IDCAAnimationTestLayer.m */; };
 		56E0BE7B1C813F6100F6E7DA /* IDNSRunLoopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E0BE7A1C813F6100F6E7DA /* IDNSRunLoopVC.m */; };
 		56E0BE7F1C813FB700F6E7DA /* IDBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E0BE7E1C813FB700F6E7DA /* IDBaseVC.m */; };
 		56E0BE841C8140F000F6E7DA /* IDBaseTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E0BE831C8140F000F6E7DA /* IDBaseTableVC.m */; };
@@ -37,6 +42,14 @@
 		56E0BE911C81AD2A00F6E7DA /* WeChat_1456306696.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 56E0BE901C81AD2A00F6E7DA /* WeChat_1456306696.jpeg */; };
 		56E0BE951C81CF2000F6E7DA /* IDCALayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E0BE941C81CF2000F6E7DA /* IDCALayerVC.m */; };
 		56E0BE981C81CFE300F6E7DA /* IDCALayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E0BE971C81CFE300F6E7DA /* IDCALayer.m */; };
+		56E1FEFC1C897000004363C1 /* IDBlockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E1FEFB1C897000004363C1 /* IDBlockVC.m */; };
+		56E1FF011C897B1C004363C1 /* IDUIKitList.json in Resources */ = {isa = PBXBuildFile; fileRef = 56E1FEFE1C897B1C004363C1 /* IDUIKitList.json */; };
+		56E1FF021C897B1C004363C1 /* IDUIKitListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E1FF001C897B1C004363C1 /* IDUIKitListVC.m */; };
+		56E1FF061C897B85004363C1 /* IDOCAndJSVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E1FF051C897B85004363C1 /* IDOCAndJSVC.m */; };
+		56E1FF081C897D1C004363C1 /* OCAndJS.html in Resources */ = {isa = PBXBuildFile; fileRef = 56E1FF071C897D1C004363C1 /* OCAndJS.html */; };
+		56E1FF0C1C8995D3004363C1 /* IDOCPatchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E1FF0B1C8995D3004363C1 /* IDOCPatchVC.m */; };
+		56E1FF0E1C899B07004363C1 /* jspatch.js in Resources */ = {isa = PBXBuildFile; fileRef = 56E1FF0D1C8999CD004363C1 /* jspatch.js */; };
+		56F75CB51C840A9A000F63BF /* IDCAAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F75CB41C840A9A000F63BF /* IDCAAnimationVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +72,12 @@
 /* Begin PBXFileReference section */
 		564BA8C81C82C1E4001A0A07 /* IDCALayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDCALayerView.h; sourceTree = "<group>"; };
 		564BA8C91C82C1E4001A0A07 /* IDCALayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDCALayerView.m; sourceTree = "<group>"; };
+		564BA8CC1C82DFA5001A0A07 /* IDUIViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDUIViewVC.h; sourceTree = "<group>"; };
+		564BA8CD1C82DFA5001A0A07 /* IDUIViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDUIViewVC.m; sourceTree = "<group>"; };
+		565216791C86BEED00A8E5A9 /* IDMRCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDMRCVC.h; sourceTree = "<group>"; };
+		5652167A1C86BEED00A8E5A9 /* IDMRCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDMRCVC.m; sourceTree = "<group>"; };
+		5652167C1C86C52400A8E5A9 /* IDPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPerson.h; sourceTree = "<group>"; };
+		5652167D1C86C52400A8E5A9 /* IDPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPerson.m; sourceTree = "<group>"; };
 		568F89281C7FF49F009A27C5 /* iOSDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		568F892C1C7FF49F009A27C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		568F892E1C7FF49F009A27C5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -95,6 +114,10 @@
 		568F89B31C803883009A27C5 /* IDNSCacheVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDNSCacheVC.m; sourceTree = "<group>"; };
 		568F89B61C80464F009A27C5 /* IDNSDictionaryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDNSDictionaryVC.h; sourceTree = "<group>"; };
 		568F89B71C80464F009A27C5 /* IDNSDictionaryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDNSDictionaryVC.m; sourceTree = "<group>"; };
+		56DFB26D1C84164600F750E8 /* IDCAAnimationTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDCAAnimationTestView.h; sourceTree = "<group>"; };
+		56DFB26E1C84164600F750E8 /* IDCAAnimationTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDCAAnimationTestView.m; sourceTree = "<group>"; };
+		56DFB2701C84165400F750E8 /* IDCAAnimationTestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDCAAnimationTestLayer.h; sourceTree = "<group>"; };
+		56DFB2711C84165400F750E8 /* IDCAAnimationTestLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDCAAnimationTestLayer.m; sourceTree = "<group>"; };
 		56E0BE791C813F6100F6E7DA /* IDNSRunLoopVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDNSRunLoopVC.h; sourceTree = "<group>"; };
 		56E0BE7A1C813F6100F6E7DA /* IDNSRunLoopVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDNSRunLoopVC.m; sourceTree = "<group>"; };
 		56E0BE7D1C813FB700F6E7DA /* IDBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDBaseVC.h; sourceTree = "<group>"; };
@@ -113,6 +136,19 @@
 		56E0BE941C81CF2000F6E7DA /* IDCALayerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDCALayerVC.m; sourceTree = "<group>"; };
 		56E0BE961C81CFE300F6E7DA /* IDCALayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDCALayer.h; sourceTree = "<group>"; };
 		56E0BE971C81CFE300F6E7DA /* IDCALayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDCALayer.m; sourceTree = "<group>"; };
+		56E1FEFA1C897000004363C1 /* IDBlockVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDBlockVC.h; sourceTree = "<group>"; };
+		56E1FEFB1C897000004363C1 /* IDBlockVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDBlockVC.m; sourceTree = "<group>"; };
+		56E1FEFE1C897B1C004363C1 /* IDUIKitList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = IDUIKitList.json; sourceTree = "<group>"; };
+		56E1FEFF1C897B1C004363C1 /* IDUIKitListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDUIKitListVC.h; sourceTree = "<group>"; };
+		56E1FF001C897B1C004363C1 /* IDUIKitListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDUIKitListVC.m; sourceTree = "<group>"; };
+		56E1FF041C897B85004363C1 /* IDOCAndJSVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDOCAndJSVC.h; sourceTree = "<group>"; };
+		56E1FF051C897B85004363C1 /* IDOCAndJSVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDOCAndJSVC.m; sourceTree = "<group>"; };
+		56E1FF071C897D1C004363C1 /* OCAndJS.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = OCAndJS.html; sourceTree = "<group>"; };
+		56E1FF0A1C8995D3004363C1 /* IDOCPatchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDOCPatchVC.h; sourceTree = "<group>"; };
+		56E1FF0B1C8995D3004363C1 /* IDOCPatchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDOCPatchVC.m; sourceTree = "<group>"; };
+		56E1FF0D1C8999CD004363C1 /* jspatch.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jspatch.js; sourceTree = "<group>"; };
+		56F75CB31C840A9A000F63BF /* IDCAAnimationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDCAAnimationVC.h; sourceTree = "<group>"; };
+		56F75CB41C840A9A000F63BF /* IDCAAnimationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDCAAnimationVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +178,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		564BA8CB1C82DF88001A0A07 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				564BA8CC1C82DFA5001A0A07 /* IDUIViewVC.h */,
+				564BA8CD1C82DFA5001A0A07 /* IDUIViewVC.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		565216781C86BEAA00A8E5A9 /* MRC */ = {
+			isa = PBXGroup;
+			children = (
+				565216791C86BEED00A8E5A9 /* IDMRCVC.h */,
+				5652167A1C86BEED00A8E5A9 /* IDMRCVC.m */,
+			);
+			path = MRC;
+			sourceTree = "<group>";
+		};
 		568F891F1C7FF49F009A27C5 = {
 			isa = PBXGroup;
 			children = (
@@ -170,8 +224,10 @@
 				568F892E1C7FF49F009A27C5 /* AppDelegate.h */,
 				568F892F1C7FF49F009A27C5 /* AppDelegate.m */,
 				568F89651C7FFA05009A27C5 /* Home */,
-				568F89A61C80379D009A27C5 /* Foundation */,
 				568F89631C7FF9BD009A27C5 /* Algorithm */,
+				568F89A61C80379D009A27C5 /* Foundation */,
+				56E1FEFD1C897AB1004363C1 /* UIKit */,
+				565216781C86BEAA00A8E5A9 /* MRC */,
 				568F89861C8004B5009A27C5 /* Shared */,
 				568F89371C7FF4A0009A27C5 /* Assets.xcassets */,
 				568F89391C7FF4A0009A27C5 /* LaunchScreen.storyboard */,
@@ -283,12 +339,15 @@
 				568F89AC1C8037D3009A27C5 /* IDFoundationListVC.h */,
 				568F89AE1C8037D3009A27C5 /* IDFoundationListVC.m */,
 				568F89AD1C8037D3009A27C5 /* IDFoundationList.json */,
+				56E1FEF91C896FE7004363C1 /* Block */,
+				56F75CB21C840A83000F63BF /* CAAnimation */,
 				56E0BE921C81CF0900F6E7DA /* CALayer */,
 				56E0BE8C1C8160C600F6E7DA /* GenericsType */,
 				56E0BE881C815B9A00F6E7DA /* NSArray */,
 				568F89B11C803877009A27C5 /* NSCache */,
 				568F89B51C804648009A27C5 /* NSDictionary */,
 				56E0BE781C813F4200F6E7DA /* NSRunLoop */,
+				564BA8CB1C82DF88001A0A07 /* UIView */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -346,6 +405,8 @@
 			children = (
 				56E0BE891C815BBD00F6E7DA /* IDNSArrayVC.h */,
 				56E0BE8A1C815BBD00F6E7DA /* IDNSArrayVC.m */,
+				5652167C1C86C52400A8E5A9 /* IDPerson.h */,
+				5652167D1C86C52400A8E5A9 /* IDPerson.m */,
 			);
 			path = NSArray;
 			sourceTree = "<group>";
@@ -370,6 +431,60 @@
 				56E0BE971C81CFE300F6E7DA /* IDCALayer.m */,
 			);
 			path = CALayer;
+			sourceTree = "<group>";
+		};
+		56E1FEF91C896FE7004363C1 /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				56E1FEFA1C897000004363C1 /* IDBlockVC.h */,
+				56E1FEFB1C897000004363C1 /* IDBlockVC.m */,
+			);
+			path = Block;
+			sourceTree = "<group>";
+		};
+		56E1FEFD1C897AB1004363C1 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				56E1FEFF1C897B1C004363C1 /* IDUIKitListVC.h */,
+				56E1FF001C897B1C004363C1 /* IDUIKitListVC.m */,
+				56E1FEFE1C897B1C004363C1 /* IDUIKitList.json */,
+				56E1FF031C897B77004363C1 /* OCAndJS */,
+				56E1FF091C8995CA004363C1 /* OCPatch */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		56E1FF031C897B77004363C1 /* OCAndJS */ = {
+			isa = PBXGroup;
+			children = (
+				56E1FF041C897B85004363C1 /* IDOCAndJSVC.h */,
+				56E1FF051C897B85004363C1 /* IDOCAndJSVC.m */,
+				56E1FF071C897D1C004363C1 /* OCAndJS.html */,
+			);
+			path = OCAndJS;
+			sourceTree = "<group>";
+		};
+		56E1FF091C8995CA004363C1 /* OCPatch */ = {
+			isa = PBXGroup;
+			children = (
+				56E1FF0A1C8995D3004363C1 /* IDOCPatchVC.h */,
+				56E1FF0B1C8995D3004363C1 /* IDOCPatchVC.m */,
+				56E1FF0D1C8999CD004363C1 /* jspatch.js */,
+			);
+			path = OCPatch;
+			sourceTree = "<group>";
+		};
+		56F75CB21C840A83000F63BF /* CAAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				56F75CB31C840A9A000F63BF /* IDCAAnimationVC.h */,
+				56F75CB41C840A9A000F63BF /* IDCAAnimationVC.m */,
+				56DFB26D1C84164600F750E8 /* IDCAAnimationTestView.h */,
+				56DFB26E1C84164600F750E8 /* IDCAAnimationTestView.m */,
+				56DFB2701C84165400F750E8 /* IDCAAnimationTestLayer.h */,
+				56DFB2711C84165400F750E8 /* IDCAAnimationTestLayer.m */,
+			);
+			path = CAAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -475,8 +590,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56E1FF0E1C899B07004363C1 /* jspatch.js in Resources */,
 				568F899E1C8006A5009A27C5 /* IDAlgorithmList.json in Resources */,
+				56E1FF081C897D1C004363C1 /* OCAndJS.html in Resources */,
 				568F899A1C800649009A27C5 /* IDHomeList.json in Resources */,
+				56E1FF011C897B1C004363C1 /* IDUIKitList.json in Resources */,
 				568F893B1C7FF4A0009A27C5 /* LaunchScreen.storyboard in Resources */,
 				56E0BE911C81AD2A00F6E7DA /* WeChat_1456306696.jpeg in Resources */,
 				568F89381C7FF4A0009A27C5 /* Assets.xcassets in Resources */,
@@ -508,7 +626,10 @@
 				56E0BE8F1C8160ED00F6E7DA /* IDGenericsTypeVC.m in Sources */,
 				56E0BE7B1C813F6100F6E7DA /* IDNSRunLoopVC.m in Sources */,
 				568F89301C7FF49F009A27C5 /* AppDelegate.m in Sources */,
+				564BA8CE1C82DFA5001A0A07 /* IDUIViewVC.m in Sources */,
 				56E0BE7F1C813FB700F6E7DA /* IDBaseVC.m in Sources */,
+				5652167E1C86C52400A8E5A9 /* IDPerson.m in Sources */,
+				56E1FF021C897B1C004363C1 /* IDUIKitListVC.m in Sources */,
 				568F89B41C803883009A27C5 /* IDNSCacheVC.m in Sources */,
 				568F896A1C7FFA05009A27C5 /* IDHomeListVC.m in Sources */,
 				56E0BE871C81538C00F6E7DA /* IDCacheItem.m in Sources */,
@@ -521,10 +642,17 @@
 				568F89A51C80089C009A27C5 /* IDBinaryTreeNode.m in Sources */,
 				568F89B81C80464F009A27C5 /* IDNSDictionaryVC.m in Sources */,
 				564BA8CA1C82C1E4001A0A07 /* IDCALayerView.m in Sources */,
+				56DFB2721C84165400F750E8 /* IDCAAnimationTestLayer.m in Sources */,
 				568F89981C8005BA009A27C5 /* IDTechListModel.m in Sources */,
 				56E0BE841C8140F000F6E7DA /* IDBaseTableVC.m in Sources */,
+				56E1FF061C897B85004363C1 /* IDOCAndJSVC.m in Sources */,
+				56E1FEFC1C897000004363C1 /* IDBlockVC.m in Sources */,
 				56E0BE8B1C815BBD00F6E7DA /* IDNSArrayVC.m in Sources */,
+				56F75CB51C840A9A000F63BF /* IDCAAnimationVC.m in Sources */,
+				56E1FF0C1C8995D3004363C1 /* IDOCPatchVC.m in Sources */,
+				56DFB26F1C84164600F750E8 /* IDCAAnimationTestView.m in Sources */,
 				568F89971C8005BA009A27C5 /* IDTechListItemModel.m in Sources */,
+				5652167B1C86BEED00A8E5A9 /* IDMRCVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,8 @@
 {
     "items" : [
+               {"title" : "Algorithm", "className" : "IDAlgorithmListVC"},
                {"title" : "Foundation", "className" : "IDFoundationListVC"},
-               {"title" : "算法", "className" : "IDAlgorithmListVC"}
+               {"title" : "UIKit", "className" : "IDUIKitListVC"},
+               {"title" : "MRC", "className" : "IDMRCVC"},
                ]
 }

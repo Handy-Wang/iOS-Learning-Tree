@@ -11,18 +11,18 @@
 @implementation IDCALayer
 
 - (void)setNeedsDisplay {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
     [super setNeedsDisplay];
-    NSLog(@"%@", NSStringFromSelector(_cmd));    
 }
 
 - (void)display {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
     [super display];
-    NSLog(@"%@", NSStringFromSelector(_cmd));    
 }
 
 - (void)drawInContext:(CGContextRef)ctx {
-    [super drawInContext:ctx];
     NSLog(@"%@", NSStringFromSelector(_cmd));
+    [super drawInContext:ctx];
 }
 
 @end
