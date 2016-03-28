@@ -4,5 +4,6 @@
                {"title" : "Foundation", "className" : "IDFoundationListVC"},
                {"title" : "UIKit", "className" : "IDUIKitListVC"},
                {"title" : "MRC", "className" : "IDMRCVC"},
+               {"title" : "ProtocolBuffer", "className" : "IDProtocolBufferVC"}
                ]
 }
