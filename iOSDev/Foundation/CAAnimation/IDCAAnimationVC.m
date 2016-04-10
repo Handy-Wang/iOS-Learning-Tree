@@ -70,12 +70,12 @@
     animView.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:animView];
     
-//    animView.alpha = 0.5;
-//    
-//    [UIView animateWithDuration:0.3 animations:^{
-////        animView.alpha = 0.5;
-//        animView.frame = CGRectZero;
-//    }];
+    animView.alpha = 0.5;
+    
+    [UIView animateWithDuration:0.3 animations:^{
+//        animView.alpha = 0.5;
+        animView.frame = CGRectZero;
+    }];
 }
 
 @end
