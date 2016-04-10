@@ -24,7 +24,7 @@
 }
 
 - (void)drawRect:(CGRect)rect {
-    [super drawRect:rect];
+    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 @end

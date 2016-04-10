@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString *file1 = [[NSBundle mainBundle] pathForResource:@"WeChat_1456306696" ofType:@"jpeg"];
+    NSString *file1 = [[NSBundle mainBundle] pathForResource:@"mountian" ofType:@"png"];
     IDCacheItem *img1 = [[IDCacheItem alloc] initWithContentsOfFile:file1];
     
     /**
@@ -44,7 +44,7 @@
         int count = 5;
         
         for (int i = 0; i < count; i++) {
-            NSString *file = [[NSBundle mainBundle] pathForResource:@"WeChat_1456306696" ofType:@"jpeg"];
+            NSString *file = [[NSBundle mainBundle] pathForResource:@"mountian" ofType:@"png"];
             IDCacheItem *img = [[IDCacheItem alloc] initWithContentsOfFile:file];
             
             if (!!img) {
