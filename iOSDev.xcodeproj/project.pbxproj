@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		330070B71CCE504700C2C432 /* IDUILabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 330070B61CCE504700C2C432 /* IDUILabelVC.m */; };
+		330070BA1CCE51D200C2C432 /* NSString(TS_Attributed).m in Sources */ = {isa = PBXBuildFile; fileRef = 330070B91CCE51D200C2C432 /* NSString(TS_Attributed).m */; };
+		33230FDC1CD8412B0087A5AC /* IDUITextViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33230FDB1CD8412B0087A5AC /* IDUITextViewVC.m */; };
 		3329C67D1CAE23E9000E62D6 /* mountian.png in Resources */ = {isa = PBXBuildFile; fileRef = 3329C67C1CAE23E9000E62D6 /* mountian.png */; };
 		3329C6851CAE24E2000E62D6 /* IDFuncArgsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3329C6841CAE24E2000E62D6 /* IDFuncArgsVC.m */; };
 		3375A6D61CB7C806003C5E80 /* IDMainThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3375A6D51CB7C806003C5E80 /* IDMainThreadVC.m */; };
 		33A2E6861CB565D200990B4E /* IDRuntimeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A2E6851CB565D200990B4E /* IDRuntimeVC.m */; };
+		33EFD7D21CD1AE6400E241C3 /* IDFPSLabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFD7D11CD1AE6400E241C3 /* IDFPSLabelVC.m */; };
+		33EFD7D51CD1AEA800E241C3 /* NMFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFD7D41CD1AEA800E241C3 /* NMFPSLabel.m */; };
 		562CA1D81C9A9FBB00B6FE67 /* GPBExtensionInternals.m in Sources */ = {isa = PBXBuildFile; fileRef = 562CA1D21C9A9FBB00B6FE67 /* GPBExtensionInternals.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		562CA1D91C9A9FBB00B6FE67 /* GPBExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 562CA1D41C9A9FBB00B6FE67 /* GPBExtensionRegistry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		562CA1DA1C9A9FBB00B6FE67 /* GPBRootObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 562CA1D61C9A9FBB00B6FE67 /* GPBRootObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -101,6 +106,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		330070B51CCE504700C2C432 /* IDUILabelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDUILabelVC.h; sourceTree = "<group>"; };
+		330070B61CCE504700C2C432 /* IDUILabelVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDUILabelVC.m; sourceTree = "<group>"; };
+		330070B81CCE51D200C2C432 /* NSString(TS_Attributed).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString(TS_Attributed).h"; sourceTree = "<group>"; };
+		330070B91CCE51D200C2C432 /* NSString(TS_Attributed).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString(TS_Attributed).m"; sourceTree = "<group>"; };
+		33230FDA1CD8412B0087A5AC /* IDUITextViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDUITextViewVC.h; sourceTree = "<group>"; };
+		33230FDB1CD8412B0087A5AC /* IDUITextViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDUITextViewVC.m; sourceTree = "<group>"; };
 		3329C67C1CAE23E9000E62D6 /* mountian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mountian.png; sourceTree = "<group>"; };
 		3329C6831CAE24E2000E62D6 /* IDFuncArgsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDFuncArgsVC.h; sourceTree = "<group>"; };
 		3329C6841CAE24E2000E62D6 /* IDFuncArgsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDFuncArgsVC.m; sourceTree = "<group>"; };
@@ -108,6 +119,10 @@
 		3375A6D51CB7C806003C5E80 /* IDMainThreadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDMainThreadVC.m; sourceTree = "<group>"; };
 		33A2E6841CB565D200990B4E /* IDRuntimeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDRuntimeVC.h; sourceTree = "<group>"; };
 		33A2E6851CB565D200990B4E /* IDRuntimeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDRuntimeVC.m; sourceTree = "<group>"; };
+		33EFD7D01CD1AE6400E241C3 /* IDFPSLabelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDFPSLabelVC.h; sourceTree = "<group>"; };
+		33EFD7D11CD1AE6400E241C3 /* IDFPSLabelVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDFPSLabelVC.m; sourceTree = "<group>"; };
+		33EFD7D31CD1AEA800E241C3 /* NMFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMFPSLabel.h; sourceTree = "<group>"; };
+		33EFD7D41CD1AEA800E241C3 /* NMFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMFPSLabel.m; sourceTree = "<group>"; };
 		562CA1D11C9A9FBB00B6FE67 /* GPBExtensionInternals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBExtensionInternals.h; sourceTree = "<group>"; };
 		562CA1D21C9A9FBB00B6FE67 /* GPBExtensionInternals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBExtensionInternals.m; sourceTree = "<group>"; };
 		562CA1D31C9A9FBB00B6FE67 /* GPBExtensionRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBExtensionRegistry.h; sourceTree = "<group>"; };
@@ -290,6 +305,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		330070B41CCE501700C2C432 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				330070B51CCE504700C2C432 /* IDUILabelVC.h */,
+				330070B61CCE504700C2C432 /* IDUILabelVC.m */,
+				330070B81CCE51D200C2C432 /* NSString(TS_Attributed).h */,
+				330070B91CCE51D200C2C432 /* NSString(TS_Attributed).m */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		33230FD91CD841040087A5AC /* UITextView */ = {
+			isa = PBXGroup;
+			children = (
+				33230FDA1CD8412B0087A5AC /* IDUITextViewVC.h */,
+				33230FDB1CD8412B0087A5AC /* IDUITextViewVC.m */,
+			);
+			path = UITextView;
+			sourceTree = "<group>";
+		};
 		3329C6821CAE2478000E62D6 /* FuncArgs */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,6 +350,17 @@
 				33A2E6851CB565D200990B4E /* IDRuntimeVC.m */,
 			);
 			path = Runtime;
+			sourceTree = "<group>";
+		};
+		33EFD7CF1CD1AE4600E241C3 /* FPSLabel */ = {
+			isa = PBXGroup;
+			children = (
+				33EFD7D01CD1AE6400E241C3 /* IDFPSLabelVC.h */,
+				33EFD7D11CD1AE6400E241C3 /* IDFPSLabelVC.m */,
+				33EFD7D31CD1AEA800E241C3 /* NMFPSLabel.h */,
+				33EFD7D41CD1AEA800E241C3 /* NMFPSLabel.m */,
+			);
+			path = FPSLabel;
 			sourceTree = "<group>";
 		};
 		562CA1D01C9A9FBB00B6FE67 /* Extensions */ = {
@@ -712,8 +758,11 @@
 				56E1FEFF1C897B1C004363C1 /* IDUIKitListVC.h */,
 				56E1FF001C897B1C004363C1 /* IDUIKitListVC.m */,
 				56E1FEFE1C897B1C004363C1 /* IDUIKitList.json */,
+				33EFD7CF1CD1AE4600E241C3 /* FPSLabel */,
 				56E1FF031C897B77004363C1 /* OCAndJS */,
 				56E1FF091C8995CA004363C1 /* OCPatch */,
+				330070B41CCE501700C2C432 /* UILabel */,
+				33230FD91CD841040087A5AC /* UITextView */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -925,12 +974,14 @@
 				564BA8CE1C82DFA5001A0A07 /* IDUIViewVC.m in Sources */,
 				562CA1EE1C9AA24D00B6FE67 /* GPBCodedOutputStream.m in Sources */,
 				56E0BE7F1C813FB700F6E7DA /* IDBaseVC.m in Sources */,
+				33EFD7D51CD1AEA800E241C3 /* NMFPSLabel.m in Sources */,
 				5652167E1C86C52400A8E5A9 /* IDPerson.m in Sources */,
 				562CA2671C9AB35800B6FE67 /* Api.pbobjc.m in Sources */,
 				562CA1D91C9A9FBB00B6FE67 /* GPBExtensionRegistry.m in Sources */,
 				56F21B301C8BDFAF001732BF /* HDTeacher.m in Sources */,
 				562CA1EF1C9AA24D00B6FE67 /* GPBWireFormat.m in Sources */,
 				33A2E6861CB565D200990B4E /* IDRuntimeVC.m in Sources */,
+				33230FDC1CD8412B0087A5AC /* IDUITextViewVC.m in Sources */,
 				56E1FF021C897B1C004363C1 /* IDUIKitListVC.m in Sources */,
 				568F89B41C803883009A27C5 /* IDNSCacheVC.m in Sources */,
 				56F21B341C8BF277001732BF /* IDProtocolBufferVC.m in Sources */,
@@ -950,6 +1001,7 @@
 				562CA2681C9AB35800B6FE67 /* Descriptor.pbobjc.m in Sources */,
 				562CA1E31C9AA22E00B6FE67 /* GPBUnknownField.m in Sources */,
 				568F89A21C80085B009A27C5 /* IDBinaryTreeVC.m in Sources */,
+				330070B71CCE504700C2C432 /* IDUILabelVC.m in Sources */,
 				568F89A51C80089C009A27C5 /* IDBinaryTreeNode.m in Sources */,
 				568F89B81C80464F009A27C5 /* IDNSDictionaryVC.m in Sources */,
 				3375A6D61CB7C806003C5E80 /* IDMainThreadVC.m in Sources */,
@@ -958,6 +1010,7 @@
 				568F89981C8005BA009A27C5 /* IDTechListModel.m in Sources */,
 				562CA20A1C9AA3D100B6FE67 /* GPBWellKnownTypes.m in Sources */,
 				56E0BE841C8140F000F6E7DA /* IDBaseTableVC.m in Sources */,
+				330070BA1CCE51D200C2C432 /* NSString(TS_Attributed).m in Sources */,
 				562CA1F81C9AA3B200B6FE67 /* GPBMessage.m in Sources */,
 				56E1FF061C897B85004363C1 /* IDOCAndJSVC.m in Sources */,
 				56E1FEFC1C897000004363C1 /* IDBlockVC.m in Sources */,
@@ -969,6 +1022,7 @@
 				56E1FF0C1C8995D3004363C1 /* IDOCPatchVC.m in Sources */,
 				56DFB26F1C84164600F750E8 /* IDCAAnimationTestView.m in Sources */,
 				3329C6851CAE24E2000E62D6 /* IDFuncArgsVC.m in Sources */,
+				33EFD7D21CD1AE6400E241C3 /* IDFPSLabelVC.m in Sources */,
 				562CA2081C9AA3D100B6FE67 /* GPBDictionary.m in Sources */,
 				568F89971C8005BA009A27C5 /* IDTechListItemModel.m in Sources */,
 				562CA26C1C9AB35800B6FE67 /* SourceContext.pbobjc.m in Sources */,
