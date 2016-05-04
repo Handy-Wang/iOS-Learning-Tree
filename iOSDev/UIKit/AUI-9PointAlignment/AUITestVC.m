@@ -96,7 +96,7 @@
     _textViewsTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, kTextViewsLabelTop, self.view.frame.size.width, kTextViewsLabelHeight)];
     _textViewsTitleLabel.backgroundColor = [UIColor blackColor];
     _textViewsTitleLabel.textColor = [UIColor whiteColor];
-    _textViewsTitleLabel.text = @"AUITextViews";
+    _textViewsTitleLabel.text = @"TextViews";
     _textViewsTitleLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:_textViewsTitleLabel];
     
@@ -183,7 +183,7 @@
     _textFieldsLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, kTextFieldsLabelTop, self.view.frame.size.width, kTextFieldsLabelHeight)];
     _textFieldsLabel.backgroundColor = [UIColor blackColor];
     _textFieldsLabel.textColor = [UIColor whiteColor];
-    _textFieldsLabel.text = @"AUITextFields";
+    _textFieldsLabel.text = @"TextFields";
     _textFieldsLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:_textFieldsLabel];
     
