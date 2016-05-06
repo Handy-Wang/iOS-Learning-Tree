@@ -1,6 +1,6 @@
 {
     "items" : [
-               {"title" : "AUI-9PointAlignment", "className" : "AUITestVC"},
+               {"title" : "AUI-9PointAlignment", "className" : "BSUITestVC"},
                {"title" : "FPSLabel", "className" : "IDFPSLabelVC"},
                {"title" : "OC与JS(OC/WebView/JS)", "className" : "IDOCAndJSVC"},
                {"title" : "OC与JS(OC Patch by JS)", "className" : "IDOCPatchVC"},

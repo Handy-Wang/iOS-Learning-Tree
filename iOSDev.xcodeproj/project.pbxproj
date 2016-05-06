@@ -12,9 +12,9 @@
 		3329C6851CAE24E2000E62D6 /* IDFuncArgsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3329C6841CAE24E2000E62D6 /* IDFuncArgsVC.m */; };
 		3375A6D61CB7C806003C5E80 /* IDMainThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3375A6D51CB7C806003C5E80 /* IDMainThreadVC.m */; };
 		33A2E6861CB565D200990B4E /* IDRuntimeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A2E6851CB565D200990B4E /* IDRuntimeVC.m */; };
-		33A646051CD9A49F00944E04 /* AUITestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A645FF1CD9A49F00944E04 /* AUITestVC.m */; };
-		33A646061CD9A49F00944E04 /* AUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A646021CD9A49F00944E04 /* AUITextField.m */; };
-		33A646071CD9A49F00944E04 /* AUITextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A646041CD9A49F00944E04 /* AUITextView.m */; };
+		33A6461E1CDAE3FC00944E04 /* BSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A646191CDAE3FC00944E04 /* BSTextField.m */; };
+		33A6461F1CDAE3FC00944E04 /* BSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6461B1CDAE3FC00944E04 /* BSTextView.m */; };
+		33A646201CDAE3FC00944E04 /* BSUITestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6461D1CDAE3FC00944E04 /* BSUITestVC.m */; };
 		33B902FA1CD88F3600A0574F /* NSString(TS_Attributed).m in Sources */ = {isa = PBXBuildFile; fileRef = 33B902F91CD88F3600A0574F /* NSString(TS_Attributed).m */; };
 		33EFD7D21CD1AE6400E241C3 /* IDFPSLabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFD7D11CD1AE6400E241C3 /* IDFPSLabelVC.m */; };
 		33EFD7D51CD1AEA800E241C3 /* NMFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFD7D41CD1AEA800E241C3 /* NMFPSLabel.m */; };
@@ -117,13 +117,13 @@
 		3375A6D51CB7C806003C5E80 /* IDMainThreadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDMainThreadVC.m; sourceTree = "<group>"; };
 		33A2E6841CB565D200990B4E /* IDRuntimeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDRuntimeVC.h; sourceTree = "<group>"; };
 		33A2E6851CB565D200990B4E /* IDRuntimeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDRuntimeVC.m; sourceTree = "<group>"; };
-		33A645FE1CD9A49F00944E04 /* AUITestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUITestVC.h; sourceTree = "<group>"; };
-		33A645FF1CD9A49F00944E04 /* AUITestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUITestVC.m; sourceTree = "<group>"; };
-		33A646001CD9A49F00944E04 /* AUITextAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUITextAlignment.h; sourceTree = "<group>"; };
-		33A646011CD9A49F00944E04 /* AUITextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUITextField.h; sourceTree = "<group>"; };
-		33A646021CD9A49F00944E04 /* AUITextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUITextField.m; sourceTree = "<group>"; };
-		33A646031CD9A49F00944E04 /* AUITextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUITextView.h; sourceTree = "<group>"; };
-		33A646041CD9A49F00944E04 /* AUITextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUITextView.m; sourceTree = "<group>"; };
+		33A646171CDAE3FC00944E04 /* BSTextAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextAlignment.h; sourceTree = "<group>"; };
+		33A646181CDAE3FC00944E04 /* BSTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextField.h; sourceTree = "<group>"; };
+		33A646191CDAE3FC00944E04 /* BSTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTextField.m; sourceTree = "<group>"; };
+		33A6461A1CDAE3FC00944E04 /* BSTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextView.h; sourceTree = "<group>"; };
+		33A6461B1CDAE3FC00944E04 /* BSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTextView.m; sourceTree = "<group>"; };
+		33A6461C1CDAE3FC00944E04 /* BSUITestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSUITestVC.h; sourceTree = "<group>"; };
+		33A6461D1CDAE3FC00944E04 /* BSUITestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSUITestVC.m; sourceTree = "<group>"; };
 		33B902F81CD88F3600A0574F /* NSString(TS_Attributed).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString(TS_Attributed).h"; sourceTree = "<group>"; };
 		33B902F91CD88F3600A0574F /* NSString(TS_Attributed).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString(TS_Attributed).m"; sourceTree = "<group>"; };
 		33EFD7D01CD1AE6400E241C3 /* IDFPSLabelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDFPSLabelVC.h; sourceTree = "<group>"; };
@@ -350,18 +350,18 @@
 			path = Runtime;
 			sourceTree = "<group>";
 		};
-		33A645FD1CD9A49F00944E04 /* AUI-9PointAlignment */ = {
+		33A646161CDAE3FC00944E04 /* BSText-9PointAlignment */ = {
 			isa = PBXGroup;
 			children = (
-				33A645FE1CD9A49F00944E04 /* AUITestVC.h */,
-				33A645FF1CD9A49F00944E04 /* AUITestVC.m */,
-				33A646001CD9A49F00944E04 /* AUITextAlignment.h */,
-				33A646011CD9A49F00944E04 /* AUITextField.h */,
-				33A646021CD9A49F00944E04 /* AUITextField.m */,
-				33A646031CD9A49F00944E04 /* AUITextView.h */,
-				33A646041CD9A49F00944E04 /* AUITextView.m */,
+				33A6461C1CDAE3FC00944E04 /* BSUITestVC.h */,
+				33A6461D1CDAE3FC00944E04 /* BSUITestVC.m */,
+				33A646171CDAE3FC00944E04 /* BSTextAlignment.h */,
+				33A646181CDAE3FC00944E04 /* BSTextField.h */,
+				33A646191CDAE3FC00944E04 /* BSTextField.m */,
+				33A6461A1CDAE3FC00944E04 /* BSTextView.h */,
+				33A6461B1CDAE3FC00944E04 /* BSTextView.m */,
 			);
-			path = "AUI-9PointAlignment";
+			path = "BSText-9PointAlignment";
 			sourceTree = "<group>";
 		};
 		33EFD7CF1CD1AE4600E241C3 /* FPSLabel */ = {
@@ -770,7 +770,7 @@
 				56E1FEFF1C897B1C004363C1 /* IDUIKitListVC.h */,
 				56E1FF001C897B1C004363C1 /* IDUIKitListVC.m */,
 				56E1FEFE1C897B1C004363C1 /* IDUIKitList.json */,
-				33A645FD1CD9A49F00944E04 /* AUI-9PointAlignment */,
+				33A646161CDAE3FC00944E04 /* BSText-9PointAlignment */,
 				33EFD7CF1CD1AE4600E241C3 /* FPSLabel */,
 				56E1FF031C897B77004363C1 /* OCAndJS */,
 				56E1FF091C8995CA004363C1 /* OCPatch */,
@@ -975,6 +975,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33A6461F1CDAE3FC00944E04 /* BSTextView.m in Sources */,
 				563FC9751C9B7F0E00588A54 /* Any.pbobjc.m in Sources */,
 				562CA1D81C9A9FBB00B6FE67 /* GPBExtensionInternals.m in Sources */,
 				56E0BE8F1C8160ED00F6E7DA /* IDGenericsTypeVC.m in Sources */,
@@ -986,9 +987,7 @@
 				562CA1F71C9AA3B200B6FE67 /* GPBDescriptor.m in Sources */,
 				564BA8CE1C82DFA5001A0A07 /* IDUIViewVC.m in Sources */,
 				562CA1EE1C9AA24D00B6FE67 /* GPBCodedOutputStream.m in Sources */,
-				33A646071CD9A49F00944E04 /* AUITextView.m in Sources */,
 				56E0BE7F1C813FB700F6E7DA /* IDBaseVC.m in Sources */,
-				33A646051CD9A49F00944E04 /* AUITestVC.m in Sources */,
 				33EFD7D51CD1AEA800E241C3 /* NMFPSLabel.m in Sources */,
 				5652167E1C86C52400A8E5A9 /* IDPerson.m in Sources */,
 				562CA2671C9AB35800B6FE67 /* Api.pbobjc.m in Sources */,
@@ -1000,6 +999,7 @@
 				568F89B41C803883009A27C5 /* IDNSCacheVC.m in Sources */,
 				56F21B341C8BF277001732BF /* IDProtocolBufferVC.m in Sources */,
 				562CA2091C9AA3D100B6FE67 /* GPBUtilities.m in Sources */,
+				33A646201CDAE3FC00944E04 /* BSUITestVC.m in Sources */,
 				56F21B2F1C8BDFAF001732BF /* HDPerson.m in Sources */,
 				562CA2071C9AA3D100B6FE67 /* GPBArray.m in Sources */,
 				568F896A1C7FFA05009A27C5 /* IDHomeListVC.m in Sources */,
@@ -1029,7 +1029,6 @@
 				56E1FEFC1C897000004363C1 /* IDBlockVC.m in Sources */,
 				56E0BE8B1C815BBD00F6E7DA /* IDNSArrayVC.m in Sources */,
 				5647D77A1C8C067700CD6F80 /* Person.pbobjc.m in Sources */,
-				33A646061CD9A49F00944E04 /* AUITextField.m in Sources */,
 				56F75CB51C840A9A000F63BF /* IDCAAnimationVC.m in Sources */,
 				562CA1ED1C9AA24D00B6FE67 /* GPBCodedInputStream.m in Sources */,
 				562CA1E41C9AA22E00B6FE67 /* GPBUnknownFieldSet.m in Sources */,
@@ -1037,6 +1036,7 @@
 				56DFB26F1C84164600F750E8 /* IDCAAnimationTestView.m in Sources */,
 				3329C6851CAE24E2000E62D6 /* IDFuncArgsVC.m in Sources */,
 				33EFD7D21CD1AE6400E241C3 /* IDFPSLabelVC.m in Sources */,
+				33A6461E1CDAE3FC00944E04 /* BSTextField.m in Sources */,
 				562CA2081C9AA3D100B6FE67 /* GPBDictionary.m in Sources */,
 				568F89971C8005BA009A27C5 /* IDTechListItemModel.m in Sources */,
 				562CA26C1C9AB35800B6FE67 /* SourceContext.pbobjc.m in Sources */,
