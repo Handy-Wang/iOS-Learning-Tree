@@ -122,7 +122,8 @@ static char AjxBorderCornerRadiusLayerAssObj;
     
     if (ajxBorderWidthAndColorLayer) {
         ajxBorderWidthAndColorLayer.path = pathRef;
-        //todo....由于path变了，所以要更新border
+        //todo....由于path变了，所以要更新border        
+//        [self ajx_setBorderWidth:2];
     }
     
     self.mask = ajxBorderCornerRadiusLayer;
