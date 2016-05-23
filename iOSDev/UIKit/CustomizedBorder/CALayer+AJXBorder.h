@@ -14,6 +14,6 @@
 
 - (void)ajx_setBorderColor:(CGColorRef)borderColor;
 
-- (void)ajx_setCornerRadius:(CGFloat)cornerRadius andRectCorner:(UIRectCorner)rectCorner;
+- (void)ajx_setCornerRadius:(UIEdgeInsets)cornerRadius;
 
 @end

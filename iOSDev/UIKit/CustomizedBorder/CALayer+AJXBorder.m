@@ -37,25 +37,29 @@ static char AjxBorderCornerRadiusLayerAssObj;
         }
     }
     
+    CGPathRef pathRef = nil;
     if (ajxBorderCornerRadiusLayer) {
-        //        self.borderWidth = 0;
-        
-        ajxBorderWidthAndColorLayer.path = ajxBorderCornerRadiusLayer.path;
+        pathRef = CGPathRetain(ajxBorderCornerRadiusLayer.path);
         
     } else {
-        CGRect pathRect = CGRectInset(self.bounds, borderWidth/2.0f, borderWidth/2.0f);
-        UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRoundedRect:pathRect
-                                                         byRoundingCorners:0
-                                                               cornerRadii:CGSizeZero];
-        [bezierPath closePath];
-        ajxBorderWidthAndColorLayer.path = bezierPath.CGPath;
-        //        [ajxBorderWidthAndColorLayer removeFromSuperlayer];
-        //        [self setAjxBorderWidthAndColorLayer:nil];
-        //        self.borderWidth = borderWidth;
+        pathRef = CGPathCreateWithRect(self.bounds, NULL);
     }
     
+    UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, [UIScreen mainScreen].scale);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetLineWidth(context, borderWidth*0.5);
+    CGContextSetStrokeColorWithColor(context, ajxBorderWidthAndColorLayer.strokeColor);
+    CGContextSetFillColor(context, nil);
+    CGContextAddPath(context, pathRef);
+    CGContextDrawPath(context, kCGPathStroke);
+    UIImage *borderImg = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
     ajxBorderWidthAndColorLayer.frame = self.bounds;
-    ajxBorderWidthAndColorLayer.lineWidth = borderWidth;
+//    ajxBorderWidthAndColorLayer.backgroundColor = [UIColor colorWithPatternImage:borderImg].CGColor;
+    ajxBorderWidthAndColorLayer.contents = (__bridge id _Nullable)(borderImg.CGImage);
+    
+    CGPathRelease(pathRef);
 }
 
 - (void)ajx_setBorderColor:(CGColorRef)borderColor {
@@ -66,29 +70,62 @@ static char AjxBorderCornerRadiusLayerAssObj;
     }
 }
 
-- (void)ajx_setCornerRadius:(CGFloat)cornerRadius andRectCorner:(UIRectCorner)rectCorner {
+- (void)ajx_setCornerRadius:(UIEdgeInsets)cornerRadius {
     AJXBorderLayer *ajxBorderCornerRadiusLayer = [self ajxBorderCornerRadiusLayer];
     AJXBorderLayer *ajxBorderWidthAndColorLayer = [self ajxBorderWidthAndColorLayer];
-    UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds
-                                                     byRoundingCorners:rectCorner
-                                                           cornerRadii:CGSizeMake(cornerRadius, cornerRadius)];
-    [bezierPath closePath];
+    
+    CGMutablePathRef pathRef = CGPathCreateMutable();
+    if (cornerRadius.top > 0) {
+        CGFloat startAngle = -M_PI;
+        CGFloat endAngle = -M_PI/2.0f;
+        CGPathAddArc(pathRef, NULL, cornerRadius.top*0.5, cornerRadius.top*0.5, cornerRadius.top*0.5, startAngle, endAngle, NO);
+    } else {
+        CGPathMoveToPoint(pathRef, NULL, 0, 0);
+    }
+    
+    if (cornerRadius.right > 0) {
+        CGPathAddLineToPoint(pathRef, NULL, self.bounds.size.width-cornerRadius.right*0.5, 0);
+        CGFloat startAngle = -M_PI/2.0f;
+        CGFloat endAngle = 0.0f;
+        CGPathAddArc(pathRef, NULL, self.bounds.size.width-cornerRadius.right*0.5, cornerRadius.right*0.5, cornerRadius.right*0.5, startAngle, endAngle, NO);
+    } else {
+        CGPathAddLineToPoint(pathRef, NULL, self.bounds.size.width, 0);
+    }
+    
+    if (cornerRadius.bottom > 0) {
+        CGPathAddLineToPoint(pathRef, NULL, self.bounds.size.width, self.bounds.size.height-cornerRadius.bottom*0.5);
+        CGFloat startAngle = 0.0f;
+        CGFloat endAngle = M_PI/2.0f;
+        CGPathAddArc(pathRef, NULL, self.bounds.size.width-cornerRadius.bottom*0.5, self.bounds.size.height-cornerRadius.bottom*0.5, cornerRadius.bottom*0.5, startAngle, endAngle, NO);
+    } else {
+        CGPathAddLineToPoint(pathRef, NULL, self.bounds.size.width, self.bounds.size.height);
+    }
+    
+    if (cornerRadius.left > 0) {
+        CGPathAddLineToPoint(pathRef, NULL, cornerRadius.left*0.5, self.bounds.size.height);
+        CGFloat startAngle = M_PI/2.0f;
+        CGFloat endAngle = M_PI;
+        CGPathAddArc(pathRef, NULL, cornerRadius.left*0.5, self.bounds.size.height-cornerRadius.left*0.5, cornerRadius.left*0.5, startAngle, endAngle, NO);
+    } else {
+        CGPathAddLineToPoint(pathRef, NULL, 0, self.bounds.size.height);
+    }
+    CGPathCloseSubpath(pathRef);
     
     if (!ajxBorderCornerRadiusLayer) {
         ajxBorderCornerRadiusLayer = [AJXBorderLayer new];
         [self setAjxBorderCornerRadiusLayer:ajxBorderCornerRadiusLayer];
     }
-    ajxBorderCornerRadiusLayer.path = bezierPath.CGPath;
-    ajxBorderCornerRadiusLayer.frame = self.bounds;
+    ajxBorderCornerRadiusLayer.path = pathRef;
     
     if (ajxBorderWidthAndColorLayer) {
-        ajxBorderWidthAndColorLayer.path = bezierPath.CGPath;
-        ajxBorderWidthAndColorLayer.lineWidth = ajxBorderWidthAndColorLayer.lineWidth;
-        ajxBorderWidthAndColorLayer.strokeColor = ajxBorderWidthAndColorLayer.strokeColor;
+        ajxBorderWidthAndColorLayer.path = pathRef;
+        //todo 重画border
     }
     
     self.mask = ajxBorderCornerRadiusLayer;
     self.masksToBounds = YES;
+    
+    CGPathRelease(pathRef);
 }
 
 #pragma mark - ====================Getter & Setter methods====================
