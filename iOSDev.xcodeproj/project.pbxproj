@@ -10,6 +10,8 @@
 		330070B71CCE504700C2C432 /* IDUILabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 330070B61CCE504700C2C432 /* IDUILabelVC.m */; };
 		3329C67D1CAE23E9000E62D6 /* mountian.png in Resources */ = {isa = PBXBuildFile; fileRef = 3329C67C1CAE23E9000E62D6 /* mountian.png */; };
 		3329C6851CAE24E2000E62D6 /* IDFuncArgsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3329C6841CAE24E2000E62D6 /* IDFuncArgsVC.m */; };
+		332D56731CF2B99800A86A97 /* IDCustomizedBorderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 332D56721CF2B99800A86A97 /* IDCustomizedBorderVC.m */; };
+		332D56791CF2BA3900A86A97 /* CALayer+AJXBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 332D56781CF2BA3900A86A97 /* CALayer+AJXBorder.m */; };
 		3375A6D61CB7C806003C5E80 /* IDMainThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3375A6D51CB7C806003C5E80 /* IDMainThreadVC.m */; };
 		33A2E6861CB565D200990B4E /* IDRuntimeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A2E6851CB565D200990B4E /* IDRuntimeVC.m */; };
 		33A6461E1CDAE3FC00944E04 /* BSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A646191CDAE3FC00944E04 /* BSTextField.m */; };
@@ -113,6 +115,10 @@
 		3329C67C1CAE23E9000E62D6 /* mountian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mountian.png; sourceTree = "<group>"; };
 		3329C6831CAE24E2000E62D6 /* IDFuncArgsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDFuncArgsVC.h; sourceTree = "<group>"; };
 		3329C6841CAE24E2000E62D6 /* IDFuncArgsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDFuncArgsVC.m; sourceTree = "<group>"; };
+		332D56711CF2B99800A86A97 /* IDCustomizedBorderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDCustomizedBorderVC.h; sourceTree = "<group>"; };
+		332D56721CF2B99800A86A97 /* IDCustomizedBorderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDCustomizedBorderVC.m; sourceTree = "<group>"; };
+		332D56771CF2BA3900A86A97 /* CALayer+AJXBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+AJXBorder.h"; sourceTree = "<group>"; };
+		332D56781CF2BA3900A86A97 /* CALayer+AJXBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AJXBorder.m"; sourceTree = "<group>"; };
 		3375A6D41CB7C806003C5E80 /* IDMainThreadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDMainThreadVC.h; sourceTree = "<group>"; };
 		3375A6D51CB7C806003C5E80 /* IDMainThreadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDMainThreadVC.m; sourceTree = "<group>"; };
 		33A2E6841CB565D200990B4E /* IDRuntimeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDRuntimeVC.h; sourceTree = "<group>"; };
@@ -330,6 +336,17 @@
 				3329C6841CAE24E2000E62D6 /* IDFuncArgsVC.m */,
 			);
 			path = FuncArgs;
+			sourceTree = "<group>";
+		};
+		332D56701CF2B97500A86A97 /* CustomizedBorder */ = {
+			isa = PBXGroup;
+			children = (
+				332D56711CF2B99800A86A97 /* IDCustomizedBorderVC.h */,
+				332D56721CF2B99800A86A97 /* IDCustomizedBorderVC.m */,
+				332D56771CF2BA3900A86A97 /* CALayer+AJXBorder.h */,
+				332D56781CF2BA3900A86A97 /* CALayer+AJXBorder.m */,
+			);
+			path = CustomizedBorder;
 			sourceTree = "<group>";
 		};
 		3375A6D31CB7C7E5003C5E80 /* MainThread */ = {
@@ -775,6 +792,7 @@
 				56E1FF031C897B77004363C1 /* OCAndJS */,
 				56E1FF091C8995CA004363C1 /* OCPatch */,
 				330070B41CCE501700C2C432 /* UILabel */,
+				332D56701CF2B97500A86A97 /* CustomizedBorder */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -979,6 +997,7 @@
 				563FC9751C9B7F0E00588A54 /* Any.pbobjc.m in Sources */,
 				562CA1D81C9A9FBB00B6FE67 /* GPBExtensionInternals.m in Sources */,
 				56E0BE8F1C8160ED00F6E7DA /* IDGenericsTypeVC.m in Sources */,
+				332D56791CF2BA3900A86A97 /* CALayer+AJXBorder.m in Sources */,
 				562CA2701C9AB35800B6FE67 /* Wrappers.pbobjc.m in Sources */,
 				562CA1DA1C9A9FBB00B6FE67 /* GPBRootObject.m in Sources */,
 				56E0BE7B1C813F6100F6E7DA /* IDNSRunLoopVC.m in Sources */,
@@ -987,6 +1006,7 @@
 				562CA1F71C9AA3B200B6FE67 /* GPBDescriptor.m in Sources */,
 				564BA8CE1C82DFA5001A0A07 /* IDUIViewVC.m in Sources */,
 				562CA1EE1C9AA24D00B6FE67 /* GPBCodedOutputStream.m in Sources */,
+				332D56731CF2B99800A86A97 /* IDCustomizedBorderVC.m in Sources */,
 				56E0BE7F1C813FB700F6E7DA /* IDBaseVC.m in Sources */,
 				33EFD7D51CD1AEA800E241C3 /* NMFPSLabel.m in Sources */,
 				5652167E1C86C52400A8E5A9 /* IDPerson.m in Sources */,
@@ -1177,6 +1197,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Libs",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSDev/iOSDevPrefixHeader.pch";
@@ -1197,6 +1218,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Libs",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSDev/iOSDevPrefixHeader.pch";
