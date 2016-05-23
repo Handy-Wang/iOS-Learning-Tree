@@ -29,6 +29,7 @@
     UILabel *_label8;
     UILabel *_label9;
     UILabel *_label10;
+    UILabel *_label11;
 }
 @end
 
@@ -79,19 +80,23 @@
     _label9 = [self labelWithFrame:group1Frame andText:@"左侧有圆角"];
     _label9.ts_left = _label8.ts_right;
     _label9.ts_top = _label1.ts_bottom;
+    [_label9.layer ajx_setBorderWidth:4];
     [_label9.layer ajx_setCornerRadius:UIEdgeInsetsFromString(@"{20,40,0,0}")];
     
     _label10 = [self labelWithFrame:group1Frame andText:@"全有圆角"];
     _label10.ts_left = _label9.ts_right;
     _label10.ts_top = _label1.ts_bottom;
+    [_label10.layer ajx_setBorderWidth:4];
     [_label10.layer ajx_setCornerRadius:UIEdgeInsetsFromString(@"{10,20,30,40}")];
+    [_label10.layer ajx_setBorderColor:[UIColor greenColor].CGColor];
+
     
     //只有边框宽度
-    _label6 = [self labelWithFrame:group1Frame andText:@"只有边框宽度、无颜色"];
-    _label6.ts_left = 0;
-    _label6.ts_top = _label1.ts_bottom;
-    _label6.ts_width = self.view.ts_width;
-    [_label6.layer ajx_setBorderWidth:4];
+    _label11 = [self labelWithFrame:group1Frame andText:@"只有边框宽度、无颜色"];
+    _label11.ts_left = 0;
+    _label11.ts_top = _label6.ts_bottom;
+    _label11.ts_width = self.view.ts_width;
+    [_label11.layer ajx_setBorderWidth:4];
     
     //只有边框颜色
 }

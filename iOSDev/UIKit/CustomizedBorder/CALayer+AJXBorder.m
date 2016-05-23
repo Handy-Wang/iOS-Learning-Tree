@@ -18,11 +18,13 @@
 //####################################################################
 
 static char AjxBorderWidthAndColorLayerAssObj;
+static char AjxBorderColorAssObj;
 static char AjxBorderCornerRadiusLayerAssObj;
 
 @implementation CALayer(AJX_Border)
 
 - (void)ajx_setBorderWidth:(CGFloat)borderWidth {
+    CGColorRef borderColor = [self ajxBorderColor];
     AJXBorderLayer *ajxBorderWidthAndColorLayer = [self ajxBorderWidthAndColorLayer];
     AJXBorderLayer *ajxBorderCornerRadiusLayer = [self ajxBorderCornerRadiusLayer];
     
@@ -32,8 +34,8 @@ static char AjxBorderCornerRadiusLayerAssObj;
         [self addSublayer:ajxBorderWidthAndColorLayer];
         ajxBorderWidthAndColorLayer.fillColor = nil;
         
-        if (!(ajxBorderWidthAndColorLayer.strokeColor)) {
-            ajxBorderWidthAndColorLayer.strokeColor = [UIColor blackColor].CGColor;
+        if (!borderColor) {
+            borderColor = [UIColor blackColor].CGColor;
         }
     }
     
@@ -48,7 +50,7 @@ static char AjxBorderCornerRadiusLayerAssObj;
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, [UIScreen mainScreen].scale);
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetLineWidth(context, borderWidth*0.5);
-    CGContextSetStrokeColorWithColor(context, ajxBorderWidthAndColorLayer.strokeColor);
+    CGContextSetStrokeColorWithColor(context, borderColor);
     CGContextSetFillColor(context, nil);
     CGContextAddPath(context, pathRef);
     CGContextDrawPath(context, kCGPathStroke);
@@ -56,18 +58,19 @@ static char AjxBorderCornerRadiusLayerAssObj;
     UIGraphicsEndImageContext();
     
     ajxBorderWidthAndColorLayer.frame = self.bounds;
-//    ajxBorderWidthAndColorLayer.backgroundColor = [UIColor colorWithPatternImage:borderImg].CGColor;
-    ajxBorderWidthAndColorLayer.contents = (__bridge id _Nullable)(borderImg.CGImage);
+    ajxBorderWidthAndColorLayer.contents = (__bridge id _Nullable)(borderImg.CGImage);//关键
+    self.masksToBounds = YES;//关键
     
     CGPathRelease(pathRef);
 }
 
 - (void)ajx_setBorderColor:(CGColorRef)borderColor {
-    AJXBorderLayer *ajxBorderWidthAndColorLayer = [self ajxBorderWidthAndColorLayer];
-    
-    if (ajxBorderWidthAndColorLayer) {
-        ajxBorderWidthAndColorLayer.strokeColor = borderColor;
+    if (!borderColor) {
+        borderColor = [UIColor blackColor].CGColor;
     }
+    [self setAjxBorderColor:borderColor];
+    //todo 更新border颜色
+    //todo 有些边框偏细？？？
 }
 
 - (void)ajx_setCornerRadius:(UIEdgeInsets)cornerRadius {
@@ -119,7 +122,7 @@ static char AjxBorderCornerRadiusLayerAssObj;
     
     if (ajxBorderWidthAndColorLayer) {
         ajxBorderWidthAndColorLayer.path = pathRef;
-        //todo 重画border
+        //todo....由于path变了，所以要更新border
     }
     
     self.mask = ajxBorderCornerRadiusLayer;
@@ -136,6 +139,14 @@ static char AjxBorderCornerRadiusLayerAssObj;
 
 - (AJXBorderLayer *)ajxBorderWidthAndColorLayer {
     return objc_getAssociatedObject(self, &AjxBorderWidthAndColorLayerAssObj);
+}
+
+- (void)setAjxBorderColor:(CGColorRef)color {
+    objc_setAssociatedObject(self, &AjxBorderColorAssObj, (__bridge id)(color), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (CGColorRef)ajxBorderColor {
+    return (__bridge CGColorRef)(objc_getAssociatedObject(self, &AjxBorderColorAssObj));
 }
 
 - (void)setAjxBorderCornerRadiusLayer:(AJXBorderLayer *)ajxBorderCornerRadiusLayer {
