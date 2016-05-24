@@ -19,14 +19,16 @@
 
 static char AjxBorderWidthAndColorLayerAssObj;
 static char AjxBorderColorAssObj;
+static char AjxBorderWidthAssObj;
 static char AjxBorderCornerRadiusLayerAssObj;
 
 @implementation CALayer(AJX_Border)
 
 - (void)ajx_setBorderWidth:(CGFloat)borderWidth {
-    CGColorRef borderColor = [self ajxBorderColor];
     AJXBorderLayer *ajxBorderWidthAndColorLayer = [self ajxBorderWidthAndColorLayer];
     AJXBorderLayer *ajxBorderCornerRadiusLayer = [self ajxBorderCornerRadiusLayer];
+    CGColorRef borderColor = [self ajxBorderColor];
+    [self setAjxBorderWidth:borderWidth*0.5];
     
     if (!ajxBorderWidthAndColorLayer) {
         ajxBorderWidthAndColorLayer = [AJXBorderLayer new];
@@ -49,7 +51,7 @@ static char AjxBorderCornerRadiusLayerAssObj;
     
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, [UIScreen mainScreen].scale);
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetLineWidth(context, borderWidth*0.5);
+    CGContextSetLineWidth(context, [self ajxBorderWidth]);
     CGContextSetStrokeColorWithColor(context, borderColor);
     CGContextSetFillColor(context, nil);
     CGContextAddPath(context, pathRef);
@@ -69,8 +71,12 @@ static char AjxBorderCornerRadiusLayerAssObj;
         borderColor = [UIColor blackColor].CGColor;
     }
     [self setAjxBorderColor:borderColor];
-    //todo 更新border颜色
-    //todo 有些边框偏细？？？
+    
+    AJXBorderLayer *ajxBorderWidthAndColorLayer = [self ajxBorderWidthAndColorLayer];
+    if (ajxBorderWidthAndColorLayer) {
+        [self ajx_setBorderWidth:[self ajxBorderWidth]];
+    }
+    //todo 为什么边框偏细？？？
 }
 
 - (void)ajx_setCornerRadius:(UIEdgeInsets)cornerRadius {
@@ -122,8 +128,7 @@ static char AjxBorderCornerRadiusLayerAssObj;
     
     if (ajxBorderWidthAndColorLayer) {
         ajxBorderWidthAndColorLayer.path = pathRef;
-        //todo....由于path变了，所以要更新border        
-//        [self ajx_setBorderWidth:2];
+        [self ajx_setBorderWidth:[self ajxBorderWidth]];
     }
     
     self.mask = ajxBorderCornerRadiusLayer;
@@ -148,6 +153,14 @@ static char AjxBorderCornerRadiusLayerAssObj;
 
 - (CGColorRef)ajxBorderColor {
     return (__bridge CGColorRef)(objc_getAssociatedObject(self, &AjxBorderColorAssObj));
+}
+
+- (void)setAjxBorderWidth:(CGFloat)width {
+    objc_setAssociatedObject(self, &AjxBorderWidthAssObj, @(width), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (CGFloat)ajxBorderWidth {
+    return [objc_getAssociatedObject(self, &AjxBorderWidthAssObj) floatValue];
 }
 
 - (void)setAjxBorderCornerRadiusLayer:(AJXBorderLayer *)ajxBorderCornerRadiusLayer {
