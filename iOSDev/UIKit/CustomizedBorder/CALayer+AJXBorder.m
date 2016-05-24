@@ -34,6 +34,7 @@ static char AjxBorderCornerRadiusLayerAssObj;
         ajxBorderWidthAndColorLayer = [AJXBorderLayer new];
         [self setAjxBorderWidthAndColorLayer:ajxBorderWidthAndColorLayer];
         [self addSublayer:ajxBorderWidthAndColorLayer];
+        ajxBorderWidthAndColorLayer.fillColor = nil;
         
         if (!borderColor) {
             borderColor = [UIColor blackColor].CGColor;
