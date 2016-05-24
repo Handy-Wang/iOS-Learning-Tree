@@ -34,7 +34,6 @@ static char AjxBorderCornerRadiusLayerAssObj;
         ajxBorderWidthAndColorLayer = [AJXBorderLayer new];
         [self setAjxBorderWidthAndColorLayer:ajxBorderWidthAndColorLayer];
         [self addSublayer:ajxBorderWidthAndColorLayer];
-        ajxBorderWidthAndColorLayer.fillColor = nil;
         
         if (!borderColor) {
             borderColor = [UIColor blackColor].CGColor;
@@ -53,7 +52,6 @@ static char AjxBorderCornerRadiusLayerAssObj;
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetLineWidth(context, [self ajxBorderWidth]);
     CGContextSetStrokeColorWithColor(context, borderColor);
-    CGContextSetFillColor(context, nil);
     CGContextAddPath(context, pathRef);
     CGContextDrawPath(context, kCGPathStroke);
     UIImage *borderImg = UIGraphicsGetImageFromCurrentImageContext();
