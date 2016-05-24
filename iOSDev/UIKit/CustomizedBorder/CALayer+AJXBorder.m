@@ -125,6 +125,7 @@ static char AjxBorderCornerRadiusLayerAssObj;
         [self setAjxBorderCornerRadiusLayer:ajxBorderCornerRadiusLayer];
     }
     ajxBorderCornerRadiusLayer.path = pathRef;
+    //注意：千万不要给maskLayer设置frame或bounds
     
     if (ajxBorderWidthAndColorLayer) {
         ajxBorderWidthAndColorLayer.path = pathRef;
