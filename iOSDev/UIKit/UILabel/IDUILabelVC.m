@@ -8,6 +8,7 @@
 
 #import "IDUILabelVC.h"
 #import "NSString(TS_Attributed).h"
+#import "BSLabel.h"
 
 @interface IDUILabelVC ()
 
@@ -24,10 +25,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor blackColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     [self calculateMultiLine];
     [self testBaseline];
+    [self testNumberOfLineAndParagraphStyle];
+    
 }
 
 - (void)calculateMultiLine {
@@ -95,6 +98,26 @@
                                                                      self.view.ts_width, 1)];
     self.labelBaseline.backgroundColor = [UIColor redColor];
     [self.view addSubview:self.labelBaseline];
+}
+
+/**
+ *  设置了paragraph style那么numberOfLines必须为非1，这样才谈得上paragraph style；
+ *  如果使用numberOfLines默认1，会导致UILabel中drawTextInRect永远把文本从(0,0)坐标点开始画
+ */
+- (void)testNumberOfLineAndParagraphStyle {
+    NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+    style.lineSpacing = 10;
+    
+    
+    BSLabel *bsLabel = [[BSLabel alloc] initWithFrame:CGRectMake(0, 64, 200, 200)];
+    bsLabel.backgroundColor = [UIColor redColor];
+    bsLabel.layer.borderColor = [UIColor redColor].CGColor;
+    bsLabel.layer.borderWidth = 1;
+    bsLabel.numberOfLines = 0;
+    bsLabel.attributedText = [[NSAttributedString alloc] initWithString:@"动画间隔决"
+                                                             attributes:@{NSForegroundColorAttributeName:[UIColor blueColor],
+                                                                          NSParagraphStyleAttributeName:style}];
+    [self.view addSubview:bsLabel];
 }
 
 @end
