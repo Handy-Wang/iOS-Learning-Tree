@@ -13,6 +13,7 @@
 @property (nonatomic, assign) UIEdgeInsets realTextContainerInset;
 @property (nonatomic, assign) BOOL needScrollToBottom;
 @property (nonatomic, strong) NSMutableParagraphStyle *textParagraphStyle;
+@property (nonatomic, assign) BOOL updateTexeFromSettingText;
 
 @end
 
@@ -65,11 +66,20 @@
 #pragma mark - Override methods - text
 
 - (void)setAttributedText:(NSAttributedString *)attrText {
-    NSDictionary *attr = [attrText attributesAtIndex:0 effectiveRange:NULL];
-    NSParagraphStyle *paragraphStyle = attr[NSParagraphStyleAttributeName];
-    _textParagraphStyle = [paragraphStyle mutableCopy];
-    [self applyTextLinespacingIfNeeded:attrText];
+    NSMutableParagraphStyle *paragraphStyle = nil;
+    if (attrText.length > 0) {
+        NSRange range = NSMakeRange(0, attrText.length);
+        NSDictionary *attr = [attrText attributesAtIndex:0 effectiveRange:&range];
+        paragraphStyle = [attr[NSParagraphStyleAttributeName] mutableCopy];
+    }
     
+    if (_updateTexeFromSettingText) {
+        _updateTexeFromSettingText = NO;
+        paragraphStyle.lineSpacing = _linespacing;
+    }
+    _textParagraphStyle = paragraphStyle;
+    
+    [self applyTextLinespacingIfNeeded:attrText];
     [self layoutTextAlignment];
 }
 
@@ -78,11 +88,9 @@
     _textParagraphStyle = nil;
     [self createLinespacingStyleIfNeeded];
     _textParagraphStyle.lineSpacing = _linespacing;
+    _updateTexeFromSettingText = YES;
     
-    NSAttributedString *attrText = [[NSAttributedString alloc] initWithString:text];
-    [self applyTextLinespacingIfNeeded:attrText];
-    
-    [self layoutTextAlignment];
+    [super setText:text];
 }
 
 #pragma mark - Override methods - text alignment
@@ -222,11 +230,6 @@
         _textParagraphStyle.maximumLineHeight = self.font.lineHeight;
         _textParagraphStyle.minimumLineHeight = self.font.lineHeight;
         _textParagraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
-//    paragraphStyleForRender.alignment = NSTextAlignmentLeft;
-//    NSMutableDictionary *attrsForRender = [newAttrs mutableCopy];
-//        NSMutableDictionary *attrsForRender = [NSMutableDictionary dictionary];
-//        attrsForRender[NSParagraphStyleAttributeName] = ps;
-//        NSAttributedString *attrStrForRender = [[NSAttributedString alloc] initWithString:text attributes:attrsForRender];
     }
 }
 
