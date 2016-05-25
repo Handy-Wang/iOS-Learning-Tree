@@ -84,12 +84,7 @@
 }
 
 - (void)setText:(NSString *)text {
-    //重置_textParagraphStyle，为了防止先设置attrText再设置text时，attrText中的样式对text的影响
-    _textParagraphStyle = nil;
-    [self createLinespacingStyleIfNeeded];
-    _textParagraphStyle.lineSpacing = _linespacing;
     _updateTexeFromSettingText = YES;
-    
     [super setText:text];
 }
 
