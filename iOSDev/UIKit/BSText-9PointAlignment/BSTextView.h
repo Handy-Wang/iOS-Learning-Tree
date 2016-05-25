@@ -12,5 +12,6 @@
 @interface BSTextView : UITextView
 
 @property (nonatomic, assign) BSTextAlignment text9PointAlignment;
+@property (nonatomic, assign) CGFloat linespacing;
 
 @end

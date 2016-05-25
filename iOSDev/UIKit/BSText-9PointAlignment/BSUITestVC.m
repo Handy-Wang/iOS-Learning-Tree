@@ -91,8 +91,10 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blackColor];
     
-    [self layoutTextViews];
-    [self lauoutTextFields];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self layoutTextViews];
+        [self lauoutTextFields];
+    });
 }
 
 - (void)layoutTextViews {
@@ -104,75 +106,143 @@
     [self.view addSubview:_textViewsTitleLabel];
     
     NSString *textStr = @"以前，如果我们想实现复杂的文本排版，例如以前，如果我们想实现复杂的文本排版以前，如果我们想实现复杂的文本排版，例如以前，如果我们想实现复杂的文本排版以前，如果我们想实现复杂的文本排版，例如以前，如果我们想实现复杂的文本排版以前，如果我们想实现复杂的文本排版，例如以前，如果我们想实现复杂的文本排版";
+    CGFloat smallLinespacing = 5;
+    CGFloat bigLinespacing = 20;
     
+    #pragma mark - ##_textViewLT####################################################################################
     _textViewLT = [[BSTextView alloc] initWithFrame:kTextViewFrameLT];
     _textViewLT.backgroundColor = [UIColor whiteColor];
     _textViewLT.text9PointAlignment = BSTextAlignmentLeftTop;
     _textViewLT.layer.borderColor = [UIColor redColor].CGColor;
     _textViewLT.layer.borderWidth = 1;
-    _textViewLT.text = textStr;
+    _textViewLT.text = @"先设置普通文本, 再设置linespacing=5";
+    _textViewLT.linespacing = smallLinespacing;
     [self.view addSubview:_textViewLT];
     
+    #pragma mark - ##_textViewCT####################################################################################
     _textViewCT = [[BSTextView alloc] initWithFrame:kTextViewFrameCT];
     _textViewCT.backgroundColor = [UIColor whiteColor];
     _textViewCT.text9PointAlignment = BSTextAlignmentCenterTop;
     _textViewCT.layer.borderColor = [UIColor redColor].CGColor;
     _textViewCT.layer.borderWidth = 1;
-    _textViewCT.text = textStr;
+    _textViewCT.linespacing = smallLinespacing;
+    _textViewCT.text = @"先设置linespacing=5, 再设置普通文本";
     [self.view addSubview:_textViewCT];
     
+    #pragma mark - ##_textViewRT####################################################################################
     _textViewRT = [[BSTextView alloc] initWithFrame:kTextViewFrameRT];
     _textViewRT.backgroundColor = [UIColor whiteColor];
     _textViewRT.text9PointAlignment = BSTextAlignmentRightTop;
     _textViewRT.layer.borderColor = [UIColor redColor].CGColor;
     _textViewRT.layer.borderWidth = 1;
-    _textViewRT.text = textStr;
+    //---
+    NSString *rtText = @"先设置attr文本 linespacing=0, 再设置linespacing=5";
+    NSMutableParagraphStyle *rtPS = [[NSMutableParagraphStyle alloc] init];
+    rtPS.lineSpacing = 0;
+    rtPS.lineBreakMode = NSLineBreakByWordWrapping;
+    NSDictionary *rtAttr = @{NSForegroundColorAttributeName:[UIColor blackColor], NSParagraphStyleAttributeName:rtPS};
+    NSAttributedString *rtAttrText = [[NSAttributedString alloc] initWithString:rtText attributes:rtAttr];
+    //---
+    _textViewRT.attributedText = rtAttrText;
+    _textViewRT.linespacing = smallLinespacing;
     [self.view addSubview:_textViewRT];
     
     //----------------------------------------------------------------
     
+    #pragma mark - ##_textViewLC####################################################################################
     _textViewLC = [[BSTextView alloc] initWithFrame:kTextViewFrameLC];
     _textViewLC.backgroundColor = [UIColor whiteColor];
     _textViewLC.text9PointAlignment = BSTextAlignmentLeftCenter;
     _textViewLC.layer.borderColor = [UIColor redColor].CGColor;
     _textViewLC.layer.borderWidth = 1;
-    _textViewLC.text = textStr;
+    _textViewLC.linespacing = smallLinespacing;
+    //---
+    NSString *lcText = @"先设置linespacing=5, 再设置attr文本 linespacing=0";
+    NSMutableParagraphStyle *lcPS = [[NSMutableParagraphStyle alloc] init];
+    lcPS.lineSpacing = 0;
+    lcPS.lineBreakMode = NSLineBreakByWordWrapping;
+    NSDictionary *lcAttr = @{NSForegroundColorAttributeName:[UIColor blackColor], NSParagraphStyleAttributeName:lcPS};
+    NSAttributedString *lcAttrText = [[NSAttributedString alloc] initWithString:lcText attributes:lcAttr];
+    //---
+    _textViewLC.attributedText = lcAttrText;
     [self.view addSubview:_textViewLC];
     
+    #pragma mark - ##_textViewC####################################################################################
     _textViewC = [[BSTextView alloc] initWithFrame:kTextViewFrameC];
     _textViewC.backgroundColor = [UIColor whiteColor];
     _textViewC.text9PointAlignment = BSTextAlignmentCenter;
     _textViewC.layer.borderColor = [UIColor redColor].CGColor;
     _textViewC.layer.borderWidth = 1;
-    _textViewC.text = textStr;
+    //---
+    NSString *cText = @"先设置attr文本 linespacing=20, 再设置linespacing=5";
+    NSMutableParagraphStyle *cPS = [[NSMutableParagraphStyle alloc] init];
+    cPS.lineSpacing = bigLinespacing;
+    cPS.lineBreakMode = NSLineBreakByWordWrapping;
+    NSDictionary *cAttr = @{NSForegroundColorAttributeName:[UIColor blackColor], NSParagraphStyleAttributeName:cPS};
+    NSAttributedString *cAttrText = [[NSAttributedString alloc] initWithString:cText attributes:cAttr];
+    //---
+    _textViewC.attributedText = cAttrText;
+    _textViewC.linespacing = smallLinespacing;
     [self.view addSubview:_textViewC];
     
+    #pragma mark - ##_textViewRC####################################################################################
     _textViewRC = [[BSTextView alloc] initWithFrame:kTextViewFrameRC];
     _textViewRC.backgroundColor = [UIColor whiteColor];
     _textViewRC.text9PointAlignment = BSTextAlignmentRightCenter;
     _textViewRC.layer.borderColor = [UIColor redColor].CGColor;
     _textViewRC.layer.borderWidth = 1;
-    _textViewRC.text = textStr;
+    _textViewRC.linespacing = smallLinespacing;
+    //---
+    NSString *rcText = @"先设置linespacing=5, 再设置attr文本 linespacing=20";
+    NSMutableParagraphStyle *rcPS = [[NSMutableParagraphStyle alloc] init];
+    rcPS.lineSpacing = bigLinespacing;
+    rcPS.lineBreakMode = NSLineBreakByWordWrapping;
+    NSDictionary *rcAttr = @{NSForegroundColorAttributeName:[UIColor blackColor], NSParagraphStyleAttributeName:rcPS};
+    NSAttributedString *rcAttrText = [[NSAttributedString alloc] initWithString:rcText attributes:rcAttr];
+    //---
+    _textViewRC.attributedText = rcAttrText;
     [self.view addSubview:_textViewRC];
     
     //----------------------------------------------------------------
     
+    #pragma mark - ##_textViewLB####################################################################################
     _textViewLB = [[BSTextView alloc] initWithFrame:kTextViewFrameLB];
     _textViewLB.backgroundColor = [UIColor whiteColor];
     _textViewLB.text9PointAlignment = BSTextAlignmentLeftBottom;
     _textViewLB.layer.borderColor = [UIColor redColor].CGColor;
     _textViewLB.layer.borderWidth = 1;
     _textViewLB.text = textStr;
+    //---
+    NSString *lbText = @"先设置普通文本, 再设置attr文本 linespacing=20";
+    NSMutableParagraphStyle *lbPS = [[NSMutableParagraphStyle alloc] init];
+    lbPS.lineSpacing = bigLinespacing;
+    lbPS.lineBreakMode = NSLineBreakByWordWrapping;
+    NSDictionary *lbAttr = @{NSForegroundColorAttributeName:[UIColor blackColor], NSParagraphStyleAttributeName:lbPS};
+    NSAttributedString *lbAttrText = [[NSAttributedString alloc] initWithString:lbText attributes:lbAttr];
+    //---
+    _textViewLB.attributedText = lbAttrText;
     [self.view addSubview:_textViewLB];
     
+    #pragma mark - ##_textViewCB####################################################################################
     _textViewCB = [[BSTextView alloc] initWithFrame:kTextViewFrameCB];
     _textViewCB.backgroundColor = [UIColor whiteColor];
     _textViewCB.text9PointAlignment = BSTextAlignmentCenterBottom;
     _textViewCB.layer.borderColor = [UIColor redColor].CGColor;
     _textViewCB.layer.borderWidth = 1;
-    _textViewCB.text = textStr;
+//    _textViewCB.linespacing = 5;
+    //---
+    NSString *cbText = @"先设置attr文本 linespacing=20, 再设置普通文本";
+    NSMutableParagraphStyle *cbPS = [[NSMutableParagraphStyle alloc] init];
+    cbPS.lineSpacing = bigLinespacing;
+    cbPS.lineBreakMode = NSLineBreakByWordWrapping;
+    NSDictionary *cbAttr = @{NSForegroundColorAttributeName:[UIColor blackColor], NSParagraphStyleAttributeName:cbPS};
+    NSAttributedString *cbAttrText = [[NSAttributedString alloc] initWithString:cbText attributes:cbAttr];
+    _textViewCB.attributedText = cbAttrText;
+    //---
+    _textViewCB.text = cbText;
     [self.view addSubview:_textViewCB];
     
+    #pragma mark - ##_textViewRB####################################################################################
     _textViewRB = [[BSTextView alloc] initWithFrame:kTextViewFrameRB];
     _textViewRB.backgroundColor = [UIColor whiteColor];
     _textViewRB.text9PointAlignment = BSTextAlignmentRightBottom;

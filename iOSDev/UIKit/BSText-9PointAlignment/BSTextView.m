@@ -12,10 +12,13 @@
 
 @property (nonatomic, assign) UIEdgeInsets realTextContainerInset;
 @property (nonatomic, assign) BOOL needScrollToBottom;
+@property (nonatomic, strong) NSMutableParagraphStyle *textParagraphStyle;
 
 @end
 
 @implementation BSTextView
+
+@synthesize linespacing = _linespacing;
 
 #pragma mark - Lifecycle
 
@@ -37,16 +40,48 @@
 }
 
 #pragma mark - ############### Public methods ###############
+
+- (void)setLinespacing:(CGFloat)linespacing {
+    [self createLinespacingStyleIfNeeded];
+    _linespacing = linespacing;
+    _textParagraphStyle.lineSpacing = _linespacing;
+    [self applyTextLinespacingIfNeeded:self.attributedText];
+    
+    [self layoutTextAlignment];
+}
+
+- (CGFloat)linespacing {
+    return _textParagraphStyle.lineSpacing;
+}
+
 #pragma mark - Override methods - textContainerInset
+
 - (void)setTextContainerInset:(UIEdgeInsets)textContainerInset {
     _realTextContainerInset = textContainerInset;
+    
     [self layoutTextAlignment];
 }
 
 #pragma mark - Override methods - text
 
+- (void)setAttributedText:(NSAttributedString *)attrText {
+    NSDictionary *attr = [attrText attributesAtIndex:0 effectiveRange:NULL];
+    NSParagraphStyle *paragraphStyle = attr[NSParagraphStyleAttributeName];
+    _textParagraphStyle = [paragraphStyle mutableCopy];
+    [self applyTextLinespacingIfNeeded:attrText];
+    
+    [self layoutTextAlignment];
+}
+
 - (void)setText:(NSString *)text {
-    [super setText:text];
+    //重置_textParagraphStyle，为了防止先设置attrText再设置text时，attrText中的样式对text的影响
+    _textParagraphStyle = nil;
+    [self createLinespacingStyleIfNeeded];
+    _textParagraphStyle.lineSpacing = _linespacing;
+    
+    NSAttributedString *attrText = [[NSAttributedString alloc] initWithString:text];
+    [self applyTextLinespacingIfNeeded:attrText];
+    
     [self layoutTextAlignment];
 }
 
@@ -99,7 +134,7 @@
     [self layoutTextAlignment];
 }
 
-#pragma mark - Private methods
+#pragma mark - ############### Private methods ###############
 
 - (void)bsTextViewDidChange:(UITextView *)textView
 {
@@ -167,6 +202,31 @@
     if(self.needScrollToBottom && self.text.length > 0 ) {
         self.needScrollToBottom = NO;
         [self scrollRectToVisible:CGRectMake(0, self.contentSize.height-1, self.frame.size.width, 1) animated:NO];
+    }
+}
+
+- (void)applyTextLinespacingIfNeeded:(NSAttributedString *)attrText {
+    NSMutableAttributedString *mAttrText = [attrText mutableCopy];
+    if (mAttrText.length > 0 && _textParagraphStyle) {
+        [mAttrText addAttribute:NSParagraphStyleAttributeName value:_textParagraphStyle range:NSMakeRange(0, mAttrText.length)];
+    }
+    
+    super.attributedText = mAttrText;
+}
+
+#pragma mark - ############### Getter & Setter methods ###############
+
+- (void)createLinespacingStyleIfNeeded {
+    if (!_textParagraphStyle) {
+        _textParagraphStyle = [[NSMutableParagraphStyle alloc] init];
+        _textParagraphStyle.maximumLineHeight = self.font.lineHeight;
+        _textParagraphStyle.minimumLineHeight = self.font.lineHeight;
+        _textParagraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
+//    paragraphStyleForRender.alignment = NSTextAlignmentLeft;
+//    NSMutableDictionary *attrsForRender = [newAttrs mutableCopy];
+//        NSMutableDictionary *attrsForRender = [NSMutableDictionary dictionary];
+//        attrsForRender[NSParagraphStyleAttributeName] = ps;
+//        NSAttributedString *attrStrForRender = [[NSAttributedString alloc] initWithString:text attributes:attrsForRender];
     }
 }
 
