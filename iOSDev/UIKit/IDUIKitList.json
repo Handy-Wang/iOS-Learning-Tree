@@ -5,6 +5,7 @@
                {"title" : "OC与JS(OC/WebView/JS)", "className" : "IDOCAndJSVC"},
                {"title" : "OC与JS(OC Patch by JS)", "className" : "IDOCPatchVC"},
                {"title" : "UILabel", "className" : "IDUILabelVC"},
-               {"title" : "CustomizedBorder", "className" : "IDCustomizedBorderVC"}
+               {"title" : "CustomizedBorder", "className" : "IDCustomizedBorderVC"},
+               {"title" : "UITableViewController", "className" : "IDTableVC"}
                ]
 }

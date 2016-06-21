@@ -7,8 +7,9 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
+#import "CALayerAJXBorderObserver.h"
 
-@interface CALayer(AJXBorder)
+@interface CALayer(AJXBorder) <CALayerAJXBorderObserverDelegate>
 
 - (void)ajx_setBorderWidth:(CGFloat)borderWidth;
 

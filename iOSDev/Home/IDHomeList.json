@@ -1,5 +1,6 @@
 {
     "items" : [
+               {"title" : "CoreAnimation", "className" : "IDCoreAnimationVC"},
                {"title" : "Algorithm", "className" : "IDAlgorithmListVC"},
                {"title" : "Foundation", "className" : "IDFoundationListVC"},
                {"title" : "UIKit", "className" : "IDUIKitListVC"},

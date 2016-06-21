@@ -6,8 +6,8 @@
 //  Copyright © 2016 XiaoShan. All rights reserved.
 //
 
-#import "CALayer+AJXBorder.h"
 #import <objc/runtime.h>
+#import "CALayer+AJXBorder.h"
 
 @interface AJXBorderLayer : CAShapeLayer
 @end
@@ -17,8 +17,6 @@
 
 //####################################################################
 
-#define kObservedBoundsKeyPath          (@"bounds")
-
 static char AjxBorderWidthAndColorLayerAssObj;
 static char AjxBorderColorAssObj;
 static char AjxBorderWidthAssObj;
@@ -26,8 +24,9 @@ static char AjxBorderWidthAssObj;
 static char AjxBorderCornerRadiusLayerAssObj;
 static char AjxBorderCornerRadiusAssObj;
 
-static char HadObservedBoundsChange;
 static char NeedRedrawAll;
+
+static char AjxBorderObserver;
 
 @implementation CALayer(AJX_Border)
 
@@ -60,19 +59,20 @@ static char NeedRedrawAll;
             pathRef = CGPathCreateWithRect(self.bounds, NULL);
         }
         
-        UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, [UIScreen mainScreen].scale);
-        CGContextRef context = UIGraphicsGetCurrentContext();
-        CGContextSetLineWidth(context, [self ajxBorderWidth]);
-        CGContextSetStrokeColorWithColor(context, borderColor);
-        CGContextSetFillColor(context, nil);
-        CGContextAddPath(context, pathRef);
-        CGContextDrawPath(context, kCGPathStroke);
-        UIImage *borderImg = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        
-        ajxBorderWidthAndColorLayer.frame = self.bounds;
-        ajxBorderWidthAndColorLayer.contents = (__bridge id _Nullable)(borderImg.CGImage);//关键
-        self.masksToBounds = YES;//关键
+        if (self.bounds.size.height != 0 && self.bounds.size.width != 0) {
+            UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, [UIScreen mainScreen].scale);
+            CGContextRef context = UIGraphicsGetCurrentContext();
+            CGContextSetLineWidth(context, [self ajxBorderWidth]);
+            CGContextSetStrokeColorWithColor(context, borderColor);
+            CGContextAddPath(context, pathRef);
+            CGContextDrawPath(context, kCGPathStroke);
+            UIImage *borderImg = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+            
+            ajxBorderWidthAndColorLayer.frame = self.bounds;
+            ajxBorderWidthAndColorLayer.contents = (__bridge id _Nullable)(borderImg.CGImage);//关键
+            self.masksToBounds = YES;//关键
+        }
         
         CGPathRelease(pathRef);
         
@@ -155,6 +155,8 @@ static char NeedRedrawAll;
         
         self.mask = ajxBorderCornerRadiusLayer;
         self.masksToBounds = YES;
+        self.shouldRasterize = YES;
+        self.rasterizationScale = [UIScreen mainScreen].scale;
         
         CGPathRelease(pathRef);
         
@@ -162,36 +164,46 @@ static char NeedRedrawAll;
     }
 }
 
-- (void)dealloc
-{
-    if ([self hadObservedBoundsChange]) {
-        [self removeObserver:self forKeyPath:kObservedBoundsKeyPath];
-    }
-}
-
 #pragma mark - ====================Private methods====================
 
 #pragma mark - Observe bounds change
 - (void)observeBoundsChangeIfNeeded {
-    if (![self hadObservedBoundsChange]) {
-        [self setHadObservedBoundsChange:YES];
-        [self addObserver:self forKeyPath:kObservedBoundsKeyPath options:NSKeyValueObservingOptionNew+NSKeyValueObservingOptionOld context:nil];
+    if (![self ajxBorderObserver]) {
+        CALayerAJXBorderObserver *ob = [[CALayerAJXBorderObserver alloc] initWithLayer:self andDeallocBlock:^(CALayer *layer, CALayerAJXBorderObserver *ob) {
+            [layer removeObserver:ob forKeyPath:kObservedFrameKeyPath];
+//            NSLog(@"deallocing CALayerAJXBorderObserver %@", layer);
+        }];
+        [self setAjxBorderObserver:ob];
+        [self addObserver:ob forKeyPath:kObservedFrameKeyPath options:NSKeyValueObservingOptionNew+NSKeyValueObservingOptionOld context:NULL];
     }
 }
 
-- (void)observeValueForKeyPath:(nullable NSString *)keyPath ofObject:(nullable id)object change:(nullable NSDictionary<NSString*, id> *)change context:(nullable void *)context
+- (void)ajx_observeValueForKeyPath:(nullable NSString *)keyPath ofObject:(nullable id)object
+                            change:(nullable NSDictionary<NSString*, id> *)change context:(nullable void *)context
 {
-    if ([keyPath isEqualToString:kObservedBoundsKeyPath]) {
-        [self setNeedRedrawAll:YES];
+    id oldValue = [change objectForKey:NSKeyValueChangeOldKey];
+    id newValue = [change objectForKey:NSKeyValueChangeNewKey];
+    
+    if (oldValue && newValue && oldValue != [NSNull null] && newValue != [NSNull null]) {
+        CGRect oldFrame = CGRectZero;
+        [oldValue getValue:&oldFrame];
         
-        [CATransaction begin];
-        [CATransaction setValue:@(YES) forKey:kCATransactionDisableActions];
-        [self ajx_setBorderColor:[self ajxBorderColor]];
-        [self ajx_setBorderWidth:[self ajxBorderWidth]];
-        [self ajx_setCornerRadius:[self ajxBorderCornerRadius]];
-        [CATransaction commit];
+        CGRect newFrame = CGRectZero;
+        [newValue getValue:&newFrame];
         
-        [self setNeedRedrawAll:NO];
+        if ([keyPath isEqualToString:kObservedFrameKeyPath] && !CGRectEqualToRect(oldFrame, newFrame)) {
+//            NSLog(@"%@", NSStringFromSelector(_cmd));
+            [self setNeedRedrawAll:YES];
+            
+            [CATransaction begin];
+            [CATransaction setValue:@(YES) forKey:kCATransactionDisableActions];
+            [self ajx_setBorderColor:[self ajxBorderColor]];
+            [self ajx_setBorderWidth:[self ajxBorderWidth]];
+            [self ajx_setCornerRadius:[self ajxBorderCornerRadius]];
+            [CATransaction commit];
+            
+            [self setNeedRedrawAll:NO];
+        }
     }
 }
 
@@ -237,20 +249,20 @@ static char NeedRedrawAll;
     return UIEdgeInsetsFromString(objc_getAssociatedObject(self, &AjxBorderCornerRadiusAssObj));
 }
 
-- (void)setHadObservedBoundsChange:(BOOL)observed {
-    objc_setAssociatedObject(self, &HadObservedBoundsChange, @(observed), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (BOOL)hadObservedBoundsChange {
-    return [objc_getAssociatedObject(self, &HadObservedBoundsChange) boolValue];
-}
-
 - (void)setNeedRedrawAll:(BOOL)need {
     objc_setAssociatedObject(self, &NeedRedrawAll, @(need), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (BOOL)needRedrawAll {
     return [objc_getAssociatedObject(self, &NeedRedrawAll) boolValue];
+}
+
+- (void)setAjxBorderObserver:(CALayerAJXBorderObserver *)borderGC {
+    objc_setAssociatedObject(self, &AjxBorderObserver, borderGC, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (CALayerAJXBorderObserver *)ajxBorderObserver {
+    return objc_getAssociatedObject(self, &AjxBorderObserver);
 }
 
 @end

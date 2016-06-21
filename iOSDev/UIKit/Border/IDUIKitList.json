@@ -1,0 +1,6 @@
+{
+    "items" : [
+               {"title" : "CustomizedBorder", "className" : "IDCustomizedBorderVC"},
+               {"title" : "BorderTest1", "className" : "IDBorderTest1"}
+               ]
+}
