@@ -1,3 +1,4 @@
 {
-    "items" : [{"title" : "果冻Bug", "className" : "IDGuoDongVC"}]
+    "items" : [{"title" : "果冻Bug", "className" : "IDGuoDongVC"},
+               {"title" : "CoreAnimation研究一", "className" : "DHUsesAllVC"}]
 }

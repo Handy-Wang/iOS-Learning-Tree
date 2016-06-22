@@ -14,6 +14,9 @@
 		33313B491D1299BD0000D8A1 /* IDCoreAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33313B471D1299BD0000D8A1 /* IDCoreAnimationVC.m */; };
 		33313B4D1D129A340000D8A1 /* IDGuoDongVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33313B4C1D129A340000D8A1 /* IDGuoDongVC.m */; };
 		334F461D1D1918560090D97B /* CALayerAJXBorderObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 334F461C1D1918560090D97B /* CALayerAJXBorderObserver.m */; };
+		334F46211D1919F40090D97B /* DHUsesAllVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 334F46201D1919F40090D97B /* DHUsesAllVC.m */; };
+		334F46241D191A5F0090D97B /* DHUAView.m in Sources */ = {isa = PBXBuildFile; fileRef = 334F46231D191A5F0090D97B /* DHUAView.m */; };
+		334F46271D191A6C0090D97B /* DHUALayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 334F46261D191A6C0090D97B /* DHUALayer.m */; };
 		33721A0A1CF59D090003F688 /* BSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33721A091CF59D090003F688 /* BSLabel.m */; };
 		33721A111CF6F5820003F688 /* IDTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33721A101CF6F5820003F688 /* IDTableVC.m */; };
 		3375A6D61CB7C806003C5E80 /* IDMainThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3375A6D51CB7C806003C5E80 /* IDMainThreadVC.m */; };
@@ -134,6 +137,12 @@
 		33313B4C1D129A340000D8A1 /* IDGuoDongVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDGuoDongVC.m; sourceTree = "<group>"; };
 		334F461B1D1918560090D97B /* CALayerAJXBorderObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALayerAJXBorderObserver.h; sourceTree = "<group>"; };
 		334F461C1D1918560090D97B /* CALayerAJXBorderObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CALayerAJXBorderObserver.m; sourceTree = "<group>"; };
+		334F461F1D1919F40090D97B /* DHUsesAllVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHUsesAllVC.h; sourceTree = "<group>"; };
+		334F46201D1919F40090D97B /* DHUsesAllVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHUsesAllVC.m; sourceTree = "<group>"; };
+		334F46221D191A5F0090D97B /* DHUAView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHUAView.h; sourceTree = "<group>"; };
+		334F46231D191A5F0090D97B /* DHUAView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHUAView.m; sourceTree = "<group>"; };
+		334F46251D191A6C0090D97B /* DHUALayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHUALayer.h; sourceTree = "<group>"; };
+		334F46261D191A6C0090D97B /* DHUALayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHUALayer.m; sourceTree = "<group>"; };
 		33721A081CF59D090003F688 /* BSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLabel.h; sourceTree = "<group>"; };
 		33721A091CF59D090003F688 /* BSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLabel.m; sourceTree = "<group>"; };
 		33721A0F1CF6F5820003F688 /* IDTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDTableVC.h; sourceTree = "<group>"; };
@@ -380,6 +389,7 @@
 				33313B461D1299BD0000D8A1 /* IDCoreAnimationVC.h */,
 				33313B471D1299BD0000D8A1 /* IDCoreAnimationVC.m */,
 				33313B451D1299BD0000D8A1 /* IDCoreAnimation.json */,
+				334F461E1D1919E80090D97B /* DHUsesAll */,
 				33313B4A1D129A290000D8A1 /* GuoDong */,
 			);
 			path = CoreAnimation;
@@ -392,6 +402,19 @@
 				33313B4C1D129A340000D8A1 /* IDGuoDongVC.m */,
 			);
 			path = GuoDong;
+			sourceTree = "<group>";
+		};
+		334F461E1D1919E80090D97B /* DHUsesAll */ = {
+			isa = PBXGroup;
+			children = (
+				334F461F1D1919F40090D97B /* DHUsesAllVC.h */,
+				334F46201D1919F40090D97B /* DHUsesAllVC.m */,
+				334F46221D191A5F0090D97B /* DHUAView.h */,
+				334F46231D191A5F0090D97B /* DHUAView.m */,
+				334F46251D191A6C0090D97B /* DHUALayer.h */,
+				334F46261D191A6C0090D97B /* DHUALayer.m */,
+			);
+			path = DHUsesAll;
 			sourceTree = "<group>";
 		};
 		33721A0E1CF6F56D0003F688 /* UITableViewController */ = {
@@ -1142,6 +1165,7 @@
 				334F461D1D1918560090D97B /* CALayerAJXBorderObserver.m in Sources */,
 				568F89B01C8037D3009A27C5 /* IDFoundationListVC.m in Sources */,
 				56E0BE981C81CFE300F6E7DA /* IDCALayer.m in Sources */,
+				334F46211D1919F40090D97B /* DHUsesAllVC.m in Sources */,
 				568F892D1C7FF49F009A27C5 /* main.m in Sources */,
 				568F899F1C8006A5009A27C5 /* IDAlgorithmListVC.m in Sources */,
 				562CA2681C9AB35800B6FE67 /* Descriptor.pbobjc.m in Sources */,
@@ -1157,10 +1181,12 @@
 				568F89981C8005BA009A27C5 /* IDTechListModel.m in Sources */,
 				562CA20A1C9AA3D100B6FE67 /* GPBWellKnownTypes.m in Sources */,
 				56E0BE841C8140F000F6E7DA /* IDBaseTableVC.m in Sources */,
+				334F46271D191A6C0090D97B /* DHUALayer.m in Sources */,
 				562CA1F81C9AA3B200B6FE67 /* GPBMessage.m in Sources */,
 				56E1FF061C897B85004363C1 /* IDOCAndJSVC.m in Sources */,
 				56E1FEFC1C897000004363C1 /* IDBlockVC.m in Sources */,
 				56E0BE8B1C815BBD00F6E7DA /* IDNSArrayVC.m in Sources */,
+				334F46241D191A5F0090D97B /* DHUAView.m in Sources */,
 				5647D77A1C8C067700CD6F80 /* Person.pbobjc.m in Sources */,
 				56F75CB51C840A9A000F63BF /* IDCAAnimationVC.m in Sources */,
 				562CA1ED1C9AA24D00B6FE67 /* GPBCodedInputStream.m in Sources */,
