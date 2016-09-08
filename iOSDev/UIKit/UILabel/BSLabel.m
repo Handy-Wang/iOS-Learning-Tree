@@ -9,12 +9,12 @@
 #import "BSLabel.h"
 
 @implementation BSLabel
-
-- (void)drawTextInRect:(CGRect)rect {
-    
-    CGRect tempRect = CGRectMake(0, 70, rect.size.width, rect.size.height);
-    
-    [super drawTextInRect:tempRect];
-}
+//
+//- (void)drawTextInRect:(CGRect)rect {
+//    
+//    CGRect tempRect = CGRectMake(0, 70, rect.size.width, rect.size.height);
+//    
+//    [super drawTextInRect:tempRect];
+//}
 
 @end

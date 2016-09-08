@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		330070B71CCE504700C2C432 /* IDUILabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 330070B61CCE504700C2C432 /* IDUILabelVC.m */; };
+		33257E961D8043920021C716 /* UITouchEventVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33257E951D8043920021C716 /* UITouchEventVC.m */; };
+		33257E991D8043E70021C716 /* TouchViewA.m in Sources */ = {isa = PBXBuildFile; fileRef = 33257E981D8043E70021C716 /* TouchViewA.m */; };
+		33257E9C1D8043FA0021C716 /* TouchViewB.m in Sources */ = {isa = PBXBuildFile; fileRef = 33257E9B1D8043FA0021C716 /* TouchViewB.m */; };
+		33257E9F1D8044010021C716 /* TouchViewC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33257E9E1D8044010021C716 /* TouchViewC.m */; };
+		33257EA21D8050A10021C716 /* TouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33257EA11D8050A10021C716 /* TouchView.m */; };
 		3329C67D1CAE23E9000E62D6 /* mountian.png in Resources */ = {isa = PBXBuildFile; fileRef = 3329C67C1CAE23E9000E62D6 /* mountian.png */; };
 		3329C6851CAE24E2000E62D6 /* IDFuncArgsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3329C6841CAE24E2000E62D6 /* IDFuncArgsVC.m */; };
 		33313B481D1299BD0000D8A1 /* IDCoreAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 33313B451D1299BD0000D8A1 /* IDCoreAnimation.json */; };
@@ -127,6 +132,16 @@
 /* Begin PBXFileReference section */
 		330070B51CCE504700C2C432 /* IDUILabelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDUILabelVC.h; sourceTree = "<group>"; };
 		330070B61CCE504700C2C432 /* IDUILabelVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDUILabelVC.m; sourceTree = "<group>"; };
+		33257E941D8043920021C716 /* UITouchEventVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITouchEventVC.h; sourceTree = "<group>"; };
+		33257E951D8043920021C716 /* UITouchEventVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITouchEventVC.m; sourceTree = "<group>"; };
+		33257E971D8043E70021C716 /* TouchViewA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchViewA.h; sourceTree = "<group>"; };
+		33257E981D8043E70021C716 /* TouchViewA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchViewA.m; sourceTree = "<group>"; };
+		33257E9A1D8043FA0021C716 /* TouchViewB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchViewB.h; sourceTree = "<group>"; };
+		33257E9B1D8043FA0021C716 /* TouchViewB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchViewB.m; sourceTree = "<group>"; };
+		33257E9D1D8044010021C716 /* TouchViewC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchViewC.h; sourceTree = "<group>"; };
+		33257E9E1D8044010021C716 /* TouchViewC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchViewC.m; sourceTree = "<group>"; };
+		33257EA01D8050A10021C716 /* TouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchView.h; sourceTree = "<group>"; };
+		33257EA11D8050A10021C716 /* TouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchView.m; sourceTree = "<group>"; };
 		3329C67C1CAE23E9000E62D6 /* mountian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mountian.png; sourceTree = "<group>"; };
 		3329C6831CAE24E2000E62D6 /* IDFuncArgsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDFuncArgsVC.h; sourceTree = "<group>"; };
 		3329C6841CAE24E2000E62D6 /* IDFuncArgsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDFuncArgsVC.m; sourceTree = "<group>"; };
@@ -372,6 +387,23 @@
 				33721A091CF59D090003F688 /* BSLabel.m */,
 			);
 			path = UILabel;
+			sourceTree = "<group>";
+		};
+		33257E931D80433A0021C716 /* UITouchEvent */ = {
+			isa = PBXGroup;
+			children = (
+				33257E941D8043920021C716 /* UITouchEventVC.h */,
+				33257E951D8043920021C716 /* UITouchEventVC.m */,
+				33257EA01D8050A10021C716 /* TouchView.h */,
+				33257EA11D8050A10021C716 /* TouchView.m */,
+				33257E971D8043E70021C716 /* TouchViewA.h */,
+				33257E981D8043E70021C716 /* TouchViewA.m */,
+				33257E9A1D8043FA0021C716 /* TouchViewB.h */,
+				33257E9B1D8043FA0021C716 /* TouchViewB.m */,
+				33257E9D1D8044010021C716 /* TouchViewC.h */,
+				33257E9E1D8044010021C716 /* TouchViewC.m */,
+			);
+			path = UITouchEvent;
 			sourceTree = "<group>";
 		};
 		3329C6821CAE2478000E62D6 /* FuncArgs */ = {
@@ -919,6 +951,7 @@
 				56E1FF091C8995CA004363C1 /* OCPatch */,
 				339ECF4F1D179FF400F4A94C /* Border */,
 				330070B41CCE501700C2C432 /* UILabel */,
+				33257E931D80433A0021C716 /* UITouchEvent */,
 				33721A0E1CF6F56D0003F688 /* UITableViewController */,
 			);
 			path = UIKit;
@@ -1050,6 +1083,7 @@
 				TargetAttributes = {
 					568F89271C7FF49F009A27C5 = {
 						CreatedOnToolsVersion = 7.2;
+						ProvisioningStyle = Manual;
 					};
 					568F89401C7FF4A0009A27C5 = {
 						CreatedOnToolsVersion = 7.2;
@@ -1134,10 +1168,12 @@
 				568F89301C7FF49F009A27C5 /* AppDelegate.m in Sources */,
 				339ECF631D17A10800F4A94C /* IDBorderTest1Cell.m in Sources */,
 				562CA1F71C9AA3B200B6FE67 /* GPBDescriptor.m in Sources */,
+				33257E9F1D8044010021C716 /* TouchViewC.m in Sources */,
 				339ECF5A1D179FF400F4A94C /* IDCustomizedBorderVC.m in Sources */,
 				564BA8CE1C82DFA5001A0A07 /* IDUIViewVC.m in Sources */,
 				33313B491D1299BD0000D8A1 /* IDCoreAnimationVC.m in Sources */,
 				562CA1EE1C9AA24D00B6FE67 /* GPBCodedOutputStream.m in Sources */,
+				33257E9C1D8043FA0021C716 /* TouchViewB.m in Sources */,
 				56E0BE7F1C813FB700F6E7DA /* IDBaseVC.m in Sources */,
 				33EFD7D51CD1AEA800E241C3 /* NMFPSLabel.m in Sources */,
 				5652167E1C86C52400A8E5A9 /* IDPerson.m in Sources */,
@@ -1152,6 +1188,7 @@
 				568F89B41C803883009A27C5 /* IDNSCacheVC.m in Sources */,
 				56F21B341C8BF277001732BF /* IDProtocolBufferVC.m in Sources */,
 				562CA2091C9AA3D100B6FE67 /* GPBUtilities.m in Sources */,
+				33257E991D8043E70021C716 /* TouchViewA.m in Sources */,
 				33313B4D1D129A340000D8A1 /* IDGuoDongVC.m in Sources */,
 				33A646201CDAE3FC00944E04 /* BSUITestVC.m in Sources */,
 				56F21B2F1C8BDFAF001732BF /* HDPerson.m in Sources */,
@@ -1170,6 +1207,7 @@
 				568F899F1C8006A5009A27C5 /* IDAlgorithmListVC.m in Sources */,
 				562CA2681C9AB35800B6FE67 /* Descriptor.pbobjc.m in Sources */,
 				562CA1E31C9AA22E00B6FE67 /* GPBUnknownField.m in Sources */,
+				33257EA21D8050A10021C716 /* TouchView.m in Sources */,
 				33721A111CF6F5820003F688 /* IDTableVC.m in Sources */,
 				568F89A21C80085B009A27C5 /* IDBinaryTreeVC.m in Sources */,
 				330070B71CCE504700C2C432 /* IDUILabelVC.m in Sources */,
@@ -1197,6 +1235,7 @@
 				3329C6851CAE24E2000E62D6 /* IDFuncArgsVC.m in Sources */,
 				339ECF5B1D179FF400F4A94C /* IDBorderTableVC.m in Sources */,
 				33EFD7D21CD1AE6400E241C3 /* IDFPSLabelVC.m in Sources */,
+				33257E961D8043920021C716 /* UITouchEventVC.m in Sources */,
 				33A6461E1CDAE3FC00944E04 /* BSTextField.m in Sources */,
 				562CA2081C9AA3D100B6FE67 /* GPBDictionary.m in Sources */,
 				339ECF601D17A05900F4A94C /* IDBorderTest1.m in Sources */,
@@ -1336,6 +1375,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xu Xia (S567RZK44D)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Libs",
@@ -1346,10 +1387,12 @@
 				HEADER_SEARCH_PATHS = "$(SRCROOT)";
 				INFOPLIST_FILE = iOSDev/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.neolix.iOSDev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neolix.iosdev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "YAP2UR5H94/嗨个购公司授权-Dev-*";
 			};
 			name = Debug;
 		};
@@ -1357,6 +1400,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xu Xia (S567RZK44D)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Libs",
@@ -1367,9 +1412,10 @@
 				HEADER_SEARCH_PATHS = "$(SRCROOT)";
 				INFOPLIST_FILE = iOSDev/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.neolix.iOSDev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neolix.iosdev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

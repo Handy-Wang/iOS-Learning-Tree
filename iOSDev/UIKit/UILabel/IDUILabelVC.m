@@ -106,17 +106,17 @@
  */
 - (void)testNumberOfLineAndParagraphStyle {
     NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
-    style.lineSpacing = 10;
+    style.lineSpacing = 1;
     
     
     BSLabel *bsLabel = [[BSLabel alloc] initWithFrame:CGRectMake(0, 64, 200, 200)];
-    bsLabel.backgroundColor = [UIColor redColor];
+    bsLabel.backgroundColor = [UIColor whiteColor];
     bsLabel.layer.borderColor = [UIColor redColor].CGColor;
     bsLabel.layer.borderWidth = 1;
     bsLabel.numberOfLines = 0;
-    bsLabel.attributedText = [[NSAttributedString alloc] initWithString:@"动画间隔决"
-                                                             attributes:@{NSForegroundColorAttributeName:[UIColor blueColor],
-                                                                          NSParagraphStyleAttributeName:style}];
+//    bsLabel.text = @"fdsffafdfsaf\n动画\n间隔决";
+    bsLabel.attributedText = [[NSAttributedString alloc] initWithString:@"fdsffafdfsaf\n动画\n间隔决"
+                                                             attributes:nil];
     [self.view addSubview:bsLabel];
 }
 

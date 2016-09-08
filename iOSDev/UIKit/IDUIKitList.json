@@ -6,6 +6,7 @@
                {"title" : "OC与JS(OC Patch by JS)", "className" : "IDOCPatchVC"},
                {"title" : "UILabel", "className" : "IDUILabelVC"},
                {"title" : "CustomizedBorder", "className" : "IDCustomizedBorderVC"},
-               {"title" : "UITableViewController", "className" : "IDTableVC"}
+               {"title" : "UITableViewController", "className" : "IDTableVC"},
+               {"title" : "UITouchEvent", "className" : "UITouchEventVC"}
                ]
 }
