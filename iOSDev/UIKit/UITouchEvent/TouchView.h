@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIKit+STKit.h"
+#import "NMHitTestTouchView.h"
 
-@interface TouchView : UIView
+@interface TouchView : NMHitTestTouchView
 
 @end

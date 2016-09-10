@@ -35,59 +35,55 @@ typedef NS_ENUM(NSInteger, TouchState) {
     return self;
 }
 
-//- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-//    return [super hitTest:point withEvent:event];
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    NSLog(@"%@ - %@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
+//    _state = TouchState_Begin;
+//    _longPressTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self
+//                       selector:@selector(fireLongPress:) userInfo:nil repeats:NO];
 //}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"%@ - %@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
-    _state = TouchState_Begin;
-    _longPressTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self
-                       selector:@selector(fireLongPress:) userInfo:nil repeats:NO];
-}
-
-- (void)fireLongPress:(NSTimer *)timer {
-    if (_state != TouchState_Moving && _state != TouchState_Ended &&
-        _state != TouchState_Cancelled && _existsLongPressListner) {
-        _state = TouchState_LongPress;
-        NSLog(@"long click ...");
-    }
-}
-
-- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    if (_state != TouchState_LongPress && _state != TouchState_Ended && _state != TouchState_Cancelled) {
-        _state = TouchState_Moving;
-        NSLog(@"%@ - %@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
-    }
-}
-
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    if (_state != TouchState_Ended && _state != TouchState_Cancelled) {
-        TouchState oldState = _state;
-        _state = TouchState_Ended;
-        if (oldState == TouchState_Moving) {
-            NSLog(@"move end ...");
-            
-        } else if (oldState == TouchState_LongPress) {
-            NSLog(@"long press end ...");
-            
-        } else {
-            NSLog(@"click ...");
-        }
-    }
-    
-    if ([_longPressTimer isValid]) {
-        [_longPressTimer invalidate];
-        _longPressTimer = nil;
-    }
-    NSLog(@"%@ - %@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
-}
-
-- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    if (_state != TouchState_Ended && _state != TouchState_Cancelled) {
-        _state = TouchState_Cancelled;
-    }
-    NSLog(@"%@ - %@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
-}
+//
+//- (void)fireLongPress:(NSTimer *)timer {
+//    if (_state != TouchState_Moving && _state != TouchState_Ended &&
+//        _state != TouchState_Cancelled && _existsLongPressListner) {
+//        _state = TouchState_LongPress;
+//        NSLog(@"long click ...");
+//    }
+//}
+//
+//- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    if (_state != TouchState_LongPress && _state != TouchState_Ended && _state != TouchState_Cancelled) {
+//        _state = TouchState_Moving;
+//        NSLog(@"%@ - %@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
+//    }
+//}
+//
+//- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    if (_state != TouchState_Ended && _state != TouchState_Cancelled) {
+//        TouchState oldState = _state;
+//        _state = TouchState_Ended;
+//        if (oldState == TouchState_Moving) {
+//            NSLog(@"move end ...");
+//            
+//        } else if (oldState == TouchState_LongPress) {
+//            NSLog(@"long press end ...");
+//            
+//        } else {
+//            NSLog(@"click ...");
+//        }
+//    }
+//    
+//    if ([_longPressTimer isValid]) {
+//        [_longPressTimer invalidate];
+//        _longPressTimer = nil;
+//    }
+//    NSLog(@"%@ - %@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
+//}
+//
+//- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    if (_state != TouchState_Ended && _state != TouchState_Cancelled) {
+//        _state = TouchState_Cancelled;
+//    }
+//    NSLog(@"%@ - %@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
+//}
 
 @end
