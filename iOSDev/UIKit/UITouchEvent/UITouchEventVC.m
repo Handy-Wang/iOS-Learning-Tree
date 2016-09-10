@@ -9,6 +9,7 @@
 #import "TouchViewA.h"
 #import "TouchViewB.h"
 #import "TouchViewC.h"
+#import "TouchViewD.h"
 #import "UITouchEventVC.h"
 #import "NMTapGestureRecognizer.h"
 
@@ -43,21 +44,27 @@
     vc.backgroundColor = [UIColor blueColor];
     [va addSubview:vc];
     
-    NMTapGestureRecognizer *vcTapGesture = [[NMTapGestureRecognizer alloc] initWithTarget:self action:@selector(tapViewC:)];
-    UILongPressGestureRecognizer *vcLongPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressViewC:)];
+    CGRect frameD = CGRectMake(0, 0, 50, 50);
+    TouchViewD *vd = [[TouchViewD alloc] initWithFrame:frameD];
+    vd.userInteractionEnabled = YES;
+    vd.backgroundColor = [UIColor grayColor];
+    [vc addSubview:vd];
+    
+    NMTapGestureRecognizer *vcTapGesture = [[NMTapGestureRecognizer alloc] initWithTarget:self action:@selector(triggerTapGesture:)];
+    UILongPressGestureRecognizer *vcLongPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(triggerLongPressGesture:)];
 //    vcTapGesture.delaysTouchesBegan = YES;//Default NO;
 //    vcTapGesture.cancelsTouchesInView = NO;//Default YES;
 //    vcTapGesture.delaysTouchesEnded = NO;//Default YES;
-    [vc addGestureRecognizer:vcTapGesture];
-    [vc addGestureRecognizer:vcLongPressGesture];
+    [va addGestureRecognizer:vcTapGesture];
+    [va addGestureRecognizer:vcLongPressGesture];
 }
 
-- (void)tapViewC:(UITapGestureRecognizer *)tapGesture
+- (void)triggerTapGesture:(UITapGestureRecognizer *)tapGesture
 {
     NSLog(@"%@ - %@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
 }
 
-- (void)longPressViewC:(UILongPressGestureRecognizer *)longPressGesture
+- (void)triggerLongPressGesture:(UILongPressGestureRecognizer *)longPressGesture
 {
     NSLog(@"%@ - %@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
 }

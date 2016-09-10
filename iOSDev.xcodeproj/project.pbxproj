@@ -44,6 +44,7 @@
 		33EFD7D21CD1AE6400E241C3 /* IDFPSLabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFD7D11CD1AE6400E241C3 /* IDFPSLabelVC.m */; };
 		33EFD7D51CD1AEA800E241C3 /* NMFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFD7D41CD1AEA800E241C3 /* NMFPSLabel.m */; };
 		33F86BA31D846468005077CA /* NMTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F86BA21D846468005077CA /* NMTapGestureRecognizer.m */; };
+		33F86BA61D846727005077CA /* TouchViewD.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F86BA51D846727005077CA /* TouchViewD.m */; };
 		562CA1D81C9A9FBB00B6FE67 /* GPBExtensionInternals.m in Sources */ = {isa = PBXBuildFile; fileRef = 562CA1D21C9A9FBB00B6FE67 /* GPBExtensionInternals.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		562CA1D91C9A9FBB00B6FE67 /* GPBExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 562CA1D41C9A9FBB00B6FE67 /* GPBExtensionRegistry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		562CA1DA1C9A9FBB00B6FE67 /* GPBRootObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 562CA1D61C9A9FBB00B6FE67 /* GPBRootObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -207,6 +208,8 @@
 		33EFD7D41CD1AEA800E241C3 /* NMFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMFPSLabel.m; sourceTree = "<group>"; };
 		33F86BA11D846468005077CA /* NMTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMTapGestureRecognizer.h; sourceTree = "<group>"; };
 		33F86BA21D846468005077CA /* NMTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMTapGestureRecognizer.m; sourceTree = "<group>"; };
+		33F86BA41D846727005077CA /* TouchViewD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchViewD.h; sourceTree = "<group>"; };
+		33F86BA51D846727005077CA /* TouchViewD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchViewD.m; sourceTree = "<group>"; };
 		562CA1D11C9A9FBB00B6FE67 /* GPBExtensionInternals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBExtensionInternals.h; sourceTree = "<group>"; };
 		562CA1D21C9A9FBB00B6FE67 /* GPBExtensionInternals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBExtensionInternals.m; sourceTree = "<group>"; };
 		562CA1D31C9A9FBB00B6FE67 /* GPBExtensionRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBExtensionRegistry.h; sourceTree = "<group>"; };
@@ -415,6 +418,8 @@
 				33257E9B1D8043FA0021C716 /* TouchViewB.m */,
 				33257E9D1D8044010021C716 /* TouchViewC.h */,
 				33257E9E1D8044010021C716 /* TouchViewC.m */,
+				33F86BA41D846727005077CA /* TouchViewD.h */,
+				33F86BA51D846727005077CA /* TouchViewD.m */,
 				33F86BA01D846468005077CA /* NM_TapGestureRecognizer */,
 				3396798A1D831F7000225242 /* NM_hittest */,
 				3396798D1D831F7000225242 /* ST_hittest */,
@@ -1231,6 +1236,7 @@
 				56F21B301C8BDFAF001732BF /* HDTeacher.m in Sources */,
 				33D2346B1D180661006A5CF0 /* IDTestObjX.m in Sources */,
 				562CA1EF1C9AA24D00B6FE67 /* GPBWireFormat.m in Sources */,
+				33F86BA61D846727005077CA /* TouchViewD.m in Sources */,
 				33A2E6861CB565D200990B4E /* IDRuntimeVC.m in Sources */,
 				56E1FF021C897B1C004363C1 /* IDUIKitListVC.m in Sources */,
 				339679891D831E3500225242 /* TouchView.m in Sources */,
