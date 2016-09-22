@@ -13,8 +13,9 @@
 #import "UITouchEventVC.h"
 #import "NMTapGestureRecognizer.h"
 
-@interface UITouchEventVC ()
-
+@interface UITouchEventVC () {
+    UIControl *_control1;
+}
 @end
 
 @implementation UITouchEventVC
@@ -23,6 +24,18 @@
 {
     [super viewDidLoad];
     
+    //由于在touchupinside的selector回调里取control状态时仍为highlighted
+    //所以，这里采用observe的方式直接监听highlighted的状态变化，以监听到control的状态从highlighted=1变为0的时机
+    CGRect controlFrame1 = CGRectMake(0, 0, 200, 200);
+    _control1 = [[UIControl alloc] initWithFrame:controlFrame1];
+    [_control1 setBackgroundColor:[UIColor redColor]];
+    [_control1 addTarget:self action:@selector(didTapControl1:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_control1];
+    
+    [_control1 addObserver:self forKeyPath:@"highlighted" options:NSKeyValueObservingOptionNew+NSKeyValueObservingOptionOld context:NULL];
+    
+    
+    /*
     CGRect frameA = CGRectMake(0, 80, 200, 200);
     TouchViewA *va = [[TouchViewA alloc] initWithFrame:frameA];
     va.userInteractionEnabled = YES;
@@ -57,6 +70,19 @@
 //    vcTapGesture.delaysTouchesEnded = NO;//Default YES;
     [va addGestureRecognizer:vcTapGesture];
     [va addGestureRecognizer:vcLongPressGesture];
+     */
+}
+
+- (void)observeValueForKeyPath:(nullable NSString *)keyPath ofObject:(nullable id)object change:(nullable NSDictionary<NSString*, id> *)change context:(nullable void *)context
+{
+    id oldValue = [change objectForKey:NSKeyValueChangeOldKey];
+    id newValue = [change objectForKey:NSKeyValueChangeNewKey];
+    NSLog(@"--------- observe, old state is %lu, new state is %lu", [oldValue integerValue], [newValue integerValue]);
+}
+
+- (void)didTapControl1:(UIControl *)control
+{
+    NSLog(@"--------- state is %lu", control.state);
 }
 
 - (void)triggerTapGesture:(UITapGestureRecognizer *)tapGesture
