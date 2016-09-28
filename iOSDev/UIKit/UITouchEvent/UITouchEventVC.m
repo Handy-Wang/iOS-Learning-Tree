@@ -12,9 +12,11 @@
 #import "TouchViewD.h"
 #import "UITouchEventVC.h"
 #import "NMTapGestureRecognizer.h"
+#import "NMContainerView.h"
 
 @interface UITouchEventVC () {
     UIControl *_control1;
+    
 }
 @end
 
@@ -24,15 +26,30 @@
 {
     [super viewDidLoad];
     
+    CGRect containerFrame = CGRectMake(0,
+                                       self.view.frame.size.height - 100,
+                                       self.view.frame.size.width,
+                                       self.view.frame.size.height);
+    NMContainerView *containerView = [[NMContainerView alloc] initWithFrame:containerFrame];
+    containerView.layer.borderColor = [UIColor redColor].CGColor;
+    containerView.layer.borderWidth = 1;
+    [self.view addSubview:containerView];
+    
+//    STHitTestViewBlock blk =  ^ UIView *(CGPoint point, UIEvent *event, BOOL *returnSuper) {
+//        *returnSuper = NO;
+//        return nil;
+//    };
+//    [containerView setHitTestBlock:blk];
+    
     //由于在touchupinside的selector回调里取control状态时仍为highlighted
     //所以，这里采用observe的方式直接监听highlighted的状态变化，以监听到control的状态从highlighted=1变为0的时机
-    CGRect controlFrame1 = CGRectMake(0, 0, 200, 200);
-    _control1 = [[UIControl alloc] initWithFrame:controlFrame1];
-    [_control1 setBackgroundColor:[UIColor redColor]];
-    [_control1 addTarget:self action:@selector(didTapControl1:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_control1];
-    
-    [_control1 addObserver:self forKeyPath:@"highlighted" options:NSKeyValueObservingOptionNew+NSKeyValueObservingOptionOld context:NULL];
+//    CGRect controlFrame1 = CGRectMake(0, 0, 200, 200);
+//    _control1 = [[UIControl alloc] initWithFrame:controlFrame1];
+//    [_control1 setBackgroundColor:[UIColor redColor]];
+//    [_control1 addTarget:self action:@selector(didTapControl1:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:_control1];
+//    
+//    [_control1 addObserver:self forKeyPath:@"highlighted" options:NSKeyValueObservingOptionNew+NSKeyValueObservingOptionOld context:NULL];
     
     
     /*
