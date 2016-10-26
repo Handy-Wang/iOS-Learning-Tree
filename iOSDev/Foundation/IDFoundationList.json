@@ -9,6 +9,7 @@
                {"title" : "NSArray", "className" : "IDNSArrayVC"},
                {"title" : "NSCache", "className" : "IDNSCacheVC"},
                {"title" : "NSDictionary", "className" : "IDNSDictionaryVC"},
+               {"title" : "NSObject", "className" : "IDNSObjectVC"},
                {"title" : "NSRunLoop", "className" : "IDNSRunLoopVC"},
                {"title" : "Runtime", "className" : "IDRuntimeVC"},
                {"title" : "SelfAndSuper", "className" : "IDSelfAndSuperVC"},

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		330070B71CCE504700C2C432 /* IDUILabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 330070B61CCE504700C2C432 /* IDUILabelVC.m */; };
+		3302AC2F1DC057EF008E6F2A /* IDNSObjectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3302AC2E1DC057EF008E6F2A /* IDNSObjectVC.m */; };
+		3302AC331DC05873008E6F2A /* BaseAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = 3302AC321DC05873008E6F2A /* BaseAnimal.m */; };
+		3302AC361DC05898008E6F2A /* SubPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 3302AC351DC05898008E6F2A /* SubPerson.m */; };
 		3329C67D1CAE23E9000E62D6 /* mountian.png in Resources */ = {isa = PBXBuildFile; fileRef = 3329C67C1CAE23E9000E62D6 /* mountian.png */; };
 		3329C6851CAE24E2000E62D6 /* IDFuncArgsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3329C6841CAE24E2000E62D6 /* IDFuncArgsVC.m */; };
 		33313B481D1299BD0000D8A1 /* IDCoreAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 33313B451D1299BD0000D8A1 /* IDCoreAnimation.json */; };
@@ -137,6 +140,13 @@
 /* Begin PBXFileReference section */
 		330070B51CCE504700C2C432 /* IDUILabelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDUILabelVC.h; sourceTree = "<group>"; };
 		330070B61CCE504700C2C432 /* IDUILabelVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDUILabelVC.m; sourceTree = "<group>"; };
+		3302AC2D1DC057EF008E6F2A /* IDNSObjectVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDNSObjectVC.h; sourceTree = "<group>"; };
+		3302AC2E1DC057EF008E6F2A /* IDNSObjectVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDNSObjectVC.m; sourceTree = "<group>"; };
+		3302AC301DC0582D008E6F2A /* MyProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyProtocol.h; sourceTree = "<group>"; };
+		3302AC311DC05873008E6F2A /* BaseAnimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAnimal.h; sourceTree = "<group>"; };
+		3302AC321DC05873008E6F2A /* BaseAnimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAnimal.m; sourceTree = "<group>"; };
+		3302AC341DC05898008E6F2A /* SubPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubPerson.h; sourceTree = "<group>"; };
+		3302AC351DC05898008E6F2A /* SubPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubPerson.m; sourceTree = "<group>"; };
 		3329C67C1CAE23E9000E62D6 /* mountian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mountian.png; sourceTree = "<group>"; };
 		3329C6831CAE24E2000E62D6 /* IDFuncArgsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDFuncArgsVC.h; sourceTree = "<group>"; };
 		3329C6841CAE24E2000E62D6 /* IDFuncArgsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDFuncArgsVC.m; sourceTree = "<group>"; };
@@ -402,6 +412,20 @@
 				33721A091CF59D090003F688 /* BSLabel.m */,
 			);
 			path = UILabel;
+			sourceTree = "<group>";
+		};
+		3302AC2C1DC057C8008E6F2A /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				3302AC2D1DC057EF008E6F2A /* IDNSObjectVC.h */,
+				3302AC2E1DC057EF008E6F2A /* IDNSObjectVC.m */,
+				3302AC301DC0582D008E6F2A /* MyProtocol.h */,
+				3302AC311DC05873008E6F2A /* BaseAnimal.h */,
+				3302AC321DC05873008E6F2A /* BaseAnimal.m */,
+				3302AC341DC05898008E6F2A /* SubPerson.h */,
+				3302AC351DC05898008E6F2A /* SubPerson.m */,
+			);
+			path = NSObject;
 			sourceTree = "<group>";
 		};
 		3329C6821CAE2478000E62D6 /* FuncArgs */ = {
@@ -873,6 +897,7 @@
 				56E0BE881C815B9A00F6E7DA /* NSArray */,
 				568F89B11C803877009A27C5 /* NSCache */,
 				568F89B51C804648009A27C5 /* NSDictionary */,
+				3302AC2C1DC057C8008E6F2A /* NSObject */,
 				56E0BE781C813F4200F6E7DA /* NSRunLoop */,
 				33A2E6831CB5655600990B4E /* Runtime */,
 				56F21B271C8BDF72001732BF /* SelfAndSuper */,
@@ -1242,6 +1267,8 @@
 				568F892D1C7FF49F009A27C5 /* main.m in Sources */,
 				568F899F1C8006A5009A27C5 /* IDAlgorithmListVC.m in Sources */,
 				562CA2681C9AB35800B6FE67 /* Descriptor.pbobjc.m in Sources */,
+				3302AC2F1DC057EF008E6F2A /* IDNSObjectVC.m in Sources */,
+				3302AC331DC05873008E6F2A /* BaseAnimal.m in Sources */,
 				33A764181D9BAF6A00381E74 /* NMFolderSectionHeader.m in Sources */,
 				562CA1E31C9AA22E00B6FE67 /* GPBUnknownField.m in Sources */,
 				33721A111CF6F5820003F688 /* IDTableVC.m in Sources */,
@@ -1262,6 +1289,7 @@
 				56E1FF061C897B85004363C1 /* IDOCAndJSVC.m in Sources */,
 				56E1FEFC1C897000004363C1 /* IDBlockVC.m in Sources */,
 				56E0BE8B1C815BBD00F6E7DA /* IDNSArrayVC.m in Sources */,
+				3302AC361DC05898008E6F2A /* SubPerson.m in Sources */,
 				334F46241D191A5F0090D97B /* DHUAView.m in Sources */,
 				5647D77A1C8C067700CD6F80 /* Person.pbobjc.m in Sources */,
 				56F75CB51C840A9A000F63BF /* IDCAAnimationVC.m in Sources */,
