@@ -33,9 +33,9 @@
     _tableView.dataSource = self;
     _tableView.delegate = self;
     
-    UIView *tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44)];
-    tableFooterView.backgroundColor = [UIColor redColor];
-    _tableView.tableFooterView = tableFooterView;
+//    UIView *tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44)];
+//    tableFooterView.backgroundColor = [UIColor redColor];
+//    _tableView.tableFooterView = tableFooterView;
     
     
     [self getData];

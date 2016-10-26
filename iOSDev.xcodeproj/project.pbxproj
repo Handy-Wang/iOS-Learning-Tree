@@ -20,6 +20,8 @@
 		33721A0A1CF59D090003F688 /* BSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33721A091CF59D090003F688 /* BSLabel.m */; };
 		33721A111CF6F5820003F688 /* IDTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33721A101CF6F5820003F688 /* IDTableVC.m */; };
 		3375A6D61CB7C806003C5E80 /* IDMainThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3375A6D51CB7C806003C5E80 /* IDMainThreadVC.m */; };
+		337E4C601DBE347B0072D5FC /* IDUITextFieldVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 337E4C5F1DBE347B0072D5FC /* IDUITextFieldVC.m */; };
+		337E4C631DBE40430072D5FC /* IDTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 337E4C621DBE40430072D5FC /* IDTextField.m */; };
 		339ECF591D179FF400F4A94C /* CALayer+AJXBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 339ECF521D179FF400F4A94C /* CALayer+AJXBorder.m */; };
 		339ECF5A1D179FF400F4A94C /* IDCustomizedBorderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 339ECF551D179FF400F4A94C /* IDCustomizedBorderVC.m */; };
 		339ECF5B1D179FF400F4A94C /* IDBorderTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 339ECF571D179FF400F4A94C /* IDBorderTableVC.m */; };
@@ -157,6 +159,10 @@
 		33721A101CF6F5820003F688 /* IDTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDTableVC.m; sourceTree = "<group>"; };
 		3375A6D41CB7C806003C5E80 /* IDMainThreadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDMainThreadVC.h; sourceTree = "<group>"; };
 		3375A6D51CB7C806003C5E80 /* IDMainThreadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDMainThreadVC.m; sourceTree = "<group>"; };
+		337E4C5E1DBE347B0072D5FC /* IDUITextFieldVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDUITextFieldVC.h; sourceTree = "<group>"; };
+		337E4C5F1DBE347B0072D5FC /* IDUITextFieldVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDUITextFieldVC.m; sourceTree = "<group>"; };
+		337E4C611DBE40430072D5FC /* IDTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDTextField.h; sourceTree = "<group>"; };
+		337E4C621DBE40430072D5FC /* IDTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDTextField.m; sourceTree = "<group>"; };
 		339ECF511D179FF400F4A94C /* CALayer+AJXBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+AJXBorder.h"; sourceTree = "<group>"; };
 		339ECF521D179FF400F4A94C /* CALayer+AJXBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AJXBorder.m"; sourceTree = "<group>"; };
 		339ECF541D179FF400F4A94C /* IDCustomizedBorderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDCustomizedBorderVC.h; sourceTree = "<group>"; };
@@ -457,6 +463,17 @@
 				3375A6D51CB7C806003C5E80 /* IDMainThreadVC.m */,
 			);
 			path = MainThread;
+			sourceTree = "<group>";
+		};
+		337E4C5A1DBE344F0072D5FC /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				337E4C5E1DBE347B0072D5FC /* IDUITextFieldVC.h */,
+				337E4C5F1DBE347B0072D5FC /* IDUITextFieldVC.m */,
+				337E4C611DBE40430072D5FC /* IDTextField.h */,
+				337E4C621DBE40430072D5FC /* IDTextField.m */,
+			);
+			path = UITextField;
 			sourceTree = "<group>";
 		};
 		339ECF4F1D179FF400F4A94C /* Border */ = {
@@ -968,6 +985,7 @@
 				330070B41CCE501700C2C432 /* UILabel */,
 				33721A0E1CF6F56D0003F688 /* UITableViewController */,
 				33A763FA1D9BA4B400381E74 /* NMFolderGroupVC */,
+				337E4C5A1DBE344F0072D5FC /* UITextField */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1197,6 +1215,7 @@
 				562CA1D91C9A9FBB00B6FE67 /* GPBExtensionRegistry.m in Sources */,
 				339ECF591D179FF400F4A94C /* CALayer+AJXBorder.m in Sources */,
 				56F21B301C8BDFAF001732BF /* HDTeacher.m in Sources */,
+				337E4C601DBE347B0072D5FC /* IDUITextFieldVC.m in Sources */,
 				33D2346B1D180661006A5CF0 /* IDTestObjX.m in Sources */,
 				562CA1EF1C9AA24D00B6FE67 /* GPBWireFormat.m in Sources */,
 				33A2E6861CB565D200990B4E /* IDRuntimeVC.m in Sources */,
@@ -1232,6 +1251,7 @@
 				568F89A51C80089C009A27C5 /* IDBinaryTreeNode.m in Sources */,
 				568F89B81C80464F009A27C5 /* IDNSDictionaryVC.m in Sources */,
 				3375A6D61CB7C806003C5E80 /* IDMainThreadVC.m in Sources */,
+				337E4C631DBE40430072D5FC /* IDTextField.m in Sources */,
 				564BA8CA1C82C1E4001A0A07 /* IDCALayerView.m in Sources */,
 				56DFB2721C84165400F750E8 /* IDCAAnimationTestLayer.m in Sources */,
 				568F89981C8005BA009A27C5 /* IDTechListModel.m in Sources */,
