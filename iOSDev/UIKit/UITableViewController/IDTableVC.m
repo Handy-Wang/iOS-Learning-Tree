@@ -8,23 +8,32 @@
 
 #import "IDTableVC.h"
 
-@interface IDTableVC () <UITableViewDataSource, UITableViewDelegate> {
-    UITableView *_tableview;
-}
+@interface IDTableVC () <UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, strong) UITableView *tableview;
 @end
 
 @implementation IDTableVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
-    [self.view addSubview:[self tableview]];
+    [self.view addSubview:self.tableview];
+    
+    __weak typeof(self) weakself = self;
+    [NSTimer scheduledTimerWithTimeInterval:0.5 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        
+    }];
+    
+    [NSTimer scheduledTimerWithTimeInterval:0.5 repeats:YES block:^(NSTimer * _Nonnull timer) {
+    }];
+    
+    [NSTimer scheduledTimerWithTimeInterval:0.5 repeats:YES block:^(NSTimer * _Nonnull timer) {
+    }];
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 300;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -55,7 +64,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%@, %@", NSStringFromSelector(_cmd), [@(indexPath.row) stringValue]);
-    return 200;
+    return 44;
 }
 
 #pragma mark - Getter & Setter

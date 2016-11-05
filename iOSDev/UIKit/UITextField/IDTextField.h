@@ -10,4 +10,6 @@
 
 @interface IDTextField : UITextField
 
+@property (nonatomic, assign) CGSize textSize;
+
 @end

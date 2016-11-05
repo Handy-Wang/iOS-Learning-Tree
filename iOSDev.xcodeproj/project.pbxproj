@@ -44,6 +44,7 @@
 		33A764151D9BA74800381E74 /* NMFolderItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A764141D9BA74800381E74 /* NMFolderItemModel.m */; };
 		33A764181D9BAF6A00381E74 /* NMFolderSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A764171D9BAF6A00381E74 /* NMFolderSectionHeader.m */; };
 		33B902FA1CD88F3600A0574F /* NSString(TS_Attributed).m in Sources */ = {isa = PBXBuildFile; fileRef = 33B902F91CD88F3600A0574F /* NSString(TS_Attributed).m */; };
+		33CA47681DCD056000DC7D94 /* NSStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CA47671DCD056000DC7D94 /* NSStringUtils.m */; };
 		33D2346B1D180661006A5CF0 /* IDTestObjX.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D2346A1D180661006A5CF0 /* IDTestObjX.m */; };
 		33D2346E1D181150006A5CF0 /* IDTestSubObjX.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D2346D1D181150006A5CF0 /* IDTestSubObjX.m */; };
 		33EFD7D21CD1AE6400E241C3 /* IDFPSLabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFD7D11CD1AE6400E241C3 /* IDFPSLabelVC.m */; };
@@ -211,6 +212,8 @@
 		33A764171D9BAF6A00381E74 /* NMFolderSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMFolderSectionHeader.m; sourceTree = "<group>"; };
 		33B902F81CD88F3600A0574F /* NSString(TS_Attributed).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString(TS_Attributed).h"; sourceTree = "<group>"; };
 		33B902F91CD88F3600A0574F /* NSString(TS_Attributed).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString(TS_Attributed).m"; sourceTree = "<group>"; };
+		33CA47661DCD056000DC7D94 /* NSStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringUtils.h; sourceTree = "<group>"; };
+		33CA47671DCD056000DC7D94 /* NSStringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringUtils.m; sourceTree = "<group>"; };
 		33D234691D180661006A5CF0 /* IDTestObjX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDTestObjX.h; sourceTree = "<group>"; };
 		33D2346A1D180661006A5CF0 /* IDTestObjX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDTestObjX.m; sourceTree = "<group>"; };
 		33D2346C1D181150006A5CF0 /* IDTestSubObjX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDTestSubObjX.h; sourceTree = "<group>"; };
@@ -496,6 +499,8 @@
 				337E4C5F1DBE347B0072D5FC /* IDUITextFieldVC.m */,
 				337E4C611DBE40430072D5FC /* IDTextField.h */,
 				337E4C621DBE40430072D5FC /* IDTextField.m */,
+				33CA47661DCD056000DC7D94 /* NSStringUtils.h */,
+				33CA47671DCD056000DC7D94 /* NSStringUtils.m */,
 			);
 			path = UITextField;
 			sourceTree = "<group>";
@@ -1006,8 +1011,8 @@
 				33EFD7CF1CD1AE4600E241C3 /* FPSLabel */,
 				56E1FF031C897B77004363C1 /* OCAndJS */,
 				56E1FF091C8995CA004363C1 /* OCPatch */,
-				339ECF4F1D179FF400F4A94C /* Border */,
 				330070B41CCE501700C2C432 /* UILabel */,
+				339ECF4F1D179FF400F4A94C /* Border */,
 				33721A0E1CF6F56D0003F688 /* UITableViewController */,
 				33A763FA1D9BA4B400381E74 /* NMFolderGroupVC */,
 				337E4C5A1DBE344F0072D5FC /* UITextField */,
@@ -1233,6 +1238,7 @@
 				562CA1EE1C9AA24D00B6FE67 /* GPBCodedOutputStream.m in Sources */,
 				56E0BE7F1C813FB700F6E7DA /* IDBaseVC.m in Sources */,
 				33EFD7D51CD1AEA800E241C3 /* NMFPSLabel.m in Sources */,
+				33CA47681DCD056000DC7D94 /* NSStringUtils.m in Sources */,
 				33A764031D9BA57700381E74 /* NMFolderItemCell.m in Sources */,
 				33A764151D9BA74800381E74 /* NMFolderItemModel.m in Sources */,
 				5652167E1C86C52400A8E5A9 /* IDPerson.m in Sources */,
