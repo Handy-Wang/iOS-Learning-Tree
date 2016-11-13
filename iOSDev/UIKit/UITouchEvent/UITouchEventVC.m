@@ -26,14 +26,14 @@
 {
     [super viewDidLoad];
     
-    CGRect containerFrame = CGRectMake(0,
-                                       self.view.frame.size.height - 100,
-                                       self.view.frame.size.width,
-                                       self.view.frame.size.height);
-    NMContainerView *containerView = [[NMContainerView alloc] initWithFrame:containerFrame];
-    containerView.layer.borderColor = [UIColor redColor].CGColor;
-    containerView.layer.borderWidth = 1;
-    [self.view addSubview:containerView];
+//    CGRect containerFrame = CGRectMake(0,
+//                                       self.view.frame.size.height - 100,
+//                                       self.view.frame.size.width,
+//                                       self.view.frame.size.height);
+//    NMContainerView *containerView = [[NMContainerView alloc] initWithFrame:containerFrame];
+//    containerView.layer.borderColor = [UIColor redColor].CGColor;
+//    containerView.layer.borderWidth = 1;
+//    [self.view addSubview:containerView];
     
 //    STHitTestViewBlock blk =  ^ UIView *(CGPoint point, UIEvent *event, BOOL *returnSuper) {
 //        *returnSuper = NO;
@@ -51,8 +51,6 @@
 //    
 //    [_control1 addObserver:self forKeyPath:@"highlighted" options:NSKeyValueObservingOptionNew+NSKeyValueObservingOptionOld context:NULL];
     
-    
-    /*
     CGRect frameA = CGRectMake(0, 80, 200, 200);
     TouchViewA *va = [[TouchViewA alloc] initWithFrame:frameA];
     va.userInteractionEnabled = YES;
@@ -85,15 +83,6 @@
 //    vcTapGesture.delaysTouchesBegan = YES;//Default NO;
 //    vcTapGesture.cancelsTouchesInView = NO;//Default YES;
 //    vcTapGesture.delaysTouchesEnded = NO;//Default YES;
-    [va addGestureRecognizer:vcTapGesture];
-    [va addGestureRecognizer:vcLongPressGesture];
-     */
-    
-    NMTapGestureRecognizer *vcTapGesture = [[NMTapGestureRecognizer alloc] initWithTarget:self action:@selector(triggerTapGesture:)];
-    UILongPressGestureRecognizer *vcLongPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(triggerLongPressGesture:)];
-        vcTapGesture.delaysTouchesBegan = YES;//Default NO;
-        vcTapGesture.cancelsTouchesInView = NO;//Default YES;
-        vcTapGesture.delaysTouchesEnded = NO;//Default YES;
     [va addGestureRecognizer:vcTapGesture];
     [va addGestureRecognizer:vcLongPressGesture];
 }
