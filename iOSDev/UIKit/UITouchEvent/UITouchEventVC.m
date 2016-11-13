@@ -88,6 +88,14 @@
     [va addGestureRecognizer:vcTapGesture];
     [va addGestureRecognizer:vcLongPressGesture];
      */
+    
+    NMTapGestureRecognizer *vcTapGesture = [[NMTapGestureRecognizer alloc] initWithTarget:self action:@selector(triggerTapGesture:)];
+    UILongPressGestureRecognizer *vcLongPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(triggerLongPressGesture:)];
+        vcTapGesture.delaysTouchesBegan = YES;//Default NO;
+        vcTapGesture.cancelsTouchesInView = NO;//Default YES;
+        vcTapGesture.delaysTouchesEnded = NO;//Default YES;
+    [va addGestureRecognizer:vcTapGesture];
+    [va addGestureRecognizer:vcLongPressGesture];
 }
 
 - (void)observeValueForKeyPath:(nullable NSString *)keyPath ofObject:(nullable id)object change:(nullable NSDictionary<NSString*, id> *)change context:(nullable void *)context

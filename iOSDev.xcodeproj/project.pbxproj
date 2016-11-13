@@ -20,6 +20,7 @@
 		334F46211D1919F40090D97B /* DHUsesAllVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 334F46201D1919F40090D97B /* DHUsesAllVC.m */; };
 		334F46241D191A5F0090D97B /* DHUAView.m in Sources */ = {isa = PBXBuildFile; fileRef = 334F46231D191A5F0090D97B /* DHUAView.m */; };
 		334F46271D191A6C0090D97B /* DHUALayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 334F46261D191A6C0090D97B /* DHUALayer.m */; };
+		335BC5971DD1BCDC000C19DC /* IDSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 335BC5961DD1BCDC000C19DC /* IDSelectCell.m */; };
 		33721A0A1CF59D090003F688 /* BSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33721A091CF59D090003F688 /* BSLabel.m */; };
 		33721A111CF6F5820003F688 /* IDTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33721A101CF6F5820003F688 /* IDTableVC.m */; };
 		3375A6D61CB7C806003C5E80 /* IDMainThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3375A6D51CB7C806003C5E80 /* IDMainThreadVC.m */; };
@@ -44,6 +45,19 @@
 		33A764151D9BA74800381E74 /* NMFolderItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A764141D9BA74800381E74 /* NMFolderItemModel.m */; };
 		33A764181D9BAF6A00381E74 /* NMFolderSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A764171D9BAF6A00381E74 /* NMFolderSectionHeader.m */; };
 		33B902FA1CD88F3600A0574F /* NSString(TS_Attributed).m in Sources */ = {isa = PBXBuildFile; fileRef = 33B902F91CD88F3600A0574F /* NSString(TS_Attributed).m */; };
+		33C585241DD6314100454404 /* NMContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C585071DD6314100454404 /* NMContainerView.m */; };
+		33C585251DD6314100454404 /* NMTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C585091DD6314100454404 /* NMTableView.m */; };
+		33C585261DD6314100454404 /* NMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C5850B1DD6314100454404 /* NMTableViewCell.m */; };
+		33C585271DD6314100454404 /* NMHitTestTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C5850E1DD6314100454404 /* NMHitTestTouchView.m */; };
+		33C585281DD6314100454404 /* NMTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C585111DD6314100454404 /* NMTapGestureRecognizer.m */; };
+		33C585291DD6314100454404 /* Foundation+STKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C585141DD6314100454404 /* Foundation+STKit.m */; };
+		33C5852A1DD6314100454404 /* UIKit+STKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C585171DD6314100454404 /* UIKit+STKit.m */; };
+		33C5852B1DD6314100454404 /* TouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C585191DD6314100454404 /* TouchView.m */; };
+		33C5852C1DD6314100454404 /* TouchViewA.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C5851B1DD6314100454404 /* TouchViewA.m */; };
+		33C5852D1DD6314100454404 /* TouchViewB.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C5851D1DD6314100454404 /* TouchViewB.m */; };
+		33C5852E1DD6314100454404 /* TouchViewC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C5851F1DD6314100454404 /* TouchViewC.m */; };
+		33C5852F1DD6314100454404 /* TouchViewD.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C585211DD6314100454404 /* TouchViewD.m */; };
+		33C585301DD6314100454404 /* UITouchEventVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C585231DD6314100454404 /* UITouchEventVC.m */; };
 		33CA47681DCD056000DC7D94 /* NSStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CA47671DCD056000DC7D94 /* NSStringUtils.m */; };
 		33D2346B1D180661006A5CF0 /* IDTestObjX.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D2346A1D180661006A5CF0 /* IDTestObjX.m */; };
 		33D2346E1D181150006A5CF0 /* IDTestSubObjX.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D2346D1D181150006A5CF0 /* IDTestSubObjX.m */; };
@@ -164,6 +178,8 @@
 		334F46231D191A5F0090D97B /* DHUAView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHUAView.m; sourceTree = "<group>"; };
 		334F46251D191A6C0090D97B /* DHUALayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHUALayer.h; sourceTree = "<group>"; };
 		334F46261D191A6C0090D97B /* DHUALayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHUALayer.m; sourceTree = "<group>"; };
+		335BC5951DD1BCDC000C19DC /* IDSelectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDSelectCell.h; sourceTree = "<group>"; };
+		335BC5961DD1BCDC000C19DC /* IDSelectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDSelectCell.m; sourceTree = "<group>"; };
 		33721A081CF59D090003F688 /* BSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLabel.h; sourceTree = "<group>"; };
 		33721A091CF59D090003F688 /* BSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLabel.m; sourceTree = "<group>"; };
 		33721A0F1CF6F5820003F688 /* IDTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDTableVC.h; sourceTree = "<group>"; };
@@ -212,6 +228,33 @@
 		33A764171D9BAF6A00381E74 /* NMFolderSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMFolderSectionHeader.m; sourceTree = "<group>"; };
 		33B902F81CD88F3600A0574F /* NSString(TS_Attributed).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString(TS_Attributed).h"; sourceTree = "<group>"; };
 		33B902F91CD88F3600A0574F /* NSString(TS_Attributed).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString(TS_Attributed).m"; sourceTree = "<group>"; };
+		33C585061DD6314100454404 /* NMContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMContainerView.h; sourceTree = "<group>"; };
+		33C585071DD6314100454404 /* NMContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMContainerView.m; sourceTree = "<group>"; };
+		33C585081DD6314100454404 /* NMTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMTableView.h; sourceTree = "<group>"; };
+		33C585091DD6314100454404 /* NMTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMTableView.m; sourceTree = "<group>"; };
+		33C5850A1DD6314100454404 /* NMTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMTableViewCell.h; sourceTree = "<group>"; };
+		33C5850B1DD6314100454404 /* NMTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMTableViewCell.m; sourceTree = "<group>"; };
+		33C5850D1DD6314100454404 /* NMHitTestTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMHitTestTouchView.h; sourceTree = "<group>"; };
+		33C5850E1DD6314100454404 /* NMHitTestTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMHitTestTouchView.m; sourceTree = "<group>"; };
+		33C585101DD6314100454404 /* NMTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMTapGestureRecognizer.h; sourceTree = "<group>"; };
+		33C585111DD6314100454404 /* NMTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMTapGestureRecognizer.m; sourceTree = "<group>"; };
+		33C585131DD6314100454404 /* Foundation+STKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+STKit.h"; sourceTree = "<group>"; };
+		33C585141DD6314100454404 /* Foundation+STKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+STKit.m"; sourceTree = "<group>"; };
+		33C585151DD6314100454404 /* STDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDefines.h; sourceTree = "<group>"; };
+		33C585161DD6314100454404 /* UIKit+STKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+STKit.h"; sourceTree = "<group>"; };
+		33C585171DD6314100454404 /* UIKit+STKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIKit+STKit.m"; sourceTree = "<group>"; };
+		33C585181DD6314100454404 /* TouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchView.h; sourceTree = "<group>"; };
+		33C585191DD6314100454404 /* TouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchView.m; sourceTree = "<group>"; };
+		33C5851A1DD6314100454404 /* TouchViewA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchViewA.h; sourceTree = "<group>"; };
+		33C5851B1DD6314100454404 /* TouchViewA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchViewA.m; sourceTree = "<group>"; };
+		33C5851C1DD6314100454404 /* TouchViewB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchViewB.h; sourceTree = "<group>"; };
+		33C5851D1DD6314100454404 /* TouchViewB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchViewB.m; sourceTree = "<group>"; };
+		33C5851E1DD6314100454404 /* TouchViewC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchViewC.h; sourceTree = "<group>"; };
+		33C5851F1DD6314100454404 /* TouchViewC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchViewC.m; sourceTree = "<group>"; };
+		33C585201DD6314100454404 /* TouchViewD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchViewD.h; sourceTree = "<group>"; };
+		33C585211DD6314100454404 /* TouchViewD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchViewD.m; sourceTree = "<group>"; };
+		33C585221DD6314100454404 /* UITouchEventVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITouchEventVC.h; sourceTree = "<group>"; };
+		33C585231DD6314100454404 /* UITouchEventVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITouchEventVC.m; sourceTree = "<group>"; };
 		33CA47661DCD056000DC7D94 /* NSStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringUtils.h; sourceTree = "<group>"; };
 		33CA47671DCD056000DC7D94 /* NSStringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringUtils.m; sourceTree = "<group>"; };
 		33D234691D180661006A5CF0 /* IDTestObjX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDTestObjX.h; sourceTree = "<group>"; };
@@ -479,6 +522,8 @@
 			children = (
 				33721A0F1CF6F5820003F688 /* IDTableVC.h */,
 				33721A101CF6F5820003F688 /* IDTableVC.m */,
+				335BC5951DD1BCDC000C19DC /* IDSelectCell.h */,
+				335BC5961DD1BCDC000C19DC /* IDSelectCell.m */,
 			);
 			path = UITableViewController;
 			sourceTree = "<group>";
@@ -597,6 +642,72 @@
 				33A764141D9BA74800381E74 /* NMFolderItemModel.m */,
 			);
 			path = NMFolderGroupVC;
+			sourceTree = "<group>";
+		};
+		33C585041DD6314100454404 /* UITouchEvent */ = {
+			isa = PBXGroup;
+			children = (
+				33C585051DD6314100454404 /* MoveDemo */,
+				33C5850C1DD6314100454404 /* NM_hittest */,
+				33C5850F1DD6314100454404 /* NM_TapGestureRecognizer */,
+				33C585121DD6314100454404 /* ST_hittest */,
+				33C585181DD6314100454404 /* TouchView.h */,
+				33C585191DD6314100454404 /* TouchView.m */,
+				33C5851A1DD6314100454404 /* TouchViewA.h */,
+				33C5851B1DD6314100454404 /* TouchViewA.m */,
+				33C5851C1DD6314100454404 /* TouchViewB.h */,
+				33C5851D1DD6314100454404 /* TouchViewB.m */,
+				33C5851E1DD6314100454404 /* TouchViewC.h */,
+				33C5851F1DD6314100454404 /* TouchViewC.m */,
+				33C585201DD6314100454404 /* TouchViewD.h */,
+				33C585211DD6314100454404 /* TouchViewD.m */,
+				33C585221DD6314100454404 /* UITouchEventVC.h */,
+				33C585231DD6314100454404 /* UITouchEventVC.m */,
+			);
+			path = UITouchEvent;
+			sourceTree = "<group>";
+		};
+		33C585051DD6314100454404 /* MoveDemo */ = {
+			isa = PBXGroup;
+			children = (
+				33C585061DD6314100454404 /* NMContainerView.h */,
+				33C585071DD6314100454404 /* NMContainerView.m */,
+				33C585081DD6314100454404 /* NMTableView.h */,
+				33C585091DD6314100454404 /* NMTableView.m */,
+				33C5850A1DD6314100454404 /* NMTableViewCell.h */,
+				33C5850B1DD6314100454404 /* NMTableViewCell.m */,
+			);
+			path = MoveDemo;
+			sourceTree = "<group>";
+		};
+		33C5850C1DD6314100454404 /* NM_hittest */ = {
+			isa = PBXGroup;
+			children = (
+				33C5850D1DD6314100454404 /* NMHitTestTouchView.h */,
+				33C5850E1DD6314100454404 /* NMHitTestTouchView.m */,
+			);
+			path = NM_hittest;
+			sourceTree = "<group>";
+		};
+		33C5850F1DD6314100454404 /* NM_TapGestureRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				33C585101DD6314100454404 /* NMTapGestureRecognizer.h */,
+				33C585111DD6314100454404 /* NMTapGestureRecognizer.m */,
+			);
+			path = NM_TapGestureRecognizer;
+			sourceTree = "<group>";
+		};
+		33C585121DD6314100454404 /* ST_hittest */ = {
+			isa = PBXGroup;
+			children = (
+				33C585131DD6314100454404 /* Foundation+STKit.h */,
+				33C585141DD6314100454404 /* Foundation+STKit.m */,
+				33C585151DD6314100454404 /* STDefines.h */,
+				33C585161DD6314100454404 /* UIKit+STKit.h */,
+				33C585171DD6314100454404 /* UIKit+STKit.m */,
+			);
+			path = ST_hittest;
 			sourceTree = "<group>";
 		};
 		33EFD7CF1CD1AE4600E241C3 /* FPSLabel */ = {
@@ -1016,6 +1127,7 @@
 				33721A0E1CF6F56D0003F688 /* UITableViewController */,
 				33A763FA1D9BA4B400381E74 /* NMFolderGroupVC */,
 				337E4C5A1DBE344F0072D5FC /* UITextField */,
+				33C585041DD6314100454404 /* UITouchEvent */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1221,6 +1333,7 @@
 			files = (
 				33A6461F1CDAE3FC00944E04 /* BSTextView.m in Sources */,
 				33721A0A1CF59D090003F688 /* BSLabel.m in Sources */,
+				33C585261DD6314100454404 /* NMTableViewCell.m in Sources */,
 				33A7640C1D9BA6CD00381E74 /* NMFolderBaseModel.m in Sources */,
 				563FC9751C9B7F0E00588A54 /* Any.pbobjc.m in Sources */,
 				562CA1D81C9A9FBB00B6FE67 /* GPBExtensionInternals.m in Sources */,
@@ -1234,8 +1347,10 @@
 				562CA1F71C9AA3B200B6FE67 /* GPBDescriptor.m in Sources */,
 				339ECF5A1D179FF400F4A94C /* IDCustomizedBorderVC.m in Sources */,
 				564BA8CE1C82DFA5001A0A07 /* IDUIViewVC.m in Sources */,
+				335BC5971DD1BCDC000C19DC /* IDSelectCell.m in Sources */,
 				33313B491D1299BD0000D8A1 /* IDCoreAnimationVC.m in Sources */,
 				562CA1EE1C9AA24D00B6FE67 /* GPBCodedOutputStream.m in Sources */,
+				33C5852F1DD6314100454404 /* TouchViewD.m in Sources */,
 				56E0BE7F1C813FB700F6E7DA /* IDBaseVC.m in Sources */,
 				33EFD7D51CD1AEA800E241C3 /* NMFPSLabel.m in Sources */,
 				33CA47681DCD056000DC7D94 /* NSStringUtils.m in Sources */,
@@ -1245,8 +1360,10 @@
 				562CA2671C9AB35800B6FE67 /* Api.pbobjc.m in Sources */,
 				562CA1D91C9A9FBB00B6FE67 /* GPBExtensionRegistry.m in Sources */,
 				339ECF591D179FF400F4A94C /* CALayer+AJXBorder.m in Sources */,
+				33C5852E1DD6314100454404 /* TouchViewC.m in Sources */,
 				56F21B301C8BDFAF001732BF /* HDTeacher.m in Sources */,
 				337E4C601DBE347B0072D5FC /* IDUITextFieldVC.m in Sources */,
+				33C5852B1DD6314100454404 /* TouchView.m in Sources */,
 				33D2346B1D180661006A5CF0 /* IDTestObjX.m in Sources */,
 				562CA1EF1C9AA24D00B6FE67 /* GPBWireFormat.m in Sources */,
 				33A2E6861CB565D200990B4E /* IDRuntimeVC.m in Sources */,
@@ -1255,10 +1372,13 @@
 				33A764001D9BA56E00381E74 /* NMFolderCell.m in Sources */,
 				56F21B341C8BF277001732BF /* IDProtocolBufferVC.m in Sources */,
 				562CA2091C9AA3D100B6FE67 /* GPBUtilities.m in Sources */,
+				33C585241DD6314100454404 /* NMContainerView.m in Sources */,
 				33313B4D1D129A340000D8A1 /* IDGuoDongVC.m in Sources */,
 				33A646201CDAE3FC00944E04 /* BSUITestVC.m in Sources */,
 				56F21B2F1C8BDFAF001732BF /* HDPerson.m in Sources */,
+				33C5852D1DD6314100454404 /* TouchViewB.m in Sources */,
 				33A763FD1D9BA4C200381E74 /* NMFolderGroupVC.m in Sources */,
+				33C5852C1DD6314100454404 /* TouchViewA.m in Sources */,
 				562CA2071C9AA3D100B6FE67 /* GPBArray.m in Sources */,
 				568F896A1C7FFA05009A27C5 /* IDHomeListVC.m in Sources */,
 				56E0BE871C81538C00F6E7DA /* IDCacheItem.m in Sources */,
@@ -1268,9 +1388,11 @@
 				562CA26D1C9AB35800B6FE67 /* Struct.pbobjc.m in Sources */,
 				334F461D1D1918560090D97B /* CALayerAJXBorderObserver.m in Sources */,
 				568F89B01C8037D3009A27C5 /* IDFoundationListVC.m in Sources */,
+				33C585301DD6314100454404 /* UITouchEventVC.m in Sources */,
 				56E0BE981C81CFE300F6E7DA /* IDCALayer.m in Sources */,
 				334F46211D1919F40090D97B /* DHUsesAllVC.m in Sources */,
 				568F892D1C7FF49F009A27C5 /* main.m in Sources */,
+				33C585251DD6314100454404 /* NMTableView.m in Sources */,
 				568F899F1C8006A5009A27C5 /* IDAlgorithmListVC.m in Sources */,
 				562CA2681C9AB35800B6FE67 /* Descriptor.pbobjc.m in Sources */,
 				3302AC2F1DC057EF008E6F2A /* IDNSObjectVC.m in Sources */,
@@ -1285,6 +1407,7 @@
 				568F89B81C80464F009A27C5 /* IDNSDictionaryVC.m in Sources */,
 				3375A6D61CB7C806003C5E80 /* IDMainThreadVC.m in Sources */,
 				337E4C631DBE40430072D5FC /* IDTextField.m in Sources */,
+				33C585281DD6314100454404 /* NMTapGestureRecognizer.m in Sources */,
 				564BA8CA1C82C1E4001A0A07 /* IDCALayerView.m in Sources */,
 				56DFB2721C84165400F750E8 /* IDCAAnimationTestLayer.m in Sources */,
 				568F89981C8005BA009A27C5 /* IDTechListModel.m in Sources */,
@@ -1303,17 +1426,20 @@
 				562CA1ED1C9AA24D00B6FE67 /* GPBCodedInputStream.m in Sources */,
 				33D2346E1D181150006A5CF0 /* IDTestSubObjX.m in Sources */,
 				562CA1E41C9AA22E00B6FE67 /* GPBUnknownFieldSet.m in Sources */,
+				33C585291DD6314100454404 /* Foundation+STKit.m in Sources */,
 				56E1FF0C1C8995D3004363C1 /* IDOCPatchVC.m in Sources */,
 				56DFB26F1C84164600F750E8 /* IDCAAnimationTestView.m in Sources */,
 				3329C6851CAE24E2000E62D6 /* IDFuncArgsVC.m in Sources */,
 				339ECF5B1D179FF400F4A94C /* IDBorderTableVC.m in Sources */,
 				33EFD7D21CD1AE6400E241C3 /* IDFPSLabelVC.m in Sources */,
 				33A6461E1CDAE3FC00944E04 /* BSTextField.m in Sources */,
+				33C5852A1DD6314100454404 /* UIKit+STKit.m in Sources */,
 				562CA2081C9AA3D100B6FE67 /* GPBDictionary.m in Sources */,
 				339ECF601D17A05900F4A94C /* IDBorderTest1.m in Sources */,
 				568F89971C8005BA009A27C5 /* IDTechListItemModel.m in Sources */,
 				562CA26C1C9AB35800B6FE67 /* SourceContext.pbobjc.m in Sources */,
 				56F21B2A1C8BDF85001732BF /* IDSelfAndSuperVC.m in Sources */,
+				33C585271DD6314100454404 /* NMHitTestTouchView.m in Sources */,
 				5652167B1C86BEED00A8E5A9 /* IDMRCVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

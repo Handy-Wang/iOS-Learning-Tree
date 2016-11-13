@@ -7,27 +7,21 @@
 //
 
 #import "IDTableVC.h"
+#import "IDSelectCell.h"
 
 @interface IDTableVC () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableview;
+@property (nonatomic, strong) NSMutableArray *cachedCells;
 @end
 
 @implementation IDTableVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setEdgesForExtendedLayout:UIRectEdgeNone];
+    
+    _cachedCells = [NSMutableArray array];
     [self.view addSubview:self.tableview];
-    
-    __weak typeof(self) weakself = self;
-    [NSTimer scheduledTimerWithTimeInterval:0.5 repeats:YES block:^(NSTimer * _Nonnull timer) {
-        
-    }];
-    
-    [NSTimer scheduledTimerWithTimeInterval:0.5 repeats:YES block:^(NSTimer * _Nonnull timer) {
-    }];
-    
-    [NSTimer scheduledTimerWithTimeInterval:0.5 repeats:YES block:^(NSTimer * _Nonnull timer) {
-    }];
 }
 
 #pragma mark - UITableViewDataSource
@@ -37,13 +31,18 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%@, %@", NSStringFromSelector(_cmd), [@(indexPath.row) stringValue]);
+//    NSLog(@"%@, %@", NSStringFromSelector(_cmd), [@(indexPath.row) stringValue]);
     
     static NSString *cellIdentifier = @"cellIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    IDSelectCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[IDSelectCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        NSValue *cellValue = [NSValue valueWithNonretainedObject:cell];
+        [_cachedCells addObject:cellValue];
+    } else {
+        NSUInteger reuseIndex = [_cachedCells indexOfObject:cell];
+        NSLog(@"Reuseed cell %ld", reuseIndex);
     }
     
     CGFloat r = arc4random()%255/255.0f;
@@ -51,6 +50,9 @@
     CGFloat b = arc4random()%255/255.0f;
     UIColor *bgColor = [UIColor colorWithRed:r green:g blue:b alpha:1];
     cell.backgroundColor = bgColor;
+    cell.textLabel.text = [NSString stringWithFormat:@"row ------ %ld", (indexPath.row+1)];
+    
+    NSLog(@"Cached cell pool length is %ld", _cachedCells.count);
     
     return cell;
 }
@@ -58,13 +60,18 @@
 #pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%@, %@", NSStringFromSelector(_cmd), [@(indexPath.row) stringValue]);
+//    NSLog(@"%@, %@", NSStringFromSelector(_cmd), [@(indexPath.row) stringValue]);
     return 200;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%@, %@", NSStringFromSelector(_cmd), [@(indexPath.row) stringValue]);
-    return 44;
+//    NSLog(@"%@, %@", NSStringFromSelector(_cmd), [@(indexPath.row) stringValue]);
+    return kIDSelectCellHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 #pragma mark - Getter & Setter
