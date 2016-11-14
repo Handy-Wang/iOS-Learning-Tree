@@ -4,6 +4,7 @@
                {"title" : "Algorithm", "className" : "IDAlgorithmListVC"},
                {"title" : "Foundation", "className" : "IDFoundationListVC"},
                {"title" : "UIKit", "className" : "IDUIKitListVC"},
+               {"title" : "JSC", "className" : "IDJSCVC"},
                {"title" : "MRC", "className" : "IDMRCVC"},
                {"title" : "ProtocolBuffer", "className" : "IDProtocolBufferVC"}
                ]

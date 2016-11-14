@@ -20,6 +20,7 @@
 		334F46211D1919F40090D97B /* DHUsesAllVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 334F46201D1919F40090D97B /* DHUsesAllVC.m */; };
 		334F46241D191A5F0090D97B /* DHUAView.m in Sources */ = {isa = PBXBuildFile; fileRef = 334F46231D191A5F0090D97B /* DHUAView.m */; };
 		334F46271D191A6C0090D97B /* DHUALayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 334F46261D191A6C0090D97B /* DHUALayer.m */; };
+		335196151DD89358007E118C /* IDJSCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 335196141DD89358007E118C /* IDJSCVC.m */; };
 		335BC5971DD1BCDC000C19DC /* IDSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 335BC5961DD1BCDC000C19DC /* IDSelectCell.m */; };
 		33721A0A1CF59D090003F688 /* BSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33721A091CF59D090003F688 /* BSLabel.m */; };
 		33721A111CF6F5820003F688 /* IDTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33721A101CF6F5820003F688 /* IDTableVC.m */; };
@@ -178,6 +179,8 @@
 		334F46231D191A5F0090D97B /* DHUAView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHUAView.m; sourceTree = "<group>"; };
 		334F46251D191A6C0090D97B /* DHUALayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHUALayer.h; sourceTree = "<group>"; };
 		334F46261D191A6C0090D97B /* DHUALayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHUALayer.m; sourceTree = "<group>"; };
+		335196131DD89358007E118C /* IDJSCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDJSCVC.h; sourceTree = "<group>"; };
+		335196141DD89358007E118C /* IDJSCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJSCVC.m; sourceTree = "<group>"; };
 		335BC5951DD1BCDC000C19DC /* IDSelectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDSelectCell.h; sourceTree = "<group>"; };
 		335BC5961DD1BCDC000C19DC /* IDSelectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDSelectCell.m; sourceTree = "<group>"; };
 		33721A081CF59D090003F688 /* BSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLabel.h; sourceTree = "<group>"; };
@@ -515,6 +518,15 @@
 				334F46261D191A6C0090D97B /* DHUALayer.m */,
 			);
 			path = DHUsesAll;
+			sourceTree = "<group>";
+		};
+		335196121DD892D4007E118C /* JSC */ = {
+			isa = PBXGroup;
+			children = (
+				335196131DD89358007E118C /* IDJSCVC.h */,
+				335196141DD89358007E118C /* IDJSCVC.m */,
+			);
+			path = JSC;
 			sourceTree = "<group>";
 		};
 		33721A0E1CF6F56D0003F688 /* UITableViewController */ = {
@@ -891,6 +903,7 @@
 				33313B411D1299160000D8A1 /* CoreAnimation */,
 				568F89A61C80379D009A27C5 /* Foundation */,
 				56E1FEFD1C897AB1004363C1 /* UIKit */,
+				335196121DD892D4007E118C /* JSC */,
 				565216781C86BEAA00A8E5A9 /* MRC */,
 				56F21B311C8BF26C001732BF /* ProtocolBuffer */,
 				568F89861C8004B5009A27C5 /* Shared */,
@@ -1404,6 +1417,7 @@
 				568F89A21C80085B009A27C5 /* IDBinaryTreeVC.m in Sources */,
 				330070B71CCE504700C2C432 /* IDUILabelVC.m in Sources */,
 				568F89A51C80089C009A27C5 /* IDBinaryTreeNode.m in Sources */,
+				335196151DD89358007E118C /* IDJSCVC.m in Sources */,
 				568F89B81C80464F009A27C5 /* IDNSDictionaryVC.m in Sources */,
 				3375A6D61CB7C806003C5E80 /* IDMainThreadVC.m in Sources */,
 				337E4C631DBE40430072D5FC /* IDTextField.m in Sources */,
