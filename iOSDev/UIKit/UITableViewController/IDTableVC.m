@@ -10,8 +10,11 @@
 #import "IDSelectCell.h"
 
 @interface IDTableVC () <UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, assign) NSUInteger sectionCount;
+@property (nonatomic, assign) NSUInteger rowCount;
 @property (nonatomic, strong) UITableView *tableview;
-@property (nonatomic, strong) NSMutableArray *cachedCells;
+@property (nonatomic, strong) NSMutableDictionary *sectionsRowsDict;
+//@property (nonatomic, strong) NSMutableArray *cachedCells;
 @end
 
 @implementation IDTableVC
@@ -20,14 +23,24 @@
     [super viewDidLoad];
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
     
-    _cachedCells = [NSMutableArray array];
+    self.sectionsRowsDict = [NSMutableDictionary dictionary];
+    
+    self.sectionCount = 2;
+    self.rowCount = 20;
+    
+//    _cachedCells = [NSMutableArray array];
     [self.view addSubview:self.tableview];
 }
 
 #pragma mark - UITableViewDataSource
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return self.sectionCount;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 300;
+    return self.rowCount;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -39,10 +52,10 @@
     if (!cell) {
         cell = [[IDSelectCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         NSValue *cellValue = [NSValue valueWithNonretainedObject:cell];
-        [_cachedCells addObject:cellValue];
+//        [_cachedCells addObject:cellValue];
     } else {
-        NSUInteger reuseIndex = [_cachedCells indexOfObject:cell];
-        NSLog(@"Reuseed cell %ld", reuseIndex);
+//        NSUInteger reuseIndex = [_cachedCells indexOfObject:cell];
+//        NSLog(@"Reuseed cell %ld", reuseIndex);
     }
     
     CGFloat r = arc4random()%255/255.0f;
@@ -52,7 +65,7 @@
     cell.backgroundColor = bgColor;
     cell.textLabel.text = [NSString stringWithFormat:@"row ------ %ld", (indexPath.row+1)];
     
-    NSLog(@"Cached cell pool length is %ld", _cachedCells.count);
+//    NSLog(@"Cached cell pool length is %ld", _cachedCells.count);
     
     return cell;
 }
@@ -61,6 +74,14 @@
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
 //    NSLog(@"%@, %@", NSStringFromSelector(_cmd), [@(indexPath.row) stringValue]);
+    NSMutableArray *rows = self.sectionsRowsDict[[@(indexPath.section) stringValue]];
+    if ((indexPath.section == 0 && indexPath.row == 0)) {
+        rows = [NSMutableArray array];
+        self.sectionsRowsDict = [NSMutableDictionary dictionary];
+        self.sectionsRowsDict[[@(indexPath.section) stringValue]] = rows;
+    }
+    [rows addObject:[@(indexPath.row) stringValue]];
+    
     return 200;
 }
 
@@ -72,6 +93,32 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    NSMutableString *oldKey = [NSMutableString string];
+    for (int i = 0; i < self.sectionsRowsDict.allValues.count; i++) {
+        NSArray *items = self.sectionsRowsDict.allValues[i];
+        for (int j = 0; j < items.count; j++) {
+            [oldKey appendString:[NSString stringWithFormat:@"%d-%d,", i, j]];
+        }
+    }
+    
+    //===================================================
+    
+    self.sectionCount = 3;
+    self.rowCount = 10;
+    NSMutableString *nowKey = [NSMutableString string];
+    for (int i = 0; i < self.sectionCount; i++) {
+        for (int j = 0; j < self.rowCount; j++) {
+            [nowKey appendString:[NSString stringWithFormat:@"%d-%d,", i, j]];
+        }
+    }
+    
+    NSLog(@"Old: %@", oldKey);
+    NSLog(@"Now: %@", nowKey);
+    
+    if ([oldKey isEqualToString:nowKey]) {
+        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    }
 }
 
 #pragma mark - Getter & Setter
