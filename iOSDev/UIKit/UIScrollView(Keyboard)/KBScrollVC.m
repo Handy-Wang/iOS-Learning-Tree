@@ -9,10 +9,10 @@
 #import "KBScrollVC.h"
 #import "AJXKBTextView.h"
 
-#define kScrollViewContentSizeEdge  (1000.0f)
+#define kScrollViewContentSizeEdge  (600.0f)
 #define kScrollViewContentSize      (CGSizeMake(kScrollViewContentSizeEdge, kScrollViewContentSizeEdge))
 #define kTextViewHeight             (200.0f)
-#define kTextViewWidth              (800.0f)
+#define kTextViewWidth              (400)
 
 @interface KBScrollVC ()
 @property (nonatomic, strong) UIScrollView *scrollView;
@@ -25,12 +25,23 @@
     
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(finish)];
     [self.view addGestureRecognizer:tapGesture];
-    self.view.backgroundColor = [UIColor grayColor];
+    
+    CGFloat r = arc4random()%255/255.0f;
+    CGFloat g = arc4random()%255/255.0f;
+    CGFloat b = arc4random()%255/255.0f;
+    UIColor *bgColor = [UIColor colorWithRed:r green:g blue:b alpha:1];
+    self.view.backgroundColor = bgColor;
     
     _scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     _scrollView.contentSize = kScrollViewContentSize;
     _scrollView.ts_height = self.view.ts_height*0.8;
     [self.view addSubview:_scrollView];
+    
+    r = arc4random()%255/255.0f;
+    g = arc4random()%255/255.0f;
+    b = arc4random()%255/255.0f;
+    bgColor = [UIColor colorWithRed:r green:g blue:b alpha:1];
+    _scrollView.backgroundColor = bgColor;
     
     CGRect textView1Frame = CGRectMake(0,
                                        kScrollViewContentSizeEdge-3*kTextViewHeight,
