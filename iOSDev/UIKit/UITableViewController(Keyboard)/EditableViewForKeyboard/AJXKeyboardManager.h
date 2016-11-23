@@ -14,7 +14,7 @@
 @property (nonatomic, assign, readonly) CGRect keyboardFrame;
 @property (nonatomic, assign, readonly) BOOL isKeyboardVisible;
 @property (nonatomic, weak) UIView *containerView;
-@property (nonatomic, assign) CGRect containerViewInitFrame;
+@property (nonatomic, assign) CGRect containerViewInitFrame;//for class AJXKBTextView2
 
 + (instancetype)defaultKeyboardManager;
 
