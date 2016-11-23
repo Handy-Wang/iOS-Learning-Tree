@@ -1,18 +1,18 @@
 //
-//  KBTextView.m
+//  AJXKBTextView.m
 //  iOSDev
 //
 //  Created by Handy on 11/21/16.
 //  Copyright © 2016 XiaoShan. All rights reserved.
 //
 
-#import "KBTextView.h"
+#import "AJXKBTextView.h"
 #import "UIView(AJXKeyboard).h"
 #import "UIWindow(AJXKeyboard).h"
 #import "UITableView(AJXKeyboard).h"
 #import "AJXKeyboardManager.h"
 
-@interface KBTextView() <UITextViewDelegate>
+@interface AJXKBTextView() <UITextViewDelegate>
 @property (nonatomic, assign) BOOL isTextEditing;
 @property (nonatomic, weak) UIWindow *keyWindow;
 
@@ -20,7 +20,7 @@
 //@property (nonatomic, weak) UIScrollView *superScrollView;
 @end
 
-@implementation KBTextView
+@implementation AJXKBTextView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {

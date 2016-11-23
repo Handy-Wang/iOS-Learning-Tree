@@ -1,5 +1,5 @@
 //
-//  KBTextView.h
+//  AJXKBTextView.h
 //  iOSDev
 //
 //  Created by Handy on 11/21/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KBTextView : UITextView
+@interface AJXKBTextView : UITextView
 
 @end

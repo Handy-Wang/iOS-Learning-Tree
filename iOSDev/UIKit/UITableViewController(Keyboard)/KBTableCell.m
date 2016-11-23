@@ -7,10 +7,10 @@
 //
 
 #import "KBTableCell.h"
-#import "KBTextView.h"
+#import "AJXKBTextView.h"
 
 @interface KBTableCell()
-@property (nonatomic, strong) KBTextView *textView;
+@property (nonatomic, strong) AJXKBTextView *textView;
 @end
 
 @implementation KBTableCell
@@ -30,7 +30,7 @@
 - (UITextView *)textView
 {
     if (!_textView) {
-        _textView = [[KBTextView alloc] initWithFrame:self.bounds];
+        _textView = [[AJXKBTextView alloc] initWithFrame:self.bounds];
         _textView.text = @"2018世界杯";
         _textView.layer.borderColor = [UIColor blackColor].CGColor;
         _textView.layer.borderWidth = 1;
