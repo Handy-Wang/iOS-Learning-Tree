@@ -8,7 +8,8 @@
                {"title" : "UITextField", "className" : "IDUITextFieldVC"},
                {"title" : "CustomizedBorder", "className" : "IDCustomizedBorderVC"},
                {"title" : "UITableViewController", "className" : "TCTableVC"},
-               {"title" : "UITableViewController+Keyboard", "className" : "KBTableVC"},
+               {"title" : "UITableView+Keyboard", "className" : "KBTableVC"},
+               {"title" : "UIScrollView+Keyboard", "className" : "KBScrollVC"},
                {"title" : "FolderGroup(TableVC)", "className" : "NMFolderGroupVC"},
                {"title" : "UITouchEvent", "className" : "UITouchEventVC"}
                ]

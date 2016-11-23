@@ -65,6 +65,7 @@
 		33C585301DD6314100454404 /* UITouchEventVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C585231DD6314100454404 /* UITouchEventVC.m */; };
 		33C7FC211DE58D7200A13A62 /* AJXKBTextView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC201DE58D7200A13A62 /* AJXKBTextView2.m */; };
 		33C7FC241DE5BAF900A13A62 /* UIScrollView(AJXKeyboard).m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC231DE5BAF900A13A62 /* UIScrollView(AJXKeyboard).m */; };
+		33C7FC2E1DE5C92400A13A62 /* KBScrollVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC2D1DE5C92400A13A62 /* KBScrollVC.m */; };
 		33CA47681DCD056000DC7D94 /* NSStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CA47671DCD056000DC7D94 /* NSStringUtils.m */; };
 		33D2346B1D180661006A5CF0 /* IDTestObjX.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D2346A1D180661006A5CF0 /* IDTestObjX.m */; };
 		33D2346E1D181150006A5CF0 /* IDTestSubObjX.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D2346D1D181150006A5CF0 /* IDTestSubObjX.m */; };
@@ -280,6 +281,8 @@
 		33C7FC201DE58D7200A13A62 /* AJXKBTextView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJXKBTextView2.m; sourceTree = "<group>"; };
 		33C7FC221DE5BAF900A13A62 /* UIScrollView(AJXKeyboard).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView(AJXKeyboard).h"; sourceTree = "<group>"; };
 		33C7FC231DE5BAF900A13A62 /* UIScrollView(AJXKeyboard).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView(AJXKeyboard).m"; sourceTree = "<group>"; };
+		33C7FC2C1DE5C92400A13A62 /* KBScrollVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBScrollVC.h; sourceTree = "<group>"; };
+		33C7FC2D1DE5C92400A13A62 /* KBScrollVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBScrollVC.m; sourceTree = "<group>"; };
 		33CA47661DCD056000DC7D94 /* NSStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringUtils.h; sourceTree = "<group>"; };
 		33CA47671DCD056000DC7D94 /* NSStringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringUtils.m; sourceTree = "<group>"; };
 		33D234691D180661006A5CF0 /* IDTestObjX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDTestObjX.h; sourceTree = "<group>"; };
@@ -775,6 +778,15 @@
 			path = ST_hittest;
 			sourceTree = "<group>";
 		};
+		33C7FC251DE5C8B200A13A62 /* UIScrollView(Keyboard) */ = {
+			isa = PBXGroup;
+			children = (
+				33C7FC2C1DE5C92400A13A62 /* KBScrollVC.h */,
+				33C7FC2D1DE5C92400A13A62 /* KBScrollVC.m */,
+			);
+			path = "UIScrollView(Keyboard)";
+			sourceTree = "<group>";
+		};
 		33EFD7CF1CD1AE4600E241C3 /* FPSLabel */ = {
 			isa = PBXGroup;
 			children = (
@@ -1192,6 +1204,7 @@
 				339ECF4F1D179FF400F4A94C /* Border */,
 				33721A0E1CF6F56D0003F688 /* UITableViewController */,
 				33A635711DE5854D001588FF /* UITableViewController(Keyboard) */,
+				33C7FC251DE5C8B200A13A62 /* UIScrollView(Keyboard) */,
 				33A763FA1D9BA4B400381E74 /* NMFolderGroupVC */,
 				337E4C5A1DBE344F0072D5FC /* UITextField */,
 				33C585041DD6314100454404 /* UITouchEvent */,
@@ -1492,6 +1505,7 @@
 				562CA1F81C9AA3B200B6FE67 /* GPBMessage.m in Sources */,
 				56E1FF061C897B85004363C1 /* IDOCAndJSVC.m in Sources */,
 				56E1FEFC1C897000004363C1 /* IDBlockVC.m in Sources */,
+				33C7FC2E1DE5C92400A13A62 /* KBScrollVC.m in Sources */,
 				56E0BE8B1C815BBD00F6E7DA /* IDNSArrayVC.m in Sources */,
 				3302AC361DC05898008E6F2A /* SubPerson.m in Sources */,
 				334F46241D191A5F0090D97B /* DHUAView.m in Sources */,
