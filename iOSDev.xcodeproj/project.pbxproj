@@ -67,6 +67,8 @@
 		33C7FC561DE5D30F00A13A62 /* KBTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC481DE5D30F00A13A62 /* KBTableCell.m */; };
 		33C7FC571DE5D30F00A13A62 /* KBTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC4A1DE5D30F00A13A62 /* KBTableVC.m */; };
 		33C7FC581DE5D30F00A13A62 /* KBTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC4C1DE5D30F00A13A62 /* KBTableView.m */; };
+		33C7FC5C1DE5D3D000A13A62 /* EditableView.json in Resources */ = {isa = PBXBuildFile; fileRef = 33C7FC591DE5D3D000A13A62 /* EditableView.json */; };
+		33C7FC5D1DE5D3D000A13A62 /* EditableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC5B1DE5D3D000A13A62 /* EditableViewVC.m */; };
 		33CA47681DCD056000DC7D94 /* NSStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CA47671DCD056000DC7D94 /* NSStringUtils.m */; };
 		33D2346B1D180661006A5CF0 /* IDTestObjX.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D2346A1D180661006A5CF0 /* IDTestObjX.m */; };
 		33D2346E1D181150006A5CF0 /* IDTestSubObjX.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D2346D1D181150006A5CF0 /* IDTestSubObjX.m */; };
@@ -286,6 +288,9 @@
 		33C7FC4A1DE5D30F00A13A62 /* KBTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBTableVC.m; sourceTree = "<group>"; };
 		33C7FC4B1DE5D30F00A13A62 /* KBTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBTableView.h; sourceTree = "<group>"; };
 		33C7FC4C1DE5D30F00A13A62 /* KBTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBTableView.m; sourceTree = "<group>"; };
+		33C7FC591DE5D3D000A13A62 /* EditableView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EditableView.json; sourceTree = "<group>"; };
+		33C7FC5A1DE5D3D000A13A62 /* EditableViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditableViewVC.h; sourceTree = "<group>"; };
+		33C7FC5B1DE5D3D000A13A62 /* EditableViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableViewVC.m; sourceTree = "<group>"; };
 		33CA47661DCD056000DC7D94 /* NSStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringUtils.h; sourceTree = "<group>"; };
 		33CA47671DCD056000DC7D94 /* NSStringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringUtils.m; sourceTree = "<group>"; };
 		33D234691D180661006A5CF0 /* IDTestObjX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDTestObjX.h; sourceTree = "<group>"; };
@@ -751,6 +756,9 @@
 		33C7FC331DE5D30F00A13A62 /* EditableView+UncoveredByKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				33C7FC5A1DE5D3D000A13A62 /* EditableViewVC.h */,
+				33C7FC5B1DE5D3D000A13A62 /* EditableViewVC.m */,
+				33C7FC591DE5D3D000A13A62 /* EditableView.json */,
 				33C7FC411DE5D30F00A13A62 /* UIScrollView(Keyboard) */,
 				33C7FC461DE5D30F00A13A62 /* UITableView(Keyboard) */,
 				33C7FC4D1DE5D30F00A13A62 /* UIView(Keyboard) */,
@@ -1403,6 +1411,7 @@
 				56E1FF081C897D1C004363C1 /* OCAndJS.html in Resources */,
 				568F899A1C800649009A27C5 /* IDHomeList.json in Resources */,
 				56E1FF011C897B1C004363C1 /* IDUIKitList.json in Resources */,
+				33C7FC5C1DE5D3D000A13A62 /* EditableView.json in Resources */,
 				33313B481D1299BD0000D8A1 /* IDCoreAnimation.json in Resources */,
 				3329C67D1CAE23E9000E62D6 /* mountian.png in Resources */,
 				568F893B1C7FF4A0009A27C5 /* LaunchScreen.storyboard in Resources */,
@@ -1457,6 +1466,7 @@
 				33EFD7D51CD1AEA800E241C3 /* NMFPSLabel.m in Sources */,
 				33CA47681DCD056000DC7D94 /* NSStringUtils.m in Sources */,
 				33A764031D9BA57700381E74 /* NMFolderItemCell.m in Sources */,
+				33C7FC5D1DE5D3D000A13A62 /* EditableViewVC.m in Sources */,
 				33A764151D9BA74800381E74 /* NMFolderItemModel.m in Sources */,
 				5652167E1C86C52400A8E5A9 /* IDPerson.m in Sources */,
 				562CA2671C9AB35800B6FE67 /* Api.pbobjc.m in Sources */,
