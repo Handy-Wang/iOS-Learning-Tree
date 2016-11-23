@@ -19,8 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blackColor];
-    [self setEdgesForExtendedLayout:UIRectEdgeTop];
+    self.view.backgroundColor = [UIColor grayColor];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     [self.view addSubview:self.tableView1];
     [self.view addSubview:self.tableView2];
     
@@ -31,6 +31,7 @@
 - (UITableView *)tableView1 {
     if (!_tableView1) {
         _tableView1 = [[KBTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView1.ts_top = 64;
         _tableView1.ts_height = self.view.ts_height*0.8;
         _tableView1.ts_width = self.view.ts_width*0.5;
     }
@@ -41,6 +42,7 @@
 - (UITableView *)tableView2 {
     if (!_tableView2) {
         _tableView2 = [[KBTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView2.ts_top = 64;
         _tableView2.ts_left = self.view.ts_width*0.5;
         _tableView2.ts_height = self.view.ts_height*0.8;
         _tableView2.ts_width = self.view.ts_width*0.5;
