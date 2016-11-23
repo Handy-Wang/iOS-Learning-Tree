@@ -35,6 +35,7 @@
 		339ECF601D17A05900F4A94C /* IDBorderTest1.m in Sources */ = {isa = PBXBuildFile; fileRef = 339ECF5F1D17A05900F4A94C /* IDBorderTest1.m */; };
 		339ECF631D17A10800F4A94C /* IDBorderTest1Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 339ECF621D17A10800F4A94C /* IDBorderTest1Cell.m */; };
 		33A2E6861CB565D200990B4E /* IDRuntimeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A2E6851CB565D200990B4E /* IDRuntimeVC.m */; };
+		33A635551DE576A8001588FF /* IDTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A635541DE576A8001588FF /* IDTableView.m */; };
 		33A6461E1CDAE3FC00944E04 /* BSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A646191CDAE3FC00944E04 /* BSTextField.m */; };
 		33A6461F1CDAE3FC00944E04 /* BSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6461B1CDAE3FC00944E04 /* BSTextView.m */; };
 		33A646201CDAE3FC00944E04 /* BSUITestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6461D1CDAE3FC00944E04 /* BSUITestVC.m */; };
@@ -211,6 +212,8 @@
 		339ECF621D17A10800F4A94C /* IDBorderTest1Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDBorderTest1Cell.m; sourceTree = "<group>"; };
 		33A2E6841CB565D200990B4E /* IDRuntimeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDRuntimeVC.h; sourceTree = "<group>"; };
 		33A2E6851CB565D200990B4E /* IDRuntimeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDRuntimeVC.m; sourceTree = "<group>"; };
+		33A635531DE576A8001588FF /* IDTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDTableView.h; sourceTree = "<group>"; };
+		33A635541DE576A8001588FF /* IDTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDTableView.m; sourceTree = "<group>"; };
 		33A646171CDAE3FC00944E04 /* BSTextAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextAlignment.h; sourceTree = "<group>"; };
 		33A646181CDAE3FC00944E04 /* BSTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextField.h; sourceTree = "<group>"; };
 		33A646191CDAE3FC00944E04 /* BSTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTextField.m; sourceTree = "<group>"; };
@@ -547,6 +550,8 @@
 			children = (
 				33721A0F1CF6F5820003F688 /* IDTableVC.h */,
 				33721A101CF6F5820003F688 /* IDTableVC.m */,
+				33A635531DE576A8001588FF /* IDTableView.h */,
+				33A635541DE576A8001588FF /* IDTableView.m */,
 				335BC5951DD1BCDC000C19DC /* IDSelectCell.h */,
 				335BC5961DD1BCDC000C19DC /* IDSelectCell.m */,
 				33FA66961DE444FE00523818 /* AJXKeyboardManager.h */,
@@ -1432,6 +1437,7 @@
 				568F892D1C7FF49F009A27C5 /* main.m in Sources */,
 				33C585251DD6314100454404 /* NMTableView.m in Sources */,
 				568F899F1C8006A5009A27C5 /* IDAlgorithmListVC.m in Sources */,
+				33A635551DE576A8001588FF /* IDTableView.m in Sources */,
 				562CA2681C9AB35800B6FE67 /* Descriptor.pbobjc.m in Sources */,
 				3302AC2F1DC057EF008E6F2A /* IDNSObjectVC.m in Sources */,
 				3302AC331DC05873008E6F2A /* BaseAnimal.m in Sources */,

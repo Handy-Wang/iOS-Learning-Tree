@@ -8,13 +8,11 @@
 
 #import "IDTableVC.h"
 #import "IDSelectCell.h"
+#import "IDTableView.h"
 
-@interface IDTableVC () <UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, assign) NSUInteger sectionCount;
-@property (nonatomic, assign) NSUInteger rowCount;
-@property (nonatomic, strong) UITableView *tableview;
-@property (nonatomic, strong) NSMutableDictionary *sectionsRowsDict;
-//@property (nonatomic, strong) NSMutableArray *cachedCells;
+@interface IDTableVC ()
+@property (nonatomic, strong) IDTableView *tableView1;
+@property (nonatomic, strong) IDTableView *tableView2;
 @end
 
 @implementation IDTableVC
@@ -23,99 +21,32 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blackColor];
     [self setEdgesForExtendedLayout:UIRectEdgeTop];
+    [self.view addSubview:self.tableview2];
+    [self.view addSubview:self.tableview1];
     
-    self.sectionsRowsDict = [NSMutableDictionary dictionary];
-    
-    self.sectionCount = 1;
-    self.rowCount = 8;
-    
-//    _cachedCells = [NSMutableArray array];
-    [self.view addSubview:self.tableview];
-}
-
-#pragma mark - UITableViewDataSource
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return self.sectionCount;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.rowCount;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    NSLog(@"%@, %@", NSStringFromSelector(_cmd), [@(indexPath.row) stringValue]);
-    
-    static NSString *cellIdentifier = @"cellIdentifier";
-    IDSelectCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    if (!cell) {
-        cell = [[IDSelectCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-        NSValue *cellValue = [NSValue valueWithNonretainedObject:cell];
-//        [_cachedCells addObject:cellValue];
-    } else {
-//        NSUInteger reuseIndex = [_cachedCells indexOfObject:cell];
-//        NSLog(@"Reuseed cell %ld", reuseIndex);
-    }
-    
-    CGFloat r = arc4random()%255/255.0f;
-    CGFloat g = arc4random()%255/255.0f;
-    CGFloat b = arc4random()%255/255.0f;
-    UIColor *bgColor = [UIColor colorWithRed:r green:g blue:b alpha:1];
-    cell.backgroundColor = bgColor;
-    cell.textLabel.text = [NSString stringWithFormat:@"row ------ %ld", (indexPath.row+1)];
-    
-//    NSLog(@"Cached cell pool length is %ld", _cachedCells.count);
-    
-    cell.isContainTetxtView = !!(indexPath.row % 2);
-    
-    return cell;
-}
-
-#pragma mark - UITableViewDelegate
-
-//- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-////    NSLog(@"%@, %@", NSStringFromSelector(_cmd), [@(indexPath.row) stringValue]);
-//    NSMutableArray *rows = self.sectionsRowsDict[[@(indexPath.section) stringValue]];
-//    if ((indexPath.section == 0 && indexPath.row == 0)) {
-//        rows = [NSMutableArray array];
-//        self.sectionsRowsDict = [NSMutableDictionary dictionary];
-//        self.sectionsRowsDict[[@(indexPath.section) stringValue]] = rows;
-//    }
-//    [rows addObject:[@(indexPath.row) stringValue]];
-//    
-//    return 200;
-//}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    NSLog(@"%@, %@", NSStringFromSelector(_cmd), [@(indexPath.row) stringValue]);
-    return kIDSelectCellHeight;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    CGRect cellFrame = [cell.superview convertRect:cell.frame toView:cell.window];
-    NSLog(@"===========%@--%@, cell window frame is %@",
-          NSStringFromClass(self.class), NSStringFromSelector(_cmd), NSStringFromCGRect(cellFrame));
-    
-    [self.view endEditing:YES];
 }
 
 #pragma mark - Getter & Setter
 
-- (UITableView *)tableview {
-    if (!_tableview) {
-        _tableview = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-        _tableview.ts_height = self.view.ts_height*0.8;
-        _tableview.dataSource = self;
-        _tableview.delegate = self;
+- (UITableView *)tableview1 {
+    if (!_tableView1) {
+        _tableView1 = [[IDTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView1.ts_height = self.view.ts_height*0.8;
+        _tableView1.ts_width = self.view.ts_width*0.5;
     }
 
-    return _tableview;
+    return _tableView1;
+}
+
+- (UITableView *)tableview2 {
+    if (!_tableView2) {
+        _tableView2 = [[IDTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView2.ts_left = self.view.ts_width*0.5;
+        _tableView2.ts_height = self.view.ts_height*0.8;
+        _tableView2.ts_width = self.view.ts_width*0.5;
+    }
+    
+    return _tableView2;
 }
 
 @end

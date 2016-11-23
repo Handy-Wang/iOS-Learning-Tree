@@ -10,9 +10,7 @@
 
 @interface UITableView(AJXKeyboard)
 
-- (void)cacheContentInsetAndOffset;
-
-- (void)restoreContentOffset;
+- (void)cacheContentInset;
 
 - (void)restoreContentInset;
 

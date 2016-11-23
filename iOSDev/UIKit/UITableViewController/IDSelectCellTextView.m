@@ -50,14 +50,24 @@
     AJXKeyboardManager *kbMgr = [AJXKeyboardManager defaultKeyboardManager];
     NSLog(@"====Begin edit, kb frame %@...", NSStringFromCGRect(kbMgr.keyboardFrame));
     if (kbMgr.isKeyboardVisible) {
+        
         _keyWindow = [self ajxKeyWindow];
         _superTableView = [self ajxSuperTableView];
         if (_superTableView) {
-            [_superTableView cacheContentInsetAndOffset];
+            [_superTableView cacheContentInset];
         }
         
         [self updateTableViewContentOffset];
         [self updateTableViewContentInset];
+        
+        //如果开启编辑时，当前输入框所属tableView与之前缓存在KBManager里的tableView(containerViewOfEditableView)不是同一个，
+        //则需要把之前的tableView的inset恢复到键盘弹起前
+        if (kbMgr.containerViewOfEditableView != _superTableView  && [kbMgr.containerViewOfEditableView isKindOfClass:[UITableView class]]) {
+            [(UITableView *)(kbMgr.containerViewOfEditableView) restoreContentInset];
+            kbMgr.containerViewOfEditableView = nil;
+        }
+        
+        kbMgr.containerViewOfEditableView = _superTableView;
     }
 }
 
@@ -114,7 +124,7 @@
 {
     AJXKeyboardManager *kbMgr = [AJXKeyboardManager defaultKeyboardManager];
     //键盘消失后才恢复tableView的contentInset，在tableView内部的textView间切换时不恢复tableView的contentInset
-    if (!(kbMgr.isKeyboardVisible) && _superTableView) {
+    if (!(kbMgr.isKeyboardVisible)) {
         [_superTableView restoreContentInset];
         _superTableView = nil;
     }

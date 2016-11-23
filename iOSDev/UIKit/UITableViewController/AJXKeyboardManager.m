@@ -48,26 +48,17 @@
 
 - (void)keyboardWillShow:(NSNotification *)notification
 {
-//    NSLog(@"===========%@--%@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
-//    NSLog(@"===========keyboard frame is %@", NSStringFromCGRect([self keyboardFrameFromNotification:notification]));
     _keyboardFrame = [self keyboardFrameFromNotification:notification];
-    
-    //记录刚显示keyboard的frame
 }
 
 - (void)keyboardDidShow:(NSNotification *)notification
 {
-//    NSLog(@"===========%@--%@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
-//    NSLog(@"===========keyboard frame is %@", NSStringFromCGRect([self keyboardFrameFromNotification:notification]));
 }
 
 #pragma mark - 键盘高度变化
 
 - (void)keyboardDidChangedFrame:(NSNotification *)notification
 {
-//    NSLog(@"===========%@--%@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
-//    NSLog(@"===========keyboard frame is %@", NSStringFromCGRect([self keyboardFrameFromNotification:notification]));
-    
     if ([self isKeyboardVisible]) {
         _keyboardFrame = [self keyboardFrameFromNotification:notification];
     }
@@ -82,15 +73,12 @@
 
 - (void)keyboardWillHide:(NSNotification *)notification
 {
-//    NSLog(@"===========%@--%@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
-//    NSLog(@"===========keyboard frame is %@", NSStringFromCGRect([self keyboardFrameFromNotification:notification]));
     _keyboardFrame = CGRectZero;
+    _containerViewOfEditableView = nil;
 }
 
 - (void)keyboardDidHide:(NSNotification *)notification
 {
-//    NSLog(@"===========%@--%@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
-//    NSLog(@"===========keyboard frame is %@", NSStringFromCGRect([self keyboardFrameFromNotification:notification]));
 }
 
 #pragma mark - private methods
