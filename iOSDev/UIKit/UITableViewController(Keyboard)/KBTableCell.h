@@ -1,5 +1,5 @@
 //
-//  IDSelectCell.h
+//  KBTableCell.h
 //  iOSDev
 //
 //  Created by Handy on 11/8/16.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#define kIDSelectCellHeight             (100)
+#define kKBTableCellHeight             (100)
 
-@interface IDSelectCell : UITableViewCell
+@interface KBTableCell : UITableViewCell
 @property (nonatomic, assign) BOOL isContainTetxtView;
 @end

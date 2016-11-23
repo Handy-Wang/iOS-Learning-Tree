@@ -1,20 +1,20 @@
 //
-//  IDTableView.m
+//  KBTableView.m
 //  iOSDev
 //
 //  Created by Handy on 11/23/16.
 //  Copyright © 2016 XiaoShan. All rights reserved.
 //
 
-#import "IDTableView.h"
-#import "IDSelectCell.h"
+#import "KBTableView.h"
+#import "KBTableCell.h"
 
-@interface IDTableView() <UITableViewDataSource, UITableViewDelegate>
+@interface KBTableView() <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, assign) NSUInteger sectionCount;
 @property (nonatomic, assign) NSUInteger rowCount;
 @end
 
-@implementation IDTableView
+@implementation KBTableView
 
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style
 {
@@ -42,10 +42,10 @@
     //    NSLog(@"%@, %@", NSStringFromSelector(_cmd), [@(indexPath.row) stringValue]);
     
     static NSString *cellIdentifier = @"cellIdentifier";
-    IDSelectCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    KBTableCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (!cell) {
-        cell = [[IDSelectCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[KBTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
     CGFloat r = arc4random()%255/255.0f;
@@ -62,7 +62,7 @@
 #pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return kIDSelectCellHeight;
+    return kKBTableCellHeight;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

@@ -1,5 +1,5 @@
 //
-//  IDSelectCellTextView.h
+//  KBTableCellTextView.h
 //  iOSDev
 //
 //  Created by Handy on 11/21/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IDSelectCellTextView : UITextView
+@interface KBTableCellTextView : UITextView
 
 @end

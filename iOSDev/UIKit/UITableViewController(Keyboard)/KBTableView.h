@@ -1,5 +1,5 @@
 //
-//  IDTableView.h
+//  KBTableView.h
 //  iOSDev
 //
 //  Created by Handy on 11/23/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IDTableView : UITableView
+@interface KBTableView : UITableView
 
 @end

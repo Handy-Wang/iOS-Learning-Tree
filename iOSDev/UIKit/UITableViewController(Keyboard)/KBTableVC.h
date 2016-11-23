@@ -1,5 +1,5 @@
 //
-//  IDTableVC.h
+//  KBTableVC.h
 //  iOSDev
 //
 //  Created by Handy on 5/26/16.
@@ -8,6 +8,6 @@
 
 #import "IDBaseVC.h"
 
-@interface IDTableVC : IDBaseVC
+@interface KBTableVC : IDBaseVC
 
 @end

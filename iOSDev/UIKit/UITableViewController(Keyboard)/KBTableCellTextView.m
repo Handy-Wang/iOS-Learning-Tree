@@ -1,18 +1,18 @@
 //
-//  IDSelectCellTextView.m
+//  KBTableCellTextView.m
 //  iOSDev
 //
 //  Created by Handy on 11/21/16.
 //  Copyright © 2016 XiaoShan. All rights reserved.
 //
 
-#import "IDSelectCellTextView.h"
+#import "KBTableCellTextView.h"
 #import "UIView(AJXKeyboard).h"
 #import "UIWindow(AJXKeyboard).h"
 #import "UITableView(AJXKeyboard).h"
 #import "AJXKeyboardManager.h"
 
-@interface IDSelectCellTextView() <UITextViewDelegate>
+@interface KBTableCellTextView() <UITextViewDelegate>
 @property (nonatomic, assign) BOOL isTextEditing;
 @property (nonatomic, weak) UIWindow *keyWindow;
 
@@ -20,7 +20,7 @@
 //@property (nonatomic, weak) UIScrollView *superScrollView;
 @end
 
-@implementation IDSelectCellTextView
+@implementation KBTableCellTextView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
