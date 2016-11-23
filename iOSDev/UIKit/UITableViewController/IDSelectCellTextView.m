@@ -60,14 +60,14 @@
         [self updateTableViewContentOffset];
         [self updateTableViewContentInset];
         
-        //如果开启编辑时，当前输入框所属tableView与之前缓存在KBManager里的tableView(containerViewOfEditableView)不是同一个，
+        //如果开启编辑时，当前输入框所属tableView与之前缓存在KBManager里的tableView(containerView)不是同一个，
         //则需要把之前的tableView的inset恢复到键盘弹起前
-        if (kbMgr.containerViewOfEditableView != _superTableView  && [kbMgr.containerViewOfEditableView isKindOfClass:[UITableView class]]) {
-            [(UITableView *)(kbMgr.containerViewOfEditableView) restoreContentInset];
-            kbMgr.containerViewOfEditableView = nil;
+        if (kbMgr.containerView != _superTableView  && [kbMgr.containerView isKindOfClass:[UITableView class]]) {
+            [(UITableView *)(kbMgr.containerView) restoreContentInset];
+            kbMgr.containerView = nil;
         }
         
-        kbMgr.containerViewOfEditableView = _superTableView;
+        kbMgr.containerView = _superTableView;
     }
 }
 

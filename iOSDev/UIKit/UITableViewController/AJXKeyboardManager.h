@@ -13,7 +13,7 @@
 @interface AJXKeyboardManager : NSObject
 @property (nonatomic, assign, readonly) CGRect keyboardFrame;
 @property (nonatomic, assign, readonly) BOOL isKeyboardVisible;
-@property (nonatomic, weak) UIView *containerViewOfEditableView;
+@property (nonatomic, weak) UIView *containerView;
 
 + (instancetype)defaultKeyboardManager;
 

@@ -74,7 +74,7 @@
 - (void)keyboardWillHide:(NSNotification *)notification
 {
     _keyboardFrame = CGRectZero;
-    _containerViewOfEditableView = nil;
+    _containerView = nil;
 }
 
 - (void)keyboardDidHide:(NSNotification *)notification
