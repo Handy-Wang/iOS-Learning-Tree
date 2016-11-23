@@ -69,6 +69,7 @@
 		33C7FC581DE5D30F00A13A62 /* KBTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC4C1DE5D30F00A13A62 /* KBTableView.m */; };
 		33C7FC5C1DE5D3D000A13A62 /* EditableView.json in Resources */ = {isa = PBXBuildFile; fileRef = 33C7FC591DE5D3D000A13A62 /* EditableView.json */; };
 		33C7FC5D1DE5D3D000A13A62 /* EditableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC5B1DE5D3D000A13A62 /* EditableViewVC.m */; };
+		33C7FC601DE5D4DC00A13A62 /* KBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC5F1DE5D4DC00A13A62 /* KBViewController.m */; };
 		33CA47681DCD056000DC7D94 /* NSStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CA47671DCD056000DC7D94 /* NSStringUtils.m */; };
 		33D2346B1D180661006A5CF0 /* IDTestObjX.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D2346A1D180661006A5CF0 /* IDTestObjX.m */; };
 		33D2346E1D181150006A5CF0 /* IDTestSubObjX.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D2346D1D181150006A5CF0 /* IDTestSubObjX.m */; };
@@ -291,6 +292,8 @@
 		33C7FC591DE5D3D000A13A62 /* EditableView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EditableView.json; sourceTree = "<group>"; };
 		33C7FC5A1DE5D3D000A13A62 /* EditableViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditableViewVC.h; sourceTree = "<group>"; };
 		33C7FC5B1DE5D3D000A13A62 /* EditableViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableViewVC.m; sourceTree = "<group>"; };
+		33C7FC5E1DE5D4DC00A13A62 /* KBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBViewController.h; sourceTree = "<group>"; };
+		33C7FC5F1DE5D4DC00A13A62 /* KBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBViewController.m; sourceTree = "<group>"; };
 		33CA47661DCD056000DC7D94 /* NSStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringUtils.h; sourceTree = "<group>"; };
 		33CA47671DCD056000DC7D94 /* NSStringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringUtils.m; sourceTree = "<group>"; };
 		33D234691D180661006A5CF0 /* IDTestObjX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDTestObjX.h; sourceTree = "<group>"; };
@@ -813,6 +816,8 @@
 		33C7FC4D1DE5D30F00A13A62 /* UIView(Keyboard) */ = {
 			isa = PBXGroup;
 			children = (
+				33C7FC5E1DE5D4DC00A13A62 /* KBViewController.h */,
+				33C7FC5F1DE5D4DC00A13A62 /* KBViewController.m */,
 			);
 			path = "UIView(Keyboard)";
 			sourceTree = "<group>";
@@ -1546,6 +1551,7 @@
 				33A764061D9BA59E00381E74 /* NMFolderBaseCell.m in Sources */,
 				562CA1ED1C9AA24D00B6FE67 /* GPBCodedInputStream.m in Sources */,
 				33D2346E1D181150006A5CF0 /* IDTestSubObjX.m in Sources */,
+				33C7FC601DE5D4DC00A13A62 /* KBViewController.m in Sources */,
 				562CA1E41C9AA22E00B6FE67 /* GPBUnknownFieldSet.m in Sources */,
 				56E1FF0C1C8995D3004363C1 /* IDOCPatchVC.m in Sources */,
 				56DFB26F1C84164600F750E8 /* IDCAAnimationTestView.m in Sources */,

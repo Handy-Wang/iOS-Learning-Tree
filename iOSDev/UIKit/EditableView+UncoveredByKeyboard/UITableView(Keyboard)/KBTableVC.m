@@ -21,6 +21,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor grayColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
+    
     [self.view addSubview:self.tableView1];
     [self.view addSubview:self.tableView2];
     
