@@ -1,5 +1,5 @@
 //
-//  KBTableCellTextView.h
+//  KBTextView.h
 //  iOSDev
 //
 //  Created by Handy on 11/21/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KBTableCellTextView : UITextView
+@interface KBTextView : UITextView
 
 @end
