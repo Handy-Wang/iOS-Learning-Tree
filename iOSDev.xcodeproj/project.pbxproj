@@ -64,6 +64,7 @@
 		33C5852E1DD6314100454404 /* TouchViewC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C5851F1DD6314100454404 /* TouchViewC.m */; };
 		33C5852F1DD6314100454404 /* TouchViewD.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C585211DD6314100454404 /* TouchViewD.m */; };
 		33C585301DD6314100454404 /* UITouchEventVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C585231DD6314100454404 /* UITouchEventVC.m */; };
+		33C7FC211DE58D7200A13A62 /* AJXKBTextView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC201DE58D7200A13A62 /* AJXKBTextView2.m */; };
 		33CA47681DCD056000DC7D94 /* NSStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CA47671DCD056000DC7D94 /* NSStringUtils.m */; };
 		33D2346B1D180661006A5CF0 /* IDTestObjX.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D2346A1D180661006A5CF0 /* IDTestObjX.m */; };
 		33D2346E1D181150006A5CF0 /* IDTestSubObjX.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D2346D1D181150006A5CF0 /* IDTestSubObjX.m */; };
@@ -277,6 +278,8 @@
 		33C585211DD6314100454404 /* TouchViewD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchViewD.m; sourceTree = "<group>"; };
 		33C585221DD6314100454404 /* UITouchEventVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITouchEventVC.h; sourceTree = "<group>"; };
 		33C585231DD6314100454404 /* UITouchEventVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITouchEventVC.m; sourceTree = "<group>"; };
+		33C7FC1F1DE58D7200A13A62 /* AJXKBTextView2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJXKBTextView2.h; sourceTree = "<group>"; };
+		33C7FC201DE58D7200A13A62 /* AJXKBTextView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJXKBTextView2.m; sourceTree = "<group>"; };
 		33CA47661DCD056000DC7D94 /* NSStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringUtils.h; sourceTree = "<group>"; };
 		33CA47671DCD056000DC7D94 /* NSStringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringUtils.m; sourceTree = "<group>"; };
 		33D234691D180661006A5CF0 /* IDTestObjX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDTestObjX.h; sourceTree = "<group>"; };
@@ -655,6 +658,8 @@
 			children = (
 				33A635971DE58982001588FF /* AJXKBTextView.h */,
 				33A635981DE58982001588FF /* AJXKBTextView.m */,
+				33C7FC1F1DE58D7200A13A62 /* AJXKBTextView2.h */,
+				33C7FC201DE58D7200A13A62 /* AJXKBTextView2.m */,
 				33A6358B1DE585A7001588FF /* AJXKeyboardManager.h */,
 				33A6358C1DE585A7001588FF /* AJXKeyboardManager.m */,
 				33A6358D1DE585A7001588FF /* UITableView(AJXKeyboard).h */,
@@ -1412,6 +1417,7 @@
 				564BA8CE1C82DFA5001A0A07 /* IDUIViewVC.m in Sources */,
 				33313B491D1299BD0000D8A1 /* IDCoreAnimationVC.m in Sources */,
 				562CA1EE1C9AA24D00B6FE67 /* GPBCodedOutputStream.m in Sources */,
+				33C7FC211DE58D7200A13A62 /* AJXKBTextView2.m in Sources */,
 				33C5852F1DD6314100454404 /* TouchViewD.m in Sources */,
 				56E0BE7F1C813FB700F6E7DA /* IDBaseVC.m in Sources */,
 				33A635831DE5854D001588FF /* KBTableCell.m in Sources */,
