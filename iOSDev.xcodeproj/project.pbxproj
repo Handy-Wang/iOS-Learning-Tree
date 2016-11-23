@@ -11,6 +11,7 @@
 		3302AC2F1DC057EF008E6F2A /* IDNSObjectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3302AC2E1DC057EF008E6F2A /* IDNSObjectVC.m */; };
 		3302AC331DC05873008E6F2A /* BaseAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = 3302AC321DC05873008E6F2A /* BaseAnimal.m */; };
 		3302AC361DC05898008E6F2A /* SubPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 3302AC351DC05898008E6F2A /* SubPerson.m */; };
+		3320215B1DE3013E00A4B3DF /* IDSelectCellTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3320215A1DE3013E00A4B3DF /* IDSelectCellTextView.m */; };
 		3329C67D1CAE23E9000E62D6 /* mountian.png in Resources */ = {isa = PBXBuildFile; fileRef = 3329C67C1CAE23E9000E62D6 /* mountian.png */; };
 		3329C6851CAE24E2000E62D6 /* IDFuncArgsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3329C6841CAE24E2000E62D6 /* IDFuncArgsVC.m */; };
 		33313B481D1299BD0000D8A1 /* IDCoreAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 33313B451D1299BD0000D8A1 /* IDCoreAnimation.json */; };
@@ -45,14 +46,14 @@
 		33A7640C1D9BA6CD00381E74 /* NMFolderBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A7640B1D9BA6CD00381E74 /* NMFolderBaseModel.m */; };
 		33A764151D9BA74800381E74 /* NMFolderItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A764141D9BA74800381E74 /* NMFolderItemModel.m */; };
 		33A764181D9BAF6A00381E74 /* NMFolderSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A764171D9BAF6A00381E74 /* NMFolderSectionHeader.m */; };
+		33B021DA1DE33302003705F5 /* UIWindow(AJXKeyboard).m in Sources */ = {isa = PBXBuildFile; fileRef = 33B021D91DE33302003705F5 /* UIWindow(AJXKeyboard).m */; };
+		33B021DD1DE33B69003705F5 /* UIView(AJXKeyboard).m in Sources */ = {isa = PBXBuildFile; fileRef = 33B021DC1DE33B69003705F5 /* UIView(AJXKeyboard).m */; };
 		33B902FA1CD88F3600A0574F /* NSString(TS_Attributed).m in Sources */ = {isa = PBXBuildFile; fileRef = 33B902F91CD88F3600A0574F /* NSString(TS_Attributed).m */; };
 		33C585241DD6314100454404 /* NMContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C585071DD6314100454404 /* NMContainerView.m */; };
 		33C585251DD6314100454404 /* NMTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C585091DD6314100454404 /* NMTableView.m */; };
 		33C585261DD6314100454404 /* NMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C5850B1DD6314100454404 /* NMTableViewCell.m */; };
 		33C585271DD6314100454404 /* NMHitTestTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C5850E1DD6314100454404 /* NMHitTestTouchView.m */; };
 		33C585281DD6314100454404 /* NMTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C585111DD6314100454404 /* NMTapGestureRecognizer.m */; };
-		33C585291DD6314100454404 /* Foundation+STKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C585141DD6314100454404 /* Foundation+STKit.m */; };
-		33C5852A1DD6314100454404 /* UIKit+STKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C585171DD6314100454404 /* UIKit+STKit.m */; };
 		33C5852B1DD6314100454404 /* TouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C585191DD6314100454404 /* TouchView.m */; };
 		33C5852C1DD6314100454404 /* TouchViewA.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C5851B1DD6314100454404 /* TouchViewA.m */; };
 		33C5852D1DD6314100454404 /* TouchViewB.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C5851D1DD6314100454404 /* TouchViewB.m */; };
@@ -64,6 +65,8 @@
 		33D2346E1D181150006A5CF0 /* IDTestSubObjX.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D2346D1D181150006A5CF0 /* IDTestSubObjX.m */; };
 		33EFD7D21CD1AE6400E241C3 /* IDFPSLabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFD7D11CD1AE6400E241C3 /* IDFPSLabelVC.m */; };
 		33EFD7D51CD1AEA800E241C3 /* NMFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFD7D41CD1AEA800E241C3 /* NMFPSLabel.m */; };
+		33FA66981DE444FE00523818 /* AJXKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FA66971DE444FE00523818 /* AJXKeyboardManager.m */; };
+		33FA669B1DE455FB00523818 /* UITableView(AJXKeyboard).m in Sources */ = {isa = PBXBuildFile; fileRef = 33FA669A1DE455FB00523818 /* UITableView(AJXKeyboard).m */; };
 		562CA1D81C9A9FBB00B6FE67 /* GPBExtensionInternals.m in Sources */ = {isa = PBXBuildFile; fileRef = 562CA1D21C9A9FBB00B6FE67 /* GPBExtensionInternals.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		562CA1D91C9A9FBB00B6FE67 /* GPBExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 562CA1D41C9A9FBB00B6FE67 /* GPBExtensionRegistry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		562CA1DA1C9A9FBB00B6FE67 /* GPBRootObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 562CA1D61C9A9FBB00B6FE67 /* GPBRootObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -163,6 +166,8 @@
 		3302AC321DC05873008E6F2A /* BaseAnimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAnimal.m; sourceTree = "<group>"; };
 		3302AC341DC05898008E6F2A /* SubPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubPerson.h; sourceTree = "<group>"; };
 		3302AC351DC05898008E6F2A /* SubPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubPerson.m; sourceTree = "<group>"; };
+		332021591DE3013E00A4B3DF /* IDSelectCellTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDSelectCellTextView.h; sourceTree = "<group>"; };
+		3320215A1DE3013E00A4B3DF /* IDSelectCellTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDSelectCellTextView.m; sourceTree = "<group>"; };
 		3329C67C1CAE23E9000E62D6 /* mountian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mountian.png; sourceTree = "<group>"; };
 		3329C6831CAE24E2000E62D6 /* IDFuncArgsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDFuncArgsVC.h; sourceTree = "<group>"; };
 		3329C6841CAE24E2000E62D6 /* IDFuncArgsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDFuncArgsVC.m; sourceTree = "<group>"; };
@@ -229,6 +234,10 @@
 		33A764141D9BA74800381E74 /* NMFolderItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMFolderItemModel.m; sourceTree = "<group>"; };
 		33A764161D9BAF6A00381E74 /* NMFolderSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMFolderSectionHeader.h; sourceTree = "<group>"; };
 		33A764171D9BAF6A00381E74 /* NMFolderSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMFolderSectionHeader.m; sourceTree = "<group>"; };
+		33B021D81DE33302003705F5 /* UIWindow(AJXKeyboard).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow(AJXKeyboard).h"; sourceTree = "<group>"; };
+		33B021D91DE33302003705F5 /* UIWindow(AJXKeyboard).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow(AJXKeyboard).m"; sourceTree = "<group>"; };
+		33B021DB1DE33B69003705F5 /* UIView(AJXKeyboard).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView(AJXKeyboard).h"; sourceTree = "<group>"; };
+		33B021DC1DE33B69003705F5 /* UIView(AJXKeyboard).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView(AJXKeyboard).m"; sourceTree = "<group>"; };
 		33B902F81CD88F3600A0574F /* NSString(TS_Attributed).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString(TS_Attributed).h"; sourceTree = "<group>"; };
 		33B902F91CD88F3600A0574F /* NSString(TS_Attributed).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString(TS_Attributed).m"; sourceTree = "<group>"; };
 		33C585061DD6314100454404 /* NMContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMContainerView.h; sourceTree = "<group>"; };
@@ -268,6 +277,10 @@
 		33EFD7D11CD1AE6400E241C3 /* IDFPSLabelVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDFPSLabelVC.m; sourceTree = "<group>"; };
 		33EFD7D31CD1AEA800E241C3 /* NMFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMFPSLabel.h; sourceTree = "<group>"; };
 		33EFD7D41CD1AEA800E241C3 /* NMFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMFPSLabel.m; sourceTree = "<group>"; };
+		33FA66961DE444FE00523818 /* AJXKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJXKeyboardManager.h; sourceTree = "<group>"; };
+		33FA66971DE444FE00523818 /* AJXKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJXKeyboardManager.m; sourceTree = "<group>"; };
+		33FA66991DE455FB00523818 /* UITableView(AJXKeyboard).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView(AJXKeyboard).h"; sourceTree = "<group>"; };
+		33FA669A1DE455FB00523818 /* UITableView(AJXKeyboard).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView(AJXKeyboard).m"; sourceTree = "<group>"; };
 		562CA1D11C9A9FBB00B6FE67 /* GPBExtensionInternals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBExtensionInternals.h; sourceTree = "<group>"; };
 		562CA1D21C9A9FBB00B6FE67 /* GPBExtensionInternals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBExtensionInternals.m; sourceTree = "<group>"; };
 		562CA1D31C9A9FBB00B6FE67 /* GPBExtensionRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBExtensionRegistry.h; sourceTree = "<group>"; };
@@ -536,6 +549,16 @@
 				33721A101CF6F5820003F688 /* IDTableVC.m */,
 				335BC5951DD1BCDC000C19DC /* IDSelectCell.h */,
 				335BC5961DD1BCDC000C19DC /* IDSelectCell.m */,
+				33FA66961DE444FE00523818 /* AJXKeyboardManager.h */,
+				33FA66971DE444FE00523818 /* AJXKeyboardManager.m */,
+				332021591DE3013E00A4B3DF /* IDSelectCellTextView.h */,
+				3320215A1DE3013E00A4B3DF /* IDSelectCellTextView.m */,
+				33B021D81DE33302003705F5 /* UIWindow(AJXKeyboard).h */,
+				33B021D91DE33302003705F5 /* UIWindow(AJXKeyboard).m */,
+				33B021DB1DE33B69003705F5 /* UIView(AJXKeyboard).h */,
+				33B021DC1DE33B69003705F5 /* UIView(AJXKeyboard).m */,
+				33FA66991DE455FB00523818 /* UITableView(AJXKeyboard).h */,
+				33FA669A1DE455FB00523818 /* UITableView(AJXKeyboard).m */,
 			);
 			path = UITableViewController;
 			sourceTree = "<group>";
@@ -1347,6 +1370,7 @@
 				33A6461F1CDAE3FC00944E04 /* BSTextView.m in Sources */,
 				33721A0A1CF59D090003F688 /* BSLabel.m in Sources */,
 				33C585261DD6314100454404 /* NMTableViewCell.m in Sources */,
+				33B021DA1DE33302003705F5 /* UIWindow(AJXKeyboard).m in Sources */,
 				33A7640C1D9BA6CD00381E74 /* NMFolderBaseModel.m in Sources */,
 				563FC9751C9B7F0E00588A54 /* Any.pbobjc.m in Sources */,
 				562CA1D81C9A9FBB00B6FE67 /* GPBExtensionInternals.m in Sources */,
@@ -1403,6 +1427,7 @@
 				568F89B01C8037D3009A27C5 /* IDFoundationListVC.m in Sources */,
 				33C585301DD6314100454404 /* UITouchEventVC.m in Sources */,
 				56E0BE981C81CFE300F6E7DA /* IDCALayer.m in Sources */,
+				33B021DD1DE33B69003705F5 /* UIView(AJXKeyboard).m in Sources */,
 				334F46211D1919F40090D97B /* DHUsesAllVC.m in Sources */,
 				568F892D1C7FF49F009A27C5 /* main.m in Sources */,
 				33C585251DD6314100454404 /* NMTableView.m in Sources */,
@@ -1440,20 +1465,21 @@
 				562CA1ED1C9AA24D00B6FE67 /* GPBCodedInputStream.m in Sources */,
 				33D2346E1D181150006A5CF0 /* IDTestSubObjX.m in Sources */,
 				562CA1E41C9AA22E00B6FE67 /* GPBUnknownFieldSet.m in Sources */,
-				33C585291DD6314100454404 /* Foundation+STKit.m in Sources */,
 				56E1FF0C1C8995D3004363C1 /* IDOCPatchVC.m in Sources */,
 				56DFB26F1C84164600F750E8 /* IDCAAnimationTestView.m in Sources */,
 				3329C6851CAE24E2000E62D6 /* IDFuncArgsVC.m in Sources */,
 				339ECF5B1D179FF400F4A94C /* IDBorderTableVC.m in Sources */,
 				33EFD7D21CD1AE6400E241C3 /* IDFPSLabelVC.m in Sources */,
+				33FA669B1DE455FB00523818 /* UITableView(AJXKeyboard).m in Sources */,
 				33A6461E1CDAE3FC00944E04 /* BSTextField.m in Sources */,
-				33C5852A1DD6314100454404 /* UIKit+STKit.m in Sources */,
 				562CA2081C9AA3D100B6FE67 /* GPBDictionary.m in Sources */,
 				339ECF601D17A05900F4A94C /* IDBorderTest1.m in Sources */,
 				568F89971C8005BA009A27C5 /* IDTechListItemModel.m in Sources */,
 				562CA26C1C9AB35800B6FE67 /* SourceContext.pbobjc.m in Sources */,
 				56F21B2A1C8BDF85001732BF /* IDSelfAndSuperVC.m in Sources */,
+				33FA66981DE444FE00523818 /* AJXKeyboardManager.m in Sources */,
 				33C585271DD6314100454404 /* NMHitTestTouchView.m in Sources */,
+				3320215B1DE3013E00A4B3DF /* IDSelectCellTextView.m in Sources */,
 				5652167B1C86BEED00A8E5A9 /* IDMRCVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

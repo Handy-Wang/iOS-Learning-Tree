@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#define kIDSelectCellHeight             (88)
+#define kIDSelectCellHeight             (100)
 
 @interface IDSelectCell : UITableViewCell
-
+@property (nonatomic, assign) BOOL isContainTetxtView;
 @end

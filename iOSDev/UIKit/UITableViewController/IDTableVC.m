@@ -21,12 +21,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setEdgesForExtendedLayout:UIRectEdgeNone];
+    [self setEdgesForExtendedLayout:UIRectEdgeTop];
     
     self.sectionsRowsDict = [NSMutableDictionary dictionary];
     
-    self.sectionCount = 2;
-    self.rowCount = 20;
+    self.sectionCount = 1;
+    self.rowCount = 6;
     
 //    _cachedCells = [NSMutableArray array];
     [self.view addSubview:self.tableview];
@@ -67,23 +67,25 @@
     
 //    NSLog(@"Cached cell pool length is %ld", _cachedCells.count);
     
+    cell.isContainTetxtView = !!(indexPath.row % 2);
+    
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
 
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    NSLog(@"%@, %@", NSStringFromSelector(_cmd), [@(indexPath.row) stringValue]);
-    NSMutableArray *rows = self.sectionsRowsDict[[@(indexPath.section) stringValue]];
-    if ((indexPath.section == 0 && indexPath.row == 0)) {
-        rows = [NSMutableArray array];
-        self.sectionsRowsDict = [NSMutableDictionary dictionary];
-        self.sectionsRowsDict[[@(indexPath.section) stringValue]] = rows;
-    }
-    [rows addObject:[@(indexPath.row) stringValue]];
-    
-    return 200;
-}
+//- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+////    NSLog(@"%@, %@", NSStringFromSelector(_cmd), [@(indexPath.row) stringValue]);
+//    NSMutableArray *rows = self.sectionsRowsDict[[@(indexPath.section) stringValue]];
+//    if ((indexPath.section == 0 && indexPath.row == 0)) {
+//        rows = [NSMutableArray array];
+//        self.sectionsRowsDict = [NSMutableDictionary dictionary];
+//        self.sectionsRowsDict[[@(indexPath.section) stringValue]] = rows;
+//    }
+//    [rows addObject:[@(indexPath.row) stringValue]];
+//    
+//    return 200;
+//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 //    NSLog(@"%@, %@", NSStringFromSelector(_cmd), [@(indexPath.row) stringValue]);
@@ -94,31 +96,12 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
-    NSMutableString *oldKey = [NSMutableString string];
-    for (int i = 0; i < self.sectionsRowsDict.allValues.count; i++) {
-        NSArray *items = self.sectionsRowsDict.allValues[i];
-        for (int j = 0; j < items.count; j++) {
-            [oldKey appendString:[NSString stringWithFormat:@"%d-%d,", i, j]];
-        }
-    }
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    CGRect cellFrame = [cell.superview convertRect:cell.frame toView:cell.window];
+    NSLog(@"===========%@--%@, cell window frame is %@",
+          NSStringFromClass(self.class), NSStringFromSelector(_cmd), NSStringFromCGRect(cellFrame));
     
-    //===================================================
-    
-    self.sectionCount = 3;
-    self.rowCount = 10;
-    NSMutableString *nowKey = [NSMutableString string];
-    for (int i = 0; i < self.sectionCount; i++) {
-        for (int j = 0; j < self.rowCount; j++) {
-            [nowKey appendString:[NSString stringWithFormat:@"%d-%d,", i, j]];
-        }
-    }
-    
-    NSLog(@"Old: %@", oldKey);
-    NSLog(@"Now: %@", nowKey);
-    
-    if ([oldKey isEqualToString:nowKey]) {
-        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-    }
+    [self.view endEditing:YES];
 }
 
 #pragma mark - Getter & Setter
