@@ -25,19 +25,20 @@ static char AjxKeyboardTableViewOldContentOffset;
     }
 }
 
-- (void)restoreContentInsetAndOffset
+- (void)restoreContentOffset
+{
+    if ([self ajxKeyboardTableViewOldContentOffsetObj]) {
+        self.contentOffset = CGPointMake(0, 0);//[self ajxKeyboardTableViewOldContentOffset];
+    }
+    [self resetAjxKeyboardTableViewOldContentOffset];
+}
+
+- (void)restoreContentInset
 {
     if ([self ajxKeyboardTableViewOldContentInsetObj]) {
         self.contentInset = [self ajxKeyboardTableViewOldContentInset];
     }
-    
-    if ([self ajxKeyboardTableViewOldContentOffsetObj]) {
-        self.contentOffset = [self ajxKeyboardTableViewOldContentOffset];
-    }
-    
     [self resetAjxKeyboardTableViewOldContentInset];
-    [self resetAjxKeyboardTableViewOldContentOffset];
-    
 }
 
 #pragma mark - ContentInset

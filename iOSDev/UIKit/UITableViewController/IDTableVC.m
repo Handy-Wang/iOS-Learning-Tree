@@ -21,12 +21,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor blackColor];
     [self setEdgesForExtendedLayout:UIRectEdgeTop];
     
     self.sectionsRowsDict = [NSMutableDictionary dictionary];
     
     self.sectionCount = 1;
-    self.rowCount = 6;
+    self.rowCount = 8;
     
 //    _cachedCells = [NSMutableArray array];
     [self.view addSubview:self.tableview];
@@ -109,6 +110,7 @@
 - (UITableView *)tableview {
     if (!_tableview) {
         _tableview = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableview.ts_height = self.view.ts_height*0.8;
         _tableview.dataSource = self;
         _tableview.delegate = self;
     }

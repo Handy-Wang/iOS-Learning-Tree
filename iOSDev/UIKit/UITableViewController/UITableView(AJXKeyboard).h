@@ -12,10 +12,10 @@
 
 - (void)cacheContentInsetAndOffset;
 
-- (void)restoreContentInsetAndOffset;
+- (void)restoreContentOffset;
+
+- (void)restoreContentInset;
 
 - (UIEdgeInsets)ajxKeyboardTableViewOldContentInset;
-
-- (CGPoint)ajxKeyboardTableViewOldContentOffset;
 
 @end

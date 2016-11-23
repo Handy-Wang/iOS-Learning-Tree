@@ -29,7 +29,6 @@
         //init keyboard manager
         [AJXKeyboardManager defaultKeyboardManager];
         self.delegate = self;
-        
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(keyboardDidChangedFrame:)
                                                      name:kAjxKeyboardDidChangeFrameNotification object:nil];
@@ -46,10 +45,10 @@
 
 - (void)textViewDidBeginEditing:(UITextView *)textView
 {
+    _isTextEditing = YES;
+    
     AJXKeyboardManager *kbMgr = [AJXKeyboardManager defaultKeyboardManager];
     NSLog(@"====Begin edit, kb frame %@...", NSStringFromCGRect(kbMgr.keyboardFrame));
-    
-    _isTextEditing = YES;
     if (kbMgr.isKeyboardVisible) {
         _keyWindow = [self ajxKeyWindow];
         _superTableView = [self ajxSuperTableView];
@@ -57,27 +56,8 @@
             [_superTableView cacheContentInsetAndOffset];
         }
         
-        if (_superTableView) {
-            CGRect textViewFrameInWindow = [self.superview convertRect:self.frame toView:_keyWindow];
-            CGFloat offset = CGRectGetMaxY(textViewFrameInWindow) - CGRectGetMinY(kbMgr.keyboardFrame);
-            
-            NSLog(@"BEGIN EDIT, offset %f", offset);
-            if (offset > 0) {
-                NSLog(@"update content offset.....");
-                CGPoint oldContentOffset = _superTableView.contentOffset;
-                _superTableView.contentOffset = CGPointMake(oldContentOffset.x, oldContentOffset.y + offset);
-            }
-            
-            /**
-             * 在键盘第一次显示后，无论输入框有没有被键盘挡住，都需要在tableview的原bottomInset上累加键盘的高度
-             * 注：修改contentInset采用的是相对于键盘没有弹起时的contentInset来累加的，不是相对于tableView当前的contentInset来累加的
-             */
-            UIEdgeInsets oldContentInset = [_superTableView ajxKeyboardTableViewOldContentInset];
-            _superTableView.contentInset = UIEdgeInsetsMake(oldContentInset.top,
-                                                            oldContentInset.left,
-                                                            oldContentInset.bottom + CGRectGetHeight(kbMgr.keyboardFrame),
-                                                            oldContentInset.right);
-        }
+        [self updateTableViewContentOffset];
+        [self updateTableViewContentInset];
     }
 }
 
@@ -85,40 +65,59 @@
 {
     AJXKeyboardManager *kbMgr = [AJXKeyboardManager defaultKeyboardManager];
     NSLog(@"====Chagne frame, kb frame is %@...", NSStringFromCGRect(kbMgr.keyboardFrame));
-    
-    if (kbMgr.isKeyboardVisible && _superTableView && _isTextEditing) {
-        
-        CGRect textViewFrameInWindow = [self.superview convertRect:self.frame toView:_keyWindow];
-        CGFloat offset = CGRectGetMaxY(textViewFrameInWindow) - CGRectGetMinY(kbMgr.keyboardFrame);
-        
-        if (offset >= 0) {
-            CGFloat newOffset = _superTableView.contentOffset.y + offset;
-            NSLog(@"KEYBOARD FRAME CHANGED, offset %f", newOffset);
-            NSLog(@"update content offset.....");
-            CGPoint oldContentOffset = _superTableView.contentOffset;
-            _superTableView.contentOffset = CGPointMake(oldContentOffset.x, newOffset);
-        }
-        
-        UIEdgeInsets oldContentInset = [_superTableView ajxKeyboardTableViewOldContentInset];
-        CGFloat newInsetBottom = oldContentInset.bottom + CGRectGetHeight(kbMgr.keyboardFrame);
-        _superTableView.contentInset = UIEdgeInsetsMake(oldContentInset.top,
-                                                        oldContentInset.left,
-                                                        newInsetBottom,
-                                                        oldContentInset.right);
-    }
+    [self updateTableViewContentOffset];
+    [self updateTableViewContentInset];
 }
 
 - (void)textViewDidEndEditing:(UITextView *)textView
 {
     NSLog(@"===========%@--%@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
-    
-    AJXKeyboardManager *kbMgr = [AJXKeyboardManager defaultKeyboardManager];
-    if (!kbMgr.isKeyboardVisible) {
-        [_superTableView restoreContentInsetAndOffset];
-    }
-    _superTableView = nil;
+    [self resetTableViewContentInsetIfNeeded];
     _keyWindow = nil;
     _isTextEditing = NO;
+}
+
+#pragma mark - Private
+
+- (void)updateTableViewContentOffset
+{
+    AJXKeyboardManager *kbMgr = [AJXKeyboardManager defaultKeyboardManager];
+    if (kbMgr.isKeyboardVisible && _superTableView && _isTextEditing) {
+        CGRect textViewFrameInWindow = [self.superview convertRect:self.frame toView:_keyWindow];
+        CGFloat offsetNeededToTranslate = CGRectGetMaxY(textViewFrameInWindow) - CGRectGetMinY(kbMgr.keyboardFrame);
+        
+        if (offsetNeededToTranslate > 0) {
+            CGPoint oldContentOffset = _superTableView.contentOffset;
+            CGFloat newOffset = oldContentOffset.y + offsetNeededToTranslate;
+            _superTableView.contentOffset = CGPointMake(oldContentOffset.x, newOffset);
+        }
+    }
+}
+
+- (void)updateTableViewContentInset
+{
+    AJXKeyboardManager *kbMgr = [AJXKeyboardManager defaultKeyboardManager];
+    if (kbMgr.isKeyboardVisible && _superTableView && _isTextEditing) {
+        CGRect tableFrameInWindow = [_superTableView.superview convertRect:_superTableView.frame toView:_keyWindow];
+        CGRect tableAndKeyboardInsectRect = CGRectIntersection(tableFrameInWindow, kbMgr.keyboardFrame);
+        CGFloat intersectionHeight = CGRectIsNull(tableAndKeyboardInsectRect) ? 0 : tableAndKeyboardInsectRect.size.height;
+        
+        UIEdgeInsets oldContentInset = [_superTableView ajxKeyboardTableViewOldContentInset];
+        _superTableView.contentInset = UIEdgeInsetsMake(oldContentInset.top,
+                                                        oldContentInset.left,
+                                                        oldContentInset.bottom + intersectionHeight,
+                                                        oldContentInset.right);
+    }
+}
+
+- (void)resetTableViewContentInsetIfNeeded
+{
+    AJXKeyboardManager *kbMgr = [AJXKeyboardManager defaultKeyboardManager];
+    //键盘消失后才恢复tableView的contentInset，在tableView内部的textView间切换时不恢复tableView的contentInset
+    if (!(kbMgr.isKeyboardVisible) && _superTableView) {
+        [_superTableView restoreContentInset];
+        _superTableView = nil;
+    }
 }
 
 @end
