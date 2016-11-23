@@ -33,13 +33,6 @@
 		339ECF601D17A05900F4A94C /* IDBorderTest1.m in Sources */ = {isa = PBXBuildFile; fileRef = 339ECF5F1D17A05900F4A94C /* IDBorderTest1.m */; };
 		339ECF631D17A10800F4A94C /* IDBorderTest1Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 339ECF621D17A10800F4A94C /* IDBorderTest1Cell.m */; };
 		33A2E6861CB565D200990B4E /* IDRuntimeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A2E6851CB565D200990B4E /* IDRuntimeVC.m */; };
-		33A635831DE5854D001588FF /* KBTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A635751DE5854D001588FF /* KBTableCell.m */; };
-		33A635851DE5854D001588FF /* KBTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A635791DE5854D001588FF /* KBTableVC.m */; };
-		33A635861DE5854D001588FF /* KBTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6357B1DE5854D001588FF /* KBTableView.m */; };
-		33A635931DE585A7001588FF /* AJXKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6358C1DE585A7001588FF /* AJXKeyboardManager.m */; };
-		33A635951DE585A7001588FF /* UIView(AJXKeyboard).m in Sources */ = {isa = PBXBuildFile; fileRef = 33A635901DE585A7001588FF /* UIView(AJXKeyboard).m */; };
-		33A635961DE585A7001588FF /* UIWindow(AJXKeyboard).m in Sources */ = {isa = PBXBuildFile; fileRef = 33A635921DE585A7001588FF /* UIWindow(AJXKeyboard).m */; };
-		33A635991DE58982001588FF /* AJXKBTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A635981DE58982001588FF /* AJXKBTextView.m */; };
 		33A6461E1CDAE3FC00944E04 /* BSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A646191CDAE3FC00944E04 /* BSTextField.m */; };
 		33A6461F1CDAE3FC00944E04 /* BSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6461B1CDAE3FC00944E04 /* BSTextView.m */; };
 		33A646201CDAE3FC00944E04 /* BSUITestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6461D1CDAE3FC00944E04 /* BSUITestVC.m */; };
@@ -63,9 +56,17 @@
 		33C5852E1DD6314100454404 /* TouchViewC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C5851F1DD6314100454404 /* TouchViewC.m */; };
 		33C5852F1DD6314100454404 /* TouchViewD.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C585211DD6314100454404 /* TouchViewD.m */; };
 		33C585301DD6314100454404 /* UITouchEventVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C585231DD6314100454404 /* UITouchEventVC.m */; };
-		33C7FC211DE58D7200A13A62 /* AJXKBTextView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC201DE58D7200A13A62 /* AJXKBTextView2.m */; };
-		33C7FC241DE5BAF900A13A62 /* UIScrollView(AJXKeyboard).m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC231DE5BAF900A13A62 /* UIScrollView(AJXKeyboard).m */; };
-		33C7FC2E1DE5C92400A13A62 /* KBScrollVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC2D1DE5C92400A13A62 /* KBScrollVC.m */; };
+		33C7FC4E1DE5D30F00A13A62 /* AJXKBTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC361DE5D30F00A13A62 /* AJXKBTextView.m */; };
+		33C7FC4F1DE5D30F00A13A62 /* AJXKBTextView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC381DE5D30F00A13A62 /* AJXKBTextView2.m */; };
+		33C7FC501DE5D30F00A13A62 /* AJXKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC3A1DE5D30F00A13A62 /* AJXKeyboardManager.m */; };
+		33C7FC511DE5D30F00A13A62 /* UIScrollView(AJXKeyboard).m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC3C1DE5D30F00A13A62 /* UIScrollView(AJXKeyboard).m */; };
+		33C7FC521DE5D30F00A13A62 /* UIView(AJXKeyboard).m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC3E1DE5D30F00A13A62 /* UIView(AJXKeyboard).m */; };
+		33C7FC531DE5D30F00A13A62 /* UIWindow(AJXKeyboard).m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC401DE5D30F00A13A62 /* UIWindow(AJXKeyboard).m */; };
+		33C7FC541DE5D30F00A13A62 /* KBScrollVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC431DE5D30F00A13A62 /* KBScrollVC.m */; };
+		33C7FC551DE5D30F00A13A62 /* KBScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC451DE5D30F00A13A62 /* KBScrollView.m */; };
+		33C7FC561DE5D30F00A13A62 /* KBTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC481DE5D30F00A13A62 /* KBTableCell.m */; };
+		33C7FC571DE5D30F00A13A62 /* KBTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC4A1DE5D30F00A13A62 /* KBTableVC.m */; };
+		33C7FC581DE5D30F00A13A62 /* KBTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC4C1DE5D30F00A13A62 /* KBTableView.m */; };
 		33CA47681DCD056000DC7D94 /* NSStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CA47671DCD056000DC7D94 /* NSStringUtils.m */; };
 		33D2346B1D180661006A5CF0 /* IDTestObjX.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D2346A1D180661006A5CF0 /* IDTestObjX.m */; };
 		33D2346E1D181150006A5CF0 /* IDTestSubObjX.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D2346D1D181150006A5CF0 /* IDTestSubObjX.m */; };
@@ -211,20 +212,6 @@
 		339ECF621D17A10800F4A94C /* IDBorderTest1Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDBorderTest1Cell.m; sourceTree = "<group>"; };
 		33A2E6841CB565D200990B4E /* IDRuntimeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDRuntimeVC.h; sourceTree = "<group>"; };
 		33A2E6851CB565D200990B4E /* IDRuntimeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDRuntimeVC.m; sourceTree = "<group>"; };
-		33A635741DE5854D001588FF /* KBTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBTableCell.h; sourceTree = "<group>"; };
-		33A635751DE5854D001588FF /* KBTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBTableCell.m; sourceTree = "<group>"; };
-		33A635781DE5854D001588FF /* KBTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBTableVC.h; sourceTree = "<group>"; };
-		33A635791DE5854D001588FF /* KBTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBTableVC.m; sourceTree = "<group>"; };
-		33A6357A1DE5854D001588FF /* KBTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBTableView.h; sourceTree = "<group>"; };
-		33A6357B1DE5854D001588FF /* KBTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBTableView.m; sourceTree = "<group>"; };
-		33A6358B1DE585A7001588FF /* AJXKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJXKeyboardManager.h; sourceTree = "<group>"; };
-		33A6358C1DE585A7001588FF /* AJXKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJXKeyboardManager.m; sourceTree = "<group>"; };
-		33A6358F1DE585A7001588FF /* UIView(AJXKeyboard).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView(AJXKeyboard).h"; sourceTree = "<group>"; };
-		33A635901DE585A7001588FF /* UIView(AJXKeyboard).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView(AJXKeyboard).m"; sourceTree = "<group>"; };
-		33A635911DE585A7001588FF /* UIWindow(AJXKeyboard).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow(AJXKeyboard).h"; sourceTree = "<group>"; };
-		33A635921DE585A7001588FF /* UIWindow(AJXKeyboard).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow(AJXKeyboard).m"; sourceTree = "<group>"; };
-		33A635971DE58982001588FF /* AJXKBTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJXKBTextView.h; sourceTree = "<group>"; };
-		33A635981DE58982001588FF /* AJXKBTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJXKBTextView.m; sourceTree = "<group>"; };
 		33A646171CDAE3FC00944E04 /* BSTextAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextAlignment.h; sourceTree = "<group>"; };
 		33A646181CDAE3FC00944E04 /* BSTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextField.h; sourceTree = "<group>"; };
 		33A646191CDAE3FC00944E04 /* BSTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTextField.m; sourceTree = "<group>"; };
@@ -277,12 +264,28 @@
 		33C585211DD6314100454404 /* TouchViewD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchViewD.m; sourceTree = "<group>"; };
 		33C585221DD6314100454404 /* UITouchEventVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITouchEventVC.h; sourceTree = "<group>"; };
 		33C585231DD6314100454404 /* UITouchEventVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITouchEventVC.m; sourceTree = "<group>"; };
-		33C7FC1F1DE58D7200A13A62 /* AJXKBTextView2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJXKBTextView2.h; sourceTree = "<group>"; };
-		33C7FC201DE58D7200A13A62 /* AJXKBTextView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJXKBTextView2.m; sourceTree = "<group>"; };
-		33C7FC221DE5BAF900A13A62 /* UIScrollView(AJXKeyboard).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView(AJXKeyboard).h"; sourceTree = "<group>"; };
-		33C7FC231DE5BAF900A13A62 /* UIScrollView(AJXKeyboard).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView(AJXKeyboard).m"; sourceTree = "<group>"; };
-		33C7FC2C1DE5C92400A13A62 /* KBScrollVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBScrollVC.h; sourceTree = "<group>"; };
-		33C7FC2D1DE5C92400A13A62 /* KBScrollVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBScrollVC.m; sourceTree = "<group>"; };
+		33C7FC351DE5D30F00A13A62 /* AJXKBTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJXKBTextView.h; sourceTree = "<group>"; };
+		33C7FC361DE5D30F00A13A62 /* AJXKBTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJXKBTextView.m; sourceTree = "<group>"; };
+		33C7FC371DE5D30F00A13A62 /* AJXKBTextView2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJXKBTextView2.h; sourceTree = "<group>"; };
+		33C7FC381DE5D30F00A13A62 /* AJXKBTextView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJXKBTextView2.m; sourceTree = "<group>"; };
+		33C7FC391DE5D30F00A13A62 /* AJXKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJXKeyboardManager.h; sourceTree = "<group>"; };
+		33C7FC3A1DE5D30F00A13A62 /* AJXKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJXKeyboardManager.m; sourceTree = "<group>"; };
+		33C7FC3B1DE5D30F00A13A62 /* UIScrollView(AJXKeyboard).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView(AJXKeyboard).h"; sourceTree = "<group>"; };
+		33C7FC3C1DE5D30F00A13A62 /* UIScrollView(AJXKeyboard).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView(AJXKeyboard).m"; sourceTree = "<group>"; };
+		33C7FC3D1DE5D30F00A13A62 /* UIView(AJXKeyboard).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView(AJXKeyboard).h"; sourceTree = "<group>"; };
+		33C7FC3E1DE5D30F00A13A62 /* UIView(AJXKeyboard).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView(AJXKeyboard).m"; sourceTree = "<group>"; };
+		33C7FC3F1DE5D30F00A13A62 /* UIWindow(AJXKeyboard).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow(AJXKeyboard).h"; sourceTree = "<group>"; };
+		33C7FC401DE5D30F00A13A62 /* UIWindow(AJXKeyboard).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow(AJXKeyboard).m"; sourceTree = "<group>"; };
+		33C7FC421DE5D30F00A13A62 /* KBScrollVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBScrollVC.h; sourceTree = "<group>"; };
+		33C7FC431DE5D30F00A13A62 /* KBScrollVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBScrollVC.m; sourceTree = "<group>"; };
+		33C7FC441DE5D30F00A13A62 /* KBScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBScrollView.h; sourceTree = "<group>"; };
+		33C7FC451DE5D30F00A13A62 /* KBScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBScrollView.m; sourceTree = "<group>"; };
+		33C7FC471DE5D30F00A13A62 /* KBTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBTableCell.h; sourceTree = "<group>"; };
+		33C7FC481DE5D30F00A13A62 /* KBTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBTableCell.m; sourceTree = "<group>"; };
+		33C7FC491DE5D30F00A13A62 /* KBTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBTableVC.h; sourceTree = "<group>"; };
+		33C7FC4A1DE5D30F00A13A62 /* KBTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBTableVC.m; sourceTree = "<group>"; };
+		33C7FC4B1DE5D30F00A13A62 /* KBTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBTableView.h; sourceTree = "<group>"; };
+		33C7FC4C1DE5D30F00A13A62 /* KBTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBTableView.m; sourceTree = "<group>"; };
 		33CA47661DCD056000DC7D94 /* NSStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringUtils.h; sourceTree = "<group>"; };
 		33CA47671DCD056000DC7D94 /* NSStringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringUtils.m; sourceTree = "<group>"; };
 		33D234691D180661006A5CF0 /* IDTestObjX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDTestObjX.h; sourceTree = "<group>"; };
@@ -642,39 +645,6 @@
 			path = Runtime;
 			sourceTree = "<group>";
 		};
-		33A635711DE5854D001588FF /* UITableViewController(Keyboard) */ = {
-			isa = PBXGroup;
-			children = (
-				33A635781DE5854D001588FF /* KBTableVC.h */,
-				33A635791DE5854D001588FF /* KBTableVC.m */,
-				33A6357A1DE5854D001588FF /* KBTableView.h */,
-				33A6357B1DE5854D001588FF /* KBTableView.m */,
-				33A635741DE5854D001588FF /* KBTableCell.h */,
-				33A635751DE5854D001588FF /* KBTableCell.m */,
-				33A6358A1DE585A7001588FF /* EditableViewForKeyboard */,
-			);
-			path = "UITableViewController(Keyboard)";
-			sourceTree = "<group>";
-		};
-		33A6358A1DE585A7001588FF /* EditableViewForKeyboard */ = {
-			isa = PBXGroup;
-			children = (
-				33A635971DE58982001588FF /* AJXKBTextView.h */,
-				33A635981DE58982001588FF /* AJXKBTextView.m */,
-				33C7FC1F1DE58D7200A13A62 /* AJXKBTextView2.h */,
-				33C7FC201DE58D7200A13A62 /* AJXKBTextView2.m */,
-				33A6358B1DE585A7001588FF /* AJXKeyboardManager.h */,
-				33A6358C1DE585A7001588FF /* AJXKeyboardManager.m */,
-				33C7FC221DE5BAF900A13A62 /* UIScrollView(AJXKeyboard).h */,
-				33C7FC231DE5BAF900A13A62 /* UIScrollView(AJXKeyboard).m */,
-				33A6358F1DE585A7001588FF /* UIView(AJXKeyboard).h */,
-				33A635901DE585A7001588FF /* UIView(AJXKeyboard).m */,
-				33A635911DE585A7001588FF /* UIWindow(AJXKeyboard).h */,
-				33A635921DE585A7001588FF /* UIWindow(AJXKeyboard).m */,
-			);
-			path = EditableViewForKeyboard;
-			sourceTree = "<group>";
-		};
 		33A646161CDAE3FC00944E04 /* BSText-9PointAlignment */ = {
 			isa = PBXGroup;
 			children = (
@@ -778,13 +748,65 @@
 			path = ST_hittest;
 			sourceTree = "<group>";
 		};
-		33C7FC251DE5C8B200A13A62 /* UIScrollView(Keyboard) */ = {
+		33C7FC331DE5D30F00A13A62 /* EditableView+UncoveredByKeyboard */ = {
 			isa = PBXGroup;
 			children = (
-				33C7FC2C1DE5C92400A13A62 /* KBScrollVC.h */,
-				33C7FC2D1DE5C92400A13A62 /* KBScrollVC.m */,
+				33C7FC411DE5D30F00A13A62 /* UIScrollView(Keyboard) */,
+				33C7FC461DE5D30F00A13A62 /* UITableView(Keyboard) */,
+				33C7FC4D1DE5D30F00A13A62 /* UIView(Keyboard) */,
+				33C7FC341DE5D30F00A13A62 /* EditableViewUncoveredByKeyboard */,
+			);
+			path = "EditableView+UncoveredByKeyboard";
+			sourceTree = "<group>";
+		};
+		33C7FC341DE5D30F00A13A62 /* EditableViewUncoveredByKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				33C7FC351DE5D30F00A13A62 /* AJXKBTextView.h */,
+				33C7FC361DE5D30F00A13A62 /* AJXKBTextView.m */,
+				33C7FC371DE5D30F00A13A62 /* AJXKBTextView2.h */,
+				33C7FC381DE5D30F00A13A62 /* AJXKBTextView2.m */,
+				33C7FC391DE5D30F00A13A62 /* AJXKeyboardManager.h */,
+				33C7FC3A1DE5D30F00A13A62 /* AJXKeyboardManager.m */,
+				33C7FC3B1DE5D30F00A13A62 /* UIScrollView(AJXKeyboard).h */,
+				33C7FC3C1DE5D30F00A13A62 /* UIScrollView(AJXKeyboard).m */,
+				33C7FC3D1DE5D30F00A13A62 /* UIView(AJXKeyboard).h */,
+				33C7FC3E1DE5D30F00A13A62 /* UIView(AJXKeyboard).m */,
+				33C7FC3F1DE5D30F00A13A62 /* UIWindow(AJXKeyboard).h */,
+				33C7FC401DE5D30F00A13A62 /* UIWindow(AJXKeyboard).m */,
+			);
+			path = EditableViewUncoveredByKeyboard;
+			sourceTree = "<group>";
+		};
+		33C7FC411DE5D30F00A13A62 /* UIScrollView(Keyboard) */ = {
+			isa = PBXGroup;
+			children = (
+				33C7FC421DE5D30F00A13A62 /* KBScrollVC.h */,
+				33C7FC431DE5D30F00A13A62 /* KBScrollVC.m */,
+				33C7FC441DE5D30F00A13A62 /* KBScrollView.h */,
+				33C7FC451DE5D30F00A13A62 /* KBScrollView.m */,
 			);
 			path = "UIScrollView(Keyboard)";
+			sourceTree = "<group>";
+		};
+		33C7FC461DE5D30F00A13A62 /* UITableView(Keyboard) */ = {
+			isa = PBXGroup;
+			children = (
+				33C7FC491DE5D30F00A13A62 /* KBTableVC.h */,
+				33C7FC4A1DE5D30F00A13A62 /* KBTableVC.m */,
+				33C7FC4B1DE5D30F00A13A62 /* KBTableView.h */,
+				33C7FC4C1DE5D30F00A13A62 /* KBTableView.m */,
+				33C7FC471DE5D30F00A13A62 /* KBTableCell.h */,
+				33C7FC481DE5D30F00A13A62 /* KBTableCell.m */,
+			);
+			path = "UITableView(Keyboard)";
+			sourceTree = "<group>";
+		};
+		33C7FC4D1DE5D30F00A13A62 /* UIView(Keyboard) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "UIView(Keyboard)";
 			sourceTree = "<group>";
 		};
 		33EFD7CF1CD1AE4600E241C3 /* FPSLabel */ = {
@@ -1203,8 +1225,7 @@
 				330070B41CCE501700C2C432 /* UILabel */,
 				339ECF4F1D179FF400F4A94C /* Border */,
 				33721A0E1CF6F56D0003F688 /* UITableViewController */,
-				33A635711DE5854D001588FF /* UITableViewController(Keyboard) */,
-				33C7FC251DE5C8B200A13A62 /* UIScrollView(Keyboard) */,
+				33C7FC331DE5D30F00A13A62 /* EditableView+UncoveredByKeyboard */,
 				33A763FA1D9BA4B400381E74 /* NMFolderGroupVC */,
 				337E4C5A1DBE344F0072D5FC /* UITextField */,
 				33C585041DD6314100454404 /* UITouchEvent */,
@@ -1411,7 +1432,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33A635861DE5854D001588FF /* KBTableView.m in Sources */,
 				33A6461F1CDAE3FC00944E04 /* BSTextView.m in Sources */,
 				33721A0A1CF59D090003F688 /* BSLabel.m in Sources */,
 				33C585261DD6314100454404 /* NMTableViewCell.m in Sources */,
@@ -1422,6 +1442,7 @@
 				562CA2701C9AB35800B6FE67 /* Wrappers.pbobjc.m in Sources */,
 				562CA1DA1C9A9FBB00B6FE67 /* GPBRootObject.m in Sources */,
 				56E0BE7B1C813F6100F6E7DA /* IDNSRunLoopVC.m in Sources */,
+				33C7FC561DE5D30F00A13A62 /* KBTableCell.m in Sources */,
 				33B902FA1CD88F3600A0574F /* NSString(TS_Attributed).m in Sources */,
 				568F89301C7FF49F009A27C5 /* AppDelegate.m in Sources */,
 				339ECF631D17A10800F4A94C /* IDBorderTest1Cell.m in Sources */,
@@ -1430,10 +1451,9 @@
 				564BA8CE1C82DFA5001A0A07 /* IDUIViewVC.m in Sources */,
 				33313B491D1299BD0000D8A1 /* IDCoreAnimationVC.m in Sources */,
 				562CA1EE1C9AA24D00B6FE67 /* GPBCodedOutputStream.m in Sources */,
-				33C7FC211DE58D7200A13A62 /* AJXKBTextView2.m in Sources */,
+				33C7FC4E1DE5D30F00A13A62 /* AJXKBTextView.m in Sources */,
 				33C5852F1DD6314100454404 /* TouchViewD.m in Sources */,
 				56E0BE7F1C813FB700F6E7DA /* IDBaseVC.m in Sources */,
-				33A635831DE5854D001588FF /* KBTableCell.m in Sources */,
 				33EFD7D51CD1AEA800E241C3 /* NMFPSLabel.m in Sources */,
 				33CA47681DCD056000DC7D94 /* NSStringUtils.m in Sources */,
 				33A764031D9BA57700381E74 /* NMFolderItemCell.m in Sources */,
@@ -1442,23 +1462,25 @@
 				562CA2671C9AB35800B6FE67 /* Api.pbobjc.m in Sources */,
 				562CA1D91C9A9FBB00B6FE67 /* GPBExtensionRegistry.m in Sources */,
 				339ECF591D179FF400F4A94C /* CALayer+AJXBorder.m in Sources */,
-				33A635951DE585A7001588FF /* UIView(AJXKeyboard).m in Sources */,
 				33C5852E1DD6314100454404 /* TouchViewC.m in Sources */,
 				56F21B301C8BDFAF001732BF /* HDTeacher.m in Sources */,
 				337E4C601DBE347B0072D5FC /* IDUITextFieldVC.m in Sources */,
 				33C5852B1DD6314100454404 /* TouchView.m in Sources */,
 				33D2346B1D180661006A5CF0 /* IDTestObjX.m in Sources */,
 				562CA1EF1C9AA24D00B6FE67 /* GPBWireFormat.m in Sources */,
+				33C7FC511DE5D30F00A13A62 /* UIScrollView(AJXKeyboard).m in Sources */,
 				33A2E6861CB565D200990B4E /* IDRuntimeVC.m in Sources */,
-				33C7FC241DE5BAF900A13A62 /* UIScrollView(AJXKeyboard).m in Sources */,
+				33C7FC581DE5D30F00A13A62 /* KBTableView.m in Sources */,
 				56E1FF021C897B1C004363C1 /* IDUIKitListVC.m in Sources */,
 				568F89B41C803883009A27C5 /* IDNSCacheVC.m in Sources */,
+				33C7FC571DE5D30F00A13A62 /* KBTableVC.m in Sources */,
 				33A764001D9BA56E00381E74 /* NMFolderCell.m in Sources */,
 				56F21B341C8BF277001732BF /* IDProtocolBufferVC.m in Sources */,
 				562CA2091C9AA3D100B6FE67 /* GPBUtilities.m in Sources */,
 				33C585241DD6314100454404 /* NMContainerView.m in Sources */,
 				33313B4D1D129A340000D8A1 /* IDGuoDongVC.m in Sources */,
 				33A646201CDAE3FC00944E04 /* BSUITestVC.m in Sources */,
+				33C7FC521DE5D30F00A13A62 /* UIView(AJXKeyboard).m in Sources */,
 				56F21B2F1C8BDFAF001732BF /* HDPerson.m in Sources */,
 				33C5852D1DD6314100454404 /* TouchViewB.m in Sources */,
 				33A763FD1D9BA4C200381E74 /* NMFolderGroupVC.m in Sources */,
@@ -1470,25 +1492,25 @@
 				562CA26B1C9AB35800B6FE67 /* FieldMask.pbobjc.m in Sources */,
 				56E0BE951C81CF2000F6E7DA /* IDCALayerVC.m in Sources */,
 				562CA26D1C9AB35800B6FE67 /* Struct.pbobjc.m in Sources */,
-				33A635961DE585A7001588FF /* UIWindow(AJXKeyboard).m in Sources */,
+				33C7FC501DE5D30F00A13A62 /* AJXKeyboardManager.m in Sources */,
 				334F461D1D1918560090D97B /* CALayerAJXBorderObserver.m in Sources */,
 				568F89B01C8037D3009A27C5 /* IDFoundationListVC.m in Sources */,
 				33C585301DD6314100454404 /* UITouchEventVC.m in Sources */,
 				56E0BE981C81CFE300F6E7DA /* IDCALayer.m in Sources */,
 				334F46211D1919F40090D97B /* DHUsesAllVC.m in Sources */,
 				568F892D1C7FF49F009A27C5 /* main.m in Sources */,
+				33C7FC551DE5D30F00A13A62 /* KBScrollView.m in Sources */,
 				33C585251DD6314100454404 /* NMTableView.m in Sources */,
 				568F899F1C8006A5009A27C5 /* IDAlgorithmListVC.m in Sources */,
 				562CA2681C9AB35800B6FE67 /* Descriptor.pbobjc.m in Sources */,
 				3302AC2F1DC057EF008E6F2A /* IDNSObjectVC.m in Sources */,
-				33A635991DE58982001588FF /* AJXKBTextView.m in Sources */,
 				3302AC331DC05873008E6F2A /* BaseAnimal.m in Sources */,
-				33A635851DE5854D001588FF /* KBTableVC.m in Sources */,
 				33A764181D9BAF6A00381E74 /* NMFolderSectionHeader.m in Sources */,
 				562CA1E31C9AA22E00B6FE67 /* GPBUnknownField.m in Sources */,
 				33721A111CF6F5820003F688 /* TCTableVC.m in Sources */,
 				33A764091D9BA6AD00381E74 /* NMFolderModel.m in Sources */,
 				568F89A21C80085B009A27C5 /* IDBinaryTreeVC.m in Sources */,
+				33C7FC4F1DE5D30F00A13A62 /* AJXKBTextView2.m in Sources */,
 				330070B71CCE504700C2C432 /* IDUILabelVC.m in Sources */,
 				568F89A51C80089C009A27C5 /* IDBinaryTreeNode.m in Sources */,
 				335196151DD89358007E118C /* IDJSCVC.m in Sources */,
@@ -1497,6 +1519,7 @@
 				337E4C631DBE40430072D5FC /* IDTextField.m in Sources */,
 				33C585281DD6314100454404 /* NMTapGestureRecognizer.m in Sources */,
 				564BA8CA1C82C1E4001A0A07 /* IDCALayerView.m in Sources */,
+				33C7FC531DE5D30F00A13A62 /* UIWindow(AJXKeyboard).m in Sources */,
 				56DFB2721C84165400F750E8 /* IDCAAnimationTestLayer.m in Sources */,
 				568F89981C8005BA009A27C5 /* IDTechListModel.m in Sources */,
 				562CA20A1C9AA3D100B6FE67 /* GPBWellKnownTypes.m in Sources */,
@@ -1505,7 +1528,6 @@
 				562CA1F81C9AA3B200B6FE67 /* GPBMessage.m in Sources */,
 				56E1FF061C897B85004363C1 /* IDOCAndJSVC.m in Sources */,
 				56E1FEFC1C897000004363C1 /* IDBlockVC.m in Sources */,
-				33C7FC2E1DE5C92400A13A62 /* KBScrollVC.m in Sources */,
 				56E0BE8B1C815BBD00F6E7DA /* IDNSArrayVC.m in Sources */,
 				3302AC361DC05898008E6F2A /* SubPerson.m in Sources */,
 				334F46241D191A5F0090D97B /* DHUAView.m in Sources */,
@@ -1525,8 +1547,8 @@
 				339ECF601D17A05900F4A94C /* IDBorderTest1.m in Sources */,
 				568F89971C8005BA009A27C5 /* IDTechListItemModel.m in Sources */,
 				562CA26C1C9AB35800B6FE67 /* SourceContext.pbobjc.m in Sources */,
-				33A635931DE585A7001588FF /* AJXKeyboardManager.m in Sources */,
 				56F21B2A1C8BDF85001732BF /* IDSelfAndSuperVC.m in Sources */,
+				33C7FC541DE5D30F00A13A62 /* KBScrollVC.m in Sources */,
 				33C585271DD6314100454404 /* NMHitTestTouchView.m in Sources */,
 				5652167B1C86BEED00A8E5A9 /* IDMRCVC.m in Sources */,
 			);
