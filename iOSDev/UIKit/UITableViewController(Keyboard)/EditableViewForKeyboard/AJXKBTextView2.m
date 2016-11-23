@@ -15,9 +15,7 @@
 @interface AJXKBTextView2() <UITextViewDelegate>
 @property (nonatomic, assign) BOOL isTextEditing;
 @property (nonatomic, weak) UIWindow *keyWindow;
-
 @property (nonatomic, weak) UITableView *superTableView;
-//@property (nonatomic, weak) UIScrollView *superScrollView;
 @end
 
 @implementation AJXKBTextView2
@@ -50,83 +48,66 @@
     AJXKeyboardManager *kbMgr = [AJXKeyboardManager defaultKeyboardManager];
     NSLog(@"====Begin edit, kb frame %@...", NSStringFromCGRect(kbMgr.keyboardFrame));
     if (kbMgr.isKeyboardVisible) {
-        
         _keyWindow = [self ajxKeyWindow];
         _superTableView = [self ajxSuperTableView];
-        if (_superTableView) {
-            [_superTableView cacheContentInset];
-        }
         
-        [self updateTableViewContentOffset];
-        [self updateTableViewContentInset];
-        
-        //如果开启编辑时，当前输入框所属tableView与之前缓存在KBManager里的tableView(containerView)不是同一个，
-        //则需要把之前的tableView的inset恢复到键盘弹起前
+        //---
         if (kbMgr.containerView != _superTableView  && [kbMgr.containerView isKindOfClass:[UITableView class]]) {
-            [(UITableView *)(kbMgr.containerView) restoreContentInset];
+            kbMgr.containerView.frame = kbMgr.containerViewInitFrame;
             kbMgr.containerView = nil;
         }
         
+        //---
         kbMgr.containerView = _superTableView;
+        if (_superTableView) {
+            kbMgr.containerViewInitFrame = _superTableView.frame;
+        }
+        [self updateTop];
     }
 }
 
 - (void)keyboardDidChangedFrame:(NSNotification *)notification
 {
     AJXKeyboardManager *kbMgr = [AJXKeyboardManager defaultKeyboardManager];
+    [self updateTop];
     NSLog(@"====Chagne frame, kb frame is %@...", NSStringFromCGRect(kbMgr.keyboardFrame));
-    [self updateTableViewContentOffset];
-    [self updateTableViewContentInset];
 }
 
 - (void)textViewDidEndEditing:(UITextView *)textView
 {
     NSLog(@"===========%@--%@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
-    [self resetTableViewContentInsetIfNeeded];
+    AJXKeyboardManager *kbMgr = [AJXKeyboardManager defaultKeyboardManager];
+    if (!kbMgr.isKeyboardVisible) {
+        _superTableView.frame = kbMgr.containerViewInitFrame;
+    }
+    _superTableView = nil;
     _keyWindow = nil;
     _isTextEditing = NO;
 }
 
 #pragma mark - Private
 
-- (void)updateTableViewContentOffset
+- (void)updateTop
 {
     AJXKeyboardManager *kbMgr = [AJXKeyboardManager defaultKeyboardManager];
     if (kbMgr.isKeyboardVisible && _superTableView && _isTextEditing) {
+        
         CGRect textViewFrameInWindow = [self.superview convertRect:self.frame toView:_keyWindow];
-        CGFloat offsetNeededToTranslate = CGRectGetMaxY(textViewFrameInWindow) - CGRectGetMinY(kbMgr.keyboardFrame);
-        
-        if (offsetNeededToTranslate > 0) {
-            CGPoint oldContentOffset = _superTableView.contentOffset;
-            CGFloat newOffset = oldContentOffset.y + offsetNeededToTranslate;
-            _superTableView.contentOffset = CGPointMake(oldContentOffset.x, newOffset);
+        CGFloat distance = CGRectGetMaxY(textViewFrameInWindow) - CGRectGetMinY(kbMgr.keyboardFrame);
+        if (distance > 0) {//textview被键盘遮挡
+            CGRect superTableViewFrameInWindow = [_superTableView.superview convertRect:_superTableView.frame toView:_keyWindow];
+            CGRect intersectRect = CGRectIntersection(superTableViewFrameInWindow, kbMgr.keyboardFrame);
+            CGFloat offsetNeededToTranslate = 0;
+            if (!CGRectIsNull(intersectRect)) {
+                offsetNeededToTranslate = intersectRect.size.height;
+            }
+            
+            if (offsetNeededToTranslate > 0) {
+                CGRect tableViewFrame = _superTableView.frame;
+                tableViewFrame.origin.y -= offsetNeededToTranslate;
+                _superTableView.frame = tableViewFrame;
+            }
         }
-    }
-}
-
-- (void)updateTableViewContentInset
-{
-    AJXKeyboardManager *kbMgr = [AJXKeyboardManager defaultKeyboardManager];
-    if (kbMgr.isKeyboardVisible && _superTableView && _isTextEditing) {
-        CGRect tableFrameInWindow = [_superTableView.superview convertRect:_superTableView.frame toView:_keyWindow];
-        CGRect tableAndKeyboardInsectRect = CGRectIntersection(tableFrameInWindow, kbMgr.keyboardFrame);
-        CGFloat intersectionHeight = CGRectIsNull(tableAndKeyboardInsectRect) ? 0 : tableAndKeyboardInsectRect.size.height;
-        
-        UIEdgeInsets oldContentInset = [_superTableView ajxKeyboardTableViewOldContentInset];
-        _superTableView.contentInset = UIEdgeInsetsMake(oldContentInset.top,
-                                                        oldContentInset.left,
-                                                        oldContentInset.bottom + intersectionHeight,
-                                                        oldContentInset.right);
-    }
-}
-
-- (void)resetTableViewContentInsetIfNeeded
-{
-    AJXKeyboardManager *kbMgr = [AJXKeyboardManager defaultKeyboardManager];
-    //键盘消失后才恢复tableView的contentInset，在tableView内部的textView间切换时不恢复tableView的contentInset
-    if (!(kbMgr.isKeyboardVisible)) {
-        [_superTableView restoreContentInset];
-        _superTableView = nil;
     }
 }
 

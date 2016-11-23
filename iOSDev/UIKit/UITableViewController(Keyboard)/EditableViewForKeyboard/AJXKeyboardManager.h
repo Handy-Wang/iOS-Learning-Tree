@@ -14,6 +14,7 @@
 @property (nonatomic, assign, readonly) CGRect keyboardFrame;
 @property (nonatomic, assign, readonly) BOOL isKeyboardVisible;
 @property (nonatomic, weak) UIView *containerView;
+@property (nonatomic, assign) CGRect containerViewInitFrame;
 
 + (instancetype)defaultKeyboardManager;
 

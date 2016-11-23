@@ -11,7 +11,7 @@
 #import "AJXKBTextView2.h"
 
 @interface KBTableCell()
-@property (nonatomic, strong) AJXKBTextView2 *textView;
+@property (nonatomic, strong) AJXKBTextView *textView;
 @end
 
 @implementation KBTableCell
@@ -31,7 +31,7 @@
 - (UITextView *)textView
 {
     if (!_textView) {
-        _textView = [[AJXKBTextView2 alloc] initWithFrame:self.bounds];
+        _textView = [[AJXKBTextView alloc] initWithFrame:self.bounds];
         _textView.text = @"2018世界杯";
         _textView.layer.borderColor = [UIColor blackColor].CGColor;
         _textView.layer.borderWidth = 1;

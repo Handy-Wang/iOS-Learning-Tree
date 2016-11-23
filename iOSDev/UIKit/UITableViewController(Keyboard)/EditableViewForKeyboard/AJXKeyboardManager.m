@@ -79,6 +79,7 @@
 
 - (void)keyboardDidHide:(NSNotification *)notification
 {
+    _containerViewInitFrame = CGRectZero;
 }
 
 #pragma mark - private methods
