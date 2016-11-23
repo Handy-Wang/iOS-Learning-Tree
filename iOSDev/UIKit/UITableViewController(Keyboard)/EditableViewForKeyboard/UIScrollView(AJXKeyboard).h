@@ -1,19 +1,19 @@
 //
-//  UITableView(AJXKeyboard).h
+//  UIScrollView(AJXKeyboard).h
 //  iOSDev
 //
-//  Created by Handy on 11/22/16.
+//  Created by Handy on 11/23/16.
 //  Copyright © 2016 XiaoShan. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface UITableView(AJXKeyboard)
+@interface UIScrollView(AJXKeyboard)
 
 - (void)cacheContentInset;
 
 - (void)restoreContentInset;
 
-- (UIEdgeInsets)ajxKeyboardTableViewOldContentInset;
+- (UIEdgeInsets)ajxKeyboardOldContentInset;
 
 @end

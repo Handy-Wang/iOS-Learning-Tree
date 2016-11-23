@@ -9,7 +9,7 @@
 #import "AJXKBTextView2.h"
 #import "UIView(AJXKeyboard).h"
 #import "UIWindow(AJXKeyboard).h"
-#import "UITableView(AJXKeyboard).h"
+#import "UIScrollView(AJXKeyboard).h"
 #import "AJXKeyboardManager.h"
 
 @interface AJXKBTextView2() <UITextViewDelegate>

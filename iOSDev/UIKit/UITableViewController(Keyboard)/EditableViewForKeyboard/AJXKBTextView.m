@@ -9,7 +9,7 @@
 #import "AJXKBTextView.h"
 #import "UIView(AJXKeyboard).h"
 #import "UIWindow(AJXKeyboard).h"
-#import "UITableView(AJXKeyboard).h"
+#import "UIScrollView(AJXKeyboard).h"
 #import "AJXKeyboardManager.h"
 
 @interface AJXKBTextView() <UITextViewDelegate>
@@ -62,8 +62,8 @@
         
         //如果开启编辑时，当前输入框所属tableView与之前缓存在KBManager里的tableView(containerView)不是同一个，
         //则需要把之前的tableView的inset恢复到键盘弹起前
-        if (kbMgr.containerView != _superTableView  && [kbMgr.containerView isKindOfClass:[UITableView class]]) {
-            [(UITableView *)(kbMgr.containerView) restoreContentInset];
+        if (kbMgr.containerView != _superTableView  && [kbMgr.containerView isKindOfClass:[UIScrollView class]]) {
+            [(UIScrollView *)(kbMgr.containerView) restoreContentInset];
             kbMgr.containerView = nil;
         }
         
@@ -112,7 +112,7 @@
         CGRect tableAndKeyboardInsectRect = CGRectIntersection(tableFrameInWindow, kbMgr.keyboardFrame);
         CGFloat intersectionHeight = CGRectIsNull(tableAndKeyboardInsectRect) ? 0 : tableAndKeyboardInsectRect.size.height;
         
-        UIEdgeInsets oldContentInset = [_superTableView ajxKeyboardTableViewOldContentInset];
+        UIEdgeInsets oldContentInset = [_superTableView ajxKeyboardOldContentInset];
         _superTableView.contentInset = UIEdgeInsetsMake(oldContentInset.top,
                                                         oldContentInset.left,
                                                         oldContentInset.bottom + intersectionHeight,
