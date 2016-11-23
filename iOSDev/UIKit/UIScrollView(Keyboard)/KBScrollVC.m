@@ -25,9 +25,11 @@
     
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(finish)];
     [self.view addGestureRecognizer:tapGesture];
+    self.view.backgroundColor = [UIColor grayColor];
     
     _scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     _scrollView.contentSize = kScrollViewContentSize;
+    _scrollView.ts_height = self.view.ts_height*0.8;
     [self.view addSubview:_scrollView];
     
     CGRect textView1Frame = CGRectMake(0,
