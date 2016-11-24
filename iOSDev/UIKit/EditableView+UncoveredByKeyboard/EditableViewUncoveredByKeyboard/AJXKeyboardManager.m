@@ -49,6 +49,10 @@
 - (void)keyboardWillShow:(NSNotification *)notification
 {
     _keyboardFrame = [self keyboardFrameFromNotification:notification];
+    
+    if ([_editingTextField respondsToSelector:@selector(keyboardWillShow)]) {
+        [_editingTextField performSelector:@selector(keyboardWillShow)];
+    }
 }
 
 - (void)keyboardDidShow:(NSNotification *)notification

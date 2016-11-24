@@ -53,7 +53,6 @@
     CGFloat b = arc4random()%255/255.0f;
     UIColor *bgColor = [UIColor colorWithRed:r green:g blue:b alpha:1];
     cell.backgroundColor = bgColor;
-    cell.textLabel.text = [NSString stringWithFormat:@"row ------ %ld", (indexPath.row+1)];
     cell.isContainTetxtView = !!(indexPath.row % 2);
     
     return cell;

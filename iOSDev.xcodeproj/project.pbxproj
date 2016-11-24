@@ -71,6 +71,7 @@
 		33C7FC601DE5D4DC00A13A62 /* KBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC5F1DE5D4DC00A13A62 /* KBViewController.m */; };
 		33C7FC6C1DE6CB9600A13A62 /* KBBadTopTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC6B1DE6CB9600A13A62 /* KBBadTopTableVC.m */; };
 		33C7FC6F1DE6CBA100A13A62 /* KBBadTopScrollVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC6E1DE6CBA100A13A62 /* KBBadTopScrollVC.m */; };
+		33C7FC721DE6E8DA00A13A62 /* AJXKBTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC711DE6E8DA00A13A62 /* AJXKBTextField.m */; };
 		33CA47681DCD056000DC7D94 /* NSStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CA47671DCD056000DC7D94 /* NSStringUtils.m */; };
 		33D2346B1D180661006A5CF0 /* IDTestObjX.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D2346A1D180661006A5CF0 /* IDTestObjX.m */; };
 		33D2346E1D181150006A5CF0 /* IDTestSubObjX.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D2346D1D181150006A5CF0 /* IDTestSubObjX.m */; };
@@ -297,6 +298,8 @@
 		33C7FC6B1DE6CB9600A13A62 /* KBBadTopTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBBadTopTableVC.m; sourceTree = "<group>"; };
 		33C7FC6D1DE6CBA100A13A62 /* KBBadTopScrollVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBBadTopScrollVC.h; sourceTree = "<group>"; };
 		33C7FC6E1DE6CBA100A13A62 /* KBBadTopScrollVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBBadTopScrollVC.m; sourceTree = "<group>"; };
+		33C7FC701DE6E8DA00A13A62 /* AJXKBTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJXKBTextField.h; sourceTree = "<group>"; };
+		33C7FC711DE6E8DA00A13A62 /* AJXKBTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJXKBTextField.m; sourceTree = "<group>"; };
 		33CA47661DCD056000DC7D94 /* NSStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringUtils.h; sourceTree = "<group>"; };
 		33CA47671DCD056000DC7D94 /* NSStringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringUtils.m; sourceTree = "<group>"; };
 		33D234691D180661006A5CF0 /* IDTestObjX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDTestObjX.h; sourceTree = "<group>"; };
@@ -782,6 +785,8 @@
 				33C7FC361DE5D30F00A13A62 /* AJXKBTextView.m */,
 				33C7FC371DE5D30F00A13A62 /* AJXKBTextView2.h */,
 				33C7FC381DE5D30F00A13A62 /* AJXKBTextView2.m */,
+				33C7FC701DE6E8DA00A13A62 /* AJXKBTextField.h */,
+				33C7FC711DE6E8DA00A13A62 /* AJXKBTextField.m */,
 				33C7FC391DE5D30F00A13A62 /* AJXKeyboardManager.h */,
 				33C7FC3A1DE5D30F00A13A62 /* AJXKeyboardManager.m */,
 				33C7FC3B1DE5D30F00A13A62 /* UIScrollView(AJXKeyboard).h */,
@@ -1503,6 +1508,7 @@
 				337E4C601DBE347B0072D5FC /* IDUITextFieldVC.m in Sources */,
 				33C5852B1DD6314100454404 /* TouchView.m in Sources */,
 				33D2346B1D180661006A5CF0 /* IDTestObjX.m in Sources */,
+				33C7FC721DE6E8DA00A13A62 /* AJXKBTextField.m in Sources */,
 				562CA1EF1C9AA24D00B6FE67 /* GPBWireFormat.m in Sources */,
 				33C7FC511DE5D30F00A13A62 /* UIScrollView(AJXKeyboard).m in Sources */,
 				33A2E6861CB565D200990B4E /* IDRuntimeVC.m in Sources */,

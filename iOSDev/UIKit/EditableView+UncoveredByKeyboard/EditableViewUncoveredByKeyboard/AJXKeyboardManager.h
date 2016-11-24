@@ -16,6 +16,8 @@
 @property (nonatomic, weak) UIView *containerView;
 @property (nonatomic, assign) CGRect containerViewInitFrame;//for class AJXKBTextView2
 
+@property (nonatomic, weak) UITextField *editingTextField;
+
 + (instancetype)defaultKeyboardManager;
 
 @end
