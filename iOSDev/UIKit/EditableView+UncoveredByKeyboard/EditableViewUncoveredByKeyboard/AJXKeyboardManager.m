@@ -67,10 +67,9 @@
         _keyboardFrame = [self keyboardFrameFromNotification:notification];
     }
     
-    NSNotification *notify = [[NSNotification alloc] initWithName:kAjxKeyboardDidChangeFrameNotification
-                                                           object:notification.object
-                                                         userInfo:notification.userInfo];
-    [[NSNotificationCenter defaultCenter] postNotification:notify];
+    if ([_editingTextView respondsToSelector:@selector(keyboardDidChangedFrame)]) {
+        [_editingTextView performSelector:@selector(keyboardDidChangedFrame)];
+    }
 }
 
 #pragma mark - 隐藏键盘

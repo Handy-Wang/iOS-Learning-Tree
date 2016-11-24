@@ -26,16 +26,8 @@
         //init keyboard manager
         [AJXKeyboardManager defaultKeyboardManager];
         self.delegate = self;
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(keyboardDidChangedFrame:)
-                                                     name:kAjxKeyboardDidChangeFrameNotification object:nil];
     }
     return self;
-}
-
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - UITextViewDelegate methods

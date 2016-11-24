@@ -28,16 +28,8 @@
         //init keyboard manager
         [AJXKeyboardManager defaultKeyboardManager];
         self.delegate = self;
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(keyboardDidChangedFrame:)
-                                                     name:kAjxKeyboardDidChangeFrameNotification object:nil];
     }
     return self;
-}
-
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - UITextViewDelegate methods
@@ -45,8 +37,9 @@
 - (void)textViewDidBeginEditing:(UITextView *)textView
 {
     _isTextEditing = YES;
-    
     AJXKeyboardManager *kbMgr = [AJXKeyboardManager defaultKeyboardManager];
+    kbMgr.editingTextView = self;
+    
     if (kbMgr.isKeyboardVisible) {
         
         _keyWindow = [self ajxKeyWindow];
@@ -82,7 +75,7 @@
     }
 }
 
-- (void)keyboardDidChangedFrame:(NSNotification *)notification
+- (void)keyboardDidChangedFrame
 {
     if ([self isScrollableContainerView]) {
         [self updateScrollableContainerContentOffsetWhenKeyboardFrameChanged];
@@ -99,10 +92,13 @@
     } else {
         [self restoreContainerInitFrame];
     }
+    
     _contatinerView = nil;
     _keyWindow = nil;
     _isTextEditing = NO;
     _needUpdateFrameForNormalContainerView = YES;
+    AJXKeyboardManager *kbMgr = [AJXKeyboardManager defaultKeyboardManager];
+    kbMgr.editingTextView = nil;
 }
 
 #pragma mark - Scrollable container view
