@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define kKBTableCellHeight             (100)
+#define kKBTableCellHeight             (150)
 
 @interface KBTableCell : UITableViewCell
 @property (nonatomic, assign) BOOL isContainTetxtView;

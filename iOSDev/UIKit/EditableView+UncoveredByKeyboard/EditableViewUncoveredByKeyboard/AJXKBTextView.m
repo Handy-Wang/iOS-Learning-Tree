@@ -50,7 +50,11 @@
     if (kbMgr.isKeyboardVisible) {
         
         _keyWindow = [self ajxKeyWindow];
+        
+        //查找可滚动super view
         _contatinerView = [self ajxSuperScrollableView];
+        
+        //查找普通super view
         _contatinerView = _contatinerView ? : [self ajxSuperVCView];
         
         if ([self isScrollableContainerView]) {

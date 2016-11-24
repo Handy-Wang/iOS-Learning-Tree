@@ -2,6 +2,8 @@
     "items" : [
                {"title" : "UITableView+Keyboard", "className" : "KBTableVC"},
                {"title" : "UIScrollView+Keyboard", "className" : "KBScrollVC"},
-               {"title" : "UIView+Keyboard", "className" : "KBViewController"}
+               {"title" : "UIView+Keyboard", "className" : "KBViewController"},
+               {"title" : "UITableView(Top不够)+Keyboard", "className" : "KBBadTopTableVC"},
+               {"title" : "UIScrollView(Top不够)+Keyboard", "className" : "KBBadTopScrollVC"}
                ]
 }

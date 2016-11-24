@@ -69,6 +69,8 @@
 		33C7FC5C1DE5D3D000A13A62 /* EditableView.json in Resources */ = {isa = PBXBuildFile; fileRef = 33C7FC591DE5D3D000A13A62 /* EditableView.json */; };
 		33C7FC5D1DE5D3D000A13A62 /* EditableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC5B1DE5D3D000A13A62 /* EditableViewVC.m */; };
 		33C7FC601DE5D4DC00A13A62 /* KBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC5F1DE5D4DC00A13A62 /* KBViewController.m */; };
+		33C7FC6C1DE6CB9600A13A62 /* KBBadTopTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC6B1DE6CB9600A13A62 /* KBBadTopTableVC.m */; };
+		33C7FC6F1DE6CBA100A13A62 /* KBBadTopScrollVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC6E1DE6CBA100A13A62 /* KBBadTopScrollVC.m */; };
 		33CA47681DCD056000DC7D94 /* NSStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CA47671DCD056000DC7D94 /* NSStringUtils.m */; };
 		33D2346B1D180661006A5CF0 /* IDTestObjX.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D2346A1D180661006A5CF0 /* IDTestObjX.m */; };
 		33D2346E1D181150006A5CF0 /* IDTestSubObjX.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D2346D1D181150006A5CF0 /* IDTestSubObjX.m */; };
@@ -291,6 +293,10 @@
 		33C7FC5B1DE5D3D000A13A62 /* EditableViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableViewVC.m; sourceTree = "<group>"; };
 		33C7FC5E1DE5D4DC00A13A62 /* KBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBViewController.h; sourceTree = "<group>"; };
 		33C7FC5F1DE5D4DC00A13A62 /* KBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBViewController.m; sourceTree = "<group>"; };
+		33C7FC6A1DE6CB9600A13A62 /* KBBadTopTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBBadTopTableVC.h; sourceTree = "<group>"; };
+		33C7FC6B1DE6CB9600A13A62 /* KBBadTopTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBBadTopTableVC.m; sourceTree = "<group>"; };
+		33C7FC6D1DE6CBA100A13A62 /* KBBadTopScrollVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBBadTopScrollVC.h; sourceTree = "<group>"; };
+		33C7FC6E1DE6CBA100A13A62 /* KBBadTopScrollVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBBadTopScrollVC.m; sourceTree = "<group>"; };
 		33CA47661DCD056000DC7D94 /* NSStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringUtils.h; sourceTree = "<group>"; };
 		33CA47671DCD056000DC7D94 /* NSStringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringUtils.m; sourceTree = "<group>"; };
 		33D234691D180661006A5CF0 /* IDTestObjX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDTestObjX.h; sourceTree = "<group>"; };
@@ -762,6 +768,8 @@
 				33C7FC411DE5D30F00A13A62 /* UIScrollView(Keyboard) */,
 				33C7FC461DE5D30F00A13A62 /* UITableView(Keyboard) */,
 				33C7FC4D1DE5D30F00A13A62 /* UIView(Keyboard) */,
+				33C7FC651DE6CB7200A13A62 /* UIBadTopScrollView(Keyboard) */,
+				33C7FC681DE6CB7200A13A62 /* UIBadTopTableView(Keyboard) */,
 				33C7FC341DE5D30F00A13A62 /* EditableViewUncoveredByKeyboard */,
 			);
 			path = "EditableView+UncoveredByKeyboard";
@@ -815,6 +823,24 @@
 				33C7FC5F1DE5D4DC00A13A62 /* KBViewController.m */,
 			);
 			path = "UIView(Keyboard)";
+			sourceTree = "<group>";
+		};
+		33C7FC651DE6CB7200A13A62 /* UIBadTopScrollView(Keyboard) */ = {
+			isa = PBXGroup;
+			children = (
+				33C7FC6D1DE6CBA100A13A62 /* KBBadTopScrollVC.h */,
+				33C7FC6E1DE6CBA100A13A62 /* KBBadTopScrollVC.m */,
+			);
+			path = "UIBadTopScrollView(Keyboard)";
+			sourceTree = "<group>";
+		};
+		33C7FC681DE6CB7200A13A62 /* UIBadTopTableView(Keyboard) */ = {
+			isa = PBXGroup;
+			children = (
+				33C7FC6A1DE6CB9600A13A62 /* KBBadTopTableVC.h */,
+				33C7FC6B1DE6CB9600A13A62 /* KBBadTopTableVC.m */,
+			);
+			path = "UIBadTopTableView(Keyboard)";
 			sourceTree = "<group>";
 		};
 		33EFD7CF1CD1AE4600E241C3 /* FPSLabel */ = {
@@ -1487,6 +1513,7 @@
 				33A764001D9BA56E00381E74 /* NMFolderCell.m in Sources */,
 				56F21B341C8BF277001732BF /* IDProtocolBufferVC.m in Sources */,
 				562CA2091C9AA3D100B6FE67 /* GPBUtilities.m in Sources */,
+				33C7FC6C1DE6CB9600A13A62 /* KBBadTopTableVC.m in Sources */,
 				33C585241DD6314100454404 /* NMContainerView.m in Sources */,
 				33313B4D1D129A340000D8A1 /* IDGuoDongVC.m in Sources */,
 				33A646201CDAE3FC00944E04 /* BSUITestVC.m in Sources */,
@@ -1514,6 +1541,7 @@
 				568F899F1C8006A5009A27C5 /* IDAlgorithmListVC.m in Sources */,
 				562CA2681C9AB35800B6FE67 /* Descriptor.pbobjc.m in Sources */,
 				3302AC2F1DC057EF008E6F2A /* IDNSObjectVC.m in Sources */,
+				33C7FC6F1DE6CBA100A13A62 /* KBBadTopScrollVC.m in Sources */,
 				3302AC331DC05873008E6F2A /* BaseAnimal.m in Sources */,
 				33A764181D9BAF6A00381E74 /* NMFolderSectionHeader.m in Sources */,
 				562CA1E31C9AA22E00B6FE67 /* GPBUnknownField.m in Sources */,
