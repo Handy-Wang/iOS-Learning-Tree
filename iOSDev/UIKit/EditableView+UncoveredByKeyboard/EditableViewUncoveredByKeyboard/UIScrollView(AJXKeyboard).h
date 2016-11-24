@@ -14,6 +14,6 @@
 
 - (void)restoreContentInset;
 
-- (UIEdgeInsets)ajxKeyboardOldContentInset;
+- (UIEdgeInsets)ajxOldContentInset;
 
 @end

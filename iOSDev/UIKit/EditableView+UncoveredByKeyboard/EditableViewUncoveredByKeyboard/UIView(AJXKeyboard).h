@@ -10,12 +10,22 @@
 
 @interface UIView(AJXKeyboard)
 
+#pragma mark - About keywindow
+
+- (UIWindow *)ajxKeyWindow;
+
+#pragma mark - About looking up superview
+
 - (UIScrollView *)ajxSuperScrollableView;
 
 - (UIView *)ajxSuperVCView;
 
-- (UIViewController *)ajxTopestViewController;
+#pragma mark - About frame
 
-- (UIWindow *)ajxKeyWindow;
+- (void)ajxCacheInitFrame;
+
+- (void)ajxRestoreInitFrame;
+
+- (id)ajxGetInitFrameObj;
 
 @end

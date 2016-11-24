@@ -9,45 +9,45 @@
 #import <objc/runtime.h>
 #import "UIScrollView(AJXKeyboard).h"
 
-static char AjxKeyboardOldContentInset;
+static char AjxOldContentInset;
 
 @implementation UIScrollView(AJXKeyboard)
 
 - (void)cacheContentInset
 {
-    if (![self ajxKeyboardOldContentInsetObj]) {
-        [self setAjxKeyboardOldContentInset:self.contentInset];
+    if (![self ajxOldContentInsetObj]) {
+        [self setAjxOldContentInset:self.contentInset];
     }
 }
 
 - (void)restoreContentInset
 {
-    if ([self ajxKeyboardOldContentInsetObj]) {
-        self.contentInset = [self ajxKeyboardOldContentInset];
+    if ([self ajxOldContentInsetObj]) {
+        self.contentInset = [self ajxOldContentInset];
     }
-    [self resetAjxKeyboardOldContentInset];
+    [self resetAjxOldContentInset];
 }
 
 #pragma mark - ContentInset
 
-- (void)setAjxKeyboardOldContentInset:(UIEdgeInsets)contentInset
+- (void)setAjxOldContentInset:(UIEdgeInsets)contentInset
 {
-    objc_setAssociatedObject(self, &AjxKeyboardOldContentInset, NSStringFromUIEdgeInsets(contentInset), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &AjxOldContentInset, NSStringFromUIEdgeInsets(contentInset), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (void)resetAjxKeyboardOldContentInset
+- (void)resetAjxOldContentInset
 {
-    objc_setAssociatedObject(self, &AjxKeyboardOldContentInset, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &AjxOldContentInset, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (UIEdgeInsets)ajxKeyboardOldContentInset
+- (UIEdgeInsets)ajxOldContentInset
 {
-    return UIEdgeInsetsFromString([self ajxKeyboardOldContentInsetObj]);
+    return UIEdgeInsetsFromString([self ajxOldContentInsetObj]);
 }
 
-- (id)ajxKeyboardOldContentInsetObj
+- (id)ajxOldContentInsetObj
 {
-    return objc_getAssociatedObject(self, &AjxKeyboardOldContentInset);
+    return objc_getAssociatedObject(self, &AjxOldContentInset);
 }
 
 
