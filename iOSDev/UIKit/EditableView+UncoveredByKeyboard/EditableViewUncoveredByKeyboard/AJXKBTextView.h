@@ -10,4 +10,6 @@
 
 @interface AJXKBTextView : UITextView
 
+- (void)keyboardDidChangedFrame;
+
 @end

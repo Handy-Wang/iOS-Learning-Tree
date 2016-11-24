@@ -51,7 +51,7 @@
     _keyboardFrame = [self keyboardFrameFromNotification:notification];
     
     if ([_editingTextField respondsToSelector:@selector(keyboardWillShow)]) {
-        [_editingTextField performSelector:@selector(keyboardWillShow)];
+        [_editingTextField keyboardWillShow];
     }
 }
 
@@ -68,7 +68,7 @@
     }
     
     if ([_editingTextView respondsToSelector:@selector(keyboardDidChangedFrame)]) {
-        [_editingTextView performSelector:@selector(keyboardDidChangedFrame)];
+        [_editingTextView keyboardDidChangedFrame];
     }
 }
 

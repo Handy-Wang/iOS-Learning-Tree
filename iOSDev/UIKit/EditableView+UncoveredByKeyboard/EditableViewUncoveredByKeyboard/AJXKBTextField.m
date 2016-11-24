@@ -16,6 +16,7 @@
 @property (nonatomic, weak) UIWindow *keyWindow;
 @property (nonatomic, weak) UIView *contatinerView;
 @property (nonatomic, assign) BOOL needUpdateFrameForNormalContainerView;
+@property (nonatomic, assign) BOOL hadUpdatedContainerFrameOnce;
 @end
 
 @implementation AJXKBTextField
@@ -36,15 +37,35 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
+//    NSLog(@"11111111111");
     _isTextEditing = YES;
     AJXKeyboardManager *kbMgr = [AJXKeyboardManager defaultKeyboardManager];
     kbMgr.editingTextField = self;
+    
+    /**
+     * 对于UITextField来说，第一次点击textField进行输入时，会先调用textFieldDidBeginEditing，
+     * 这时isKeyboardVisible为NO，然后系统会发出UIKeyboardWillShowNotification，
+     * 即调用下面的keyboardWillShow方法；
+     *
+     * 当键盘不消失时(isKeyboardVisible=YES时)，切换不同textField时，iOS7.x/iOS8.x上新获得焦点的textField只会调用textFieldDidBeginEditing，系统不会发出UIKeyboardWillShowNotification，iOS 9.x及以上新获得焦点的textField会调用textFieldDidBeginEditing，系统有时会发出UIKeyboardWillShowNotification。
+     *
+     * 所以，为了兼容不同iOS版本，updateContainerFrameOnce里的逻辑只需调用一次
+     */
+    [self updateContainerFrameOnce];
 }
 
 - (void)keyboardWillShow
 {
+//    NSLog(@"2222222222222222222");
+    [self updateContainerFrameOnce];
+}
+
+- (void)updateContainerFrameOnce
+{
     AJXKeyboardManager *kbMgr = [AJXKeyboardManager defaultKeyboardManager];
-    if (kbMgr.isKeyboardVisible) {
+    if (kbMgr.isKeyboardVisible && !_hadUpdatedContainerFrameOnce) {
+//        NSLog(@"33333333333333");
+        _hadUpdatedContainerFrameOnce = YES;
         
         _keyWindow = [self ajxKeyWindow];
         
@@ -101,6 +122,7 @@
     _keyWindow = nil;
     _isTextEditing = NO;
     _needUpdateFrameForNormalContainerView = YES;
+    _hadUpdatedContainerFrameOnce = NO;
     AJXKeyboardManager *kbMgr = [AJXKeyboardManager defaultKeyboardManager];
     kbMgr.editingTextField = nil;
 }

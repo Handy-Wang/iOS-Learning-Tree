@@ -10,4 +10,6 @@
 
 @interface AJXKBTextField : UITextField
 
+- (void)keyboardWillShow;
+
 @end
