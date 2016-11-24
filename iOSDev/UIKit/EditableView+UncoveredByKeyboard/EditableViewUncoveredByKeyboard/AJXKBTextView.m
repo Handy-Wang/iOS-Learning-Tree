@@ -49,10 +49,8 @@
     if (kbMgr.isKeyboardVisible) {
         
         _keyWindow = [self ajxKeyWindow];
-        _contatinerView = [self ajxSuperTableView];
-        _contatinerView = _contatinerView ? : [self ajxSuperScrollView];
-        //todo
-        //_contatinerView = _contatinerView ? : [self ViewControllerView];
+        _contatinerView = [self ajxSuperScrollableView];
+//        _contatinerView = _contatinerView ? : [self ajxSuperVCView];
         
         if ([self isScrollableContainerView]) {
             [((UIScrollView *)_contatinerView) cacheContentInset];

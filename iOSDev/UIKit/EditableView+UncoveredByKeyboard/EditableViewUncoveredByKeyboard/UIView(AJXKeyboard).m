@@ -10,21 +10,41 @@
 
 @implementation UIView(AJXKeyboard)
 
-- (UIScrollView *)ajxSuperScrollView
+- (UIScrollView *)ajxSuperScrollableView
 {
-    if ([self.superview isKindOfClass:[UIScrollView class]]) {
-        return (UIScrollView *)(self.superview);
-    } else {
-        return [self.superview ajxSuperScrollView];
+    UIScrollView *scrollableView = nil;
+    UIScrollView *scrollView = nil;
+    UIView *superView = self.superview;
+    while (superView) {
+        if ([superView isKindOfClass:[UITableView class]]) {
+            scrollableView = (UITableView *)superView;
+            break;
+        } else if (!scrollView && [superView isKindOfClass:[UIScrollView class]]) {
+            scrollView = (UIScrollView *)superView;
+            superView = superView.superview;
+        } else {
+            superView = superView.superview;
+        }
     }
+    
+    if (!scrollableView && scrollView) {
+        scrollableView = scrollView;
+    }
+    return scrollableView;
 }
 
-- (UITableView *)ajxSuperTableView
+- (UIView *)ajxSuperVCView
 {
-    if ([self.superview isKindOfClass:[UITableView class]]) {
-        return (UITableView *)(self.superview);
+    UIResponder *nextResponder = self.nextResponder;
+    while (nextResponder && ![nextResponder isKindOfClass:[UIViewController class]]) {
+        nextResponder = nextResponder.nextResponder;
+    }
+    
+    if (nextResponder && [nextResponder isKindOfClass:[UIViewController class]]) {
+        UIViewController *vc = (UIViewController *)nextResponder;
+        return vc.view;
     } else {
-        return [self.superview ajxSuperTableView];
+        return self.superview;
     }
 }
 

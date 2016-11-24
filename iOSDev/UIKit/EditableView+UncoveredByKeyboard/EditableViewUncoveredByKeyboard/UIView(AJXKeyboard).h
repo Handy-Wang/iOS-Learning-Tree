@@ -10,9 +10,9 @@
 
 @interface UIView(AJXKeyboard)
 
-- (UIScrollView *)ajxSuperScrollView;
+- (UIScrollView *)ajxSuperScrollableView;
 
-- (UITableView *)ajxSuperTableView;
+- (UIView *)ajxSuperVCView;
 
 - (UIViewController *)ajxTopestViewController;
 

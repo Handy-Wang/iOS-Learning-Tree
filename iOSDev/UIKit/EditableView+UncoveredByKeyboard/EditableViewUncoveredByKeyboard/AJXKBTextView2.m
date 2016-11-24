@@ -49,7 +49,7 @@
     NSLog(@"====Begin edit, kb frame %@...", NSStringFromCGRect(kbMgr.keyboardFrame));
     if (kbMgr.isKeyboardVisible) {
         _keyWindow = [self ajxKeyWindow];
-        _superTableView = [self ajxSuperTableView];
+        _superTableView = [self ajxSuperScrollableView];
         
         //---
         if (kbMgr.containerView != _superTableView  && [kbMgr.containerView isKindOfClass:[UITableView class]]) {
