@@ -12,6 +12,7 @@
 #import "AJXKeyboardManager.h"
 
 @interface AJXKBTextField() <UITextFieldDelegate>
+@property (nonatomic, weak) id outterDelegate;
 @property (nonatomic, assign) BOOL isTextEditing;
 @property (nonatomic, weak) UIWindow *keyWindow;
 @property (nonatomic, weak) UIView *contatinerView;
@@ -33,11 +34,31 @@
     return self;
 }
 
+- (void)setDelegate:(id<UITextViewDelegate>)delegate
+{
+    if (!delegate || delegate == self) {
+        [super setDelegate:delegate];
+    }
+    
+    if (delegate != self) {
+        _outterDelegate = delegate;
+    }
+}
+
+- (void)dealloc
+{
+    _outterDelegate = nil;
+}
+
 #pragma mark - UITextFieldDelegate methods
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
 //    NSLog(@"11111111111");
+    if ([_outterDelegate respondsToSelector:@selector(textFieldDidBeginEditing:)]) {
+        [_outterDelegate textFieldDidBeginEditing:textField];
+    }
+    
     _isTextEditing = YES;
     AJXKeyboardManager *kbMgr = [AJXKeyboardManager defaultKeyboardManager];
     kbMgr.editingTextField = self;
@@ -112,6 +133,10 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
+    if ([_outterDelegate respondsToSelector:@selector(textFieldDidEndEditing:)]) {
+        [_outterDelegate textFieldDidEndEditing:textField];
+    }
+    
     if ([self isScrollableContainerView]) {
         [self restoreScrollableContainerViewContentInset];
     } else {
@@ -237,6 +262,60 @@
 - (BOOL)isScrollableContainerView
 {
     return _contatinerView && [_contatinerView isKindOfClass:[UIScrollView class]];
+}
+
+#pragma mark - Forward UITextFieldDelegate methods to outter delegate
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    BOOL should = YES;
+    if ([_outterDelegate respondsToSelector:@selector(textFieldShouldBeginEditing:)]) {
+        should = [_outterDelegate textFieldShouldBeginEditing:textField];
+    }
+    return should;
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    BOOL should = YES;
+    if ([_outterDelegate respondsToSelector:@selector(textFieldShouldEndEditing:)]) {
+        should = [_outterDelegate textFieldShouldEndEditing:textField];
+    }
+    return should;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField reason:(UITextFieldDidEndEditingReason)reason
+{
+    if ([_outterDelegate respondsToSelector:@selector(textFieldDidEndEditing:reason:)]) {
+        [_outterDelegate textFieldDidEndEditing:textField reason:reason];
+    }
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    BOOL should = YES;
+    if ([_outterDelegate respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)]) {
+        should = [_outterDelegate textField:textField shouldChangeCharactersInRange:range replacementString:string];
+    }
+    return should;
+}
+
+- (BOOL)textFieldShouldClear:(UITextField *)textField
+{
+    BOOL should = YES;
+    if ([_outterDelegate respondsToSelector:@selector(textFieldShouldClear:)]) {
+        should = [_outterDelegate textFieldShouldClear:textField];
+    }
+    return should;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    BOOL should = NO;
+    if ([_outterDelegate respondsToSelector:@selector(textFieldShouldReturn:)]) {
+        should = [_outterDelegate textFieldShouldReturn:textField];
+    }
+    return should;
 }
 
 @end

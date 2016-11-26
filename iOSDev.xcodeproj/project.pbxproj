@@ -57,7 +57,6 @@
 		33C5852F1DD6314100454404 /* TouchViewD.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C585211DD6314100454404 /* TouchViewD.m */; };
 		33C585301DD6314100454404 /* UITouchEventVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C585231DD6314100454404 /* UITouchEventVC.m */; };
 		33C7FC4E1DE5D30F00A13A62 /* AJXKBTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC361DE5D30F00A13A62 /* AJXKBTextView.m */; };
-		33C7FC4F1DE5D30F00A13A62 /* AJXKBTextView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC381DE5D30F00A13A62 /* AJXKBTextView2.m */; };
 		33C7FC501DE5D30F00A13A62 /* AJXKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC3A1DE5D30F00A13A62 /* AJXKeyboardManager.m */; };
 		33C7FC511DE5D30F00A13A62 /* UIScrollView(AJXKeyboard).m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC3C1DE5D30F00A13A62 /* UIScrollView(AJXKeyboard).m */; };
 		33C7FC521DE5D30F00A13A62 /* UIView(AJXKeyboard).m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7FC3E1DE5D30F00A13A62 /* UIView(AJXKeyboard).m */; };
@@ -271,8 +270,6 @@
 		33C585231DD6314100454404 /* UITouchEventVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITouchEventVC.m; sourceTree = "<group>"; };
 		33C7FC351DE5D30F00A13A62 /* AJXKBTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJXKBTextView.h; sourceTree = "<group>"; };
 		33C7FC361DE5D30F00A13A62 /* AJXKBTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJXKBTextView.m; sourceTree = "<group>"; };
-		33C7FC371DE5D30F00A13A62 /* AJXKBTextView2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJXKBTextView2.h; sourceTree = "<group>"; };
-		33C7FC381DE5D30F00A13A62 /* AJXKBTextView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJXKBTextView2.m; sourceTree = "<group>"; };
 		33C7FC391DE5D30F00A13A62 /* AJXKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJXKeyboardManager.h; sourceTree = "<group>"; };
 		33C7FC3A1DE5D30F00A13A62 /* AJXKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJXKeyboardManager.m; sourceTree = "<group>"; };
 		33C7FC3B1DE5D30F00A13A62 /* UIScrollView(AJXKeyboard).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView(AJXKeyboard).h"; sourceTree = "<group>"; };
@@ -783,8 +780,6 @@
 			children = (
 				33C7FC351DE5D30F00A13A62 /* AJXKBTextView.h */,
 				33C7FC361DE5D30F00A13A62 /* AJXKBTextView.m */,
-				33C7FC371DE5D30F00A13A62 /* AJXKBTextView2.h */,
-				33C7FC381DE5D30F00A13A62 /* AJXKBTextView2.m */,
 				33C7FC701DE6E8DA00A13A62 /* AJXKBTextField.h */,
 				33C7FC711DE6E8DA00A13A62 /* AJXKBTextField.m */,
 				33C7FC391DE5D30F00A13A62 /* AJXKeyboardManager.h */,
@@ -1554,7 +1549,6 @@
 				33721A111CF6F5820003F688 /* TCTableVC.m in Sources */,
 				33A764091D9BA6AD00381E74 /* NMFolderModel.m in Sources */,
 				568F89A21C80085B009A27C5 /* IDBinaryTreeVC.m in Sources */,
-				33C7FC4F1DE5D30F00A13A62 /* AJXKBTextView2.m in Sources */,
 				330070B71CCE504700C2C432 /* IDUILabelVC.m in Sources */,
 				568F89A51C80089C009A27C5 /* IDBinaryTreeNode.m in Sources */,
 				335196151DD89358007E118C /* IDJSCVC.m in Sources */,

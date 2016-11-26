@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BSTextField.h"
 
-@interface AJXKBTextField : UITextField
-
+@interface AJXKBTextField : BSTextField
 - (void)keyboardWillShow;
-
 @end
+
+@interface AJXKBTextField (AJXKeyboard)
+- (void)textFieldDidBeginEditing:(UITextField *)textField;
+- (void)textFieldDidEndEditing:(UITextField *)textField;
+- (BOOL)textFieldShouldReturn:(UITextField *)textField;
+@end
+

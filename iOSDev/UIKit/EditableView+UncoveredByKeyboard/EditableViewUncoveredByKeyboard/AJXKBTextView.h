@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BSTextView.h"
 
-@interface AJXKBTextView : UITextView
+@interface AJXKBTextView : BSTextView
 
 - (void)keyboardDidChangedFrame;
 
