@@ -139,7 +139,12 @@
         if (offsetNeededToTranslate > 0) {
             CGPoint oldContentOffset = scrollableContainerView.contentOffset;
             CGFloat newOffset = oldContentOffset.y + offsetNeededToTranslate;
-            scrollableContainerView.contentOffset = CGPointMake(oldContentOffset.x, newOffset);
+            //scrollableContainerView.contentOffset = CGPointMake(oldContentOffset.x, newOffset);
+            
+            //不触发scrollViewDidScroll的设置offset的方式
+            CGRect scrollableContainerViewBounds = scrollableContainerView.bounds;
+            scrollableContainerViewBounds.origin = CGPointMake(oldContentOffset.x, newOffset);
+            scrollableContainerView.bounds = scrollableContainerViewBounds;
         } else {
             _needUpdateFrameForNormalContainerView = NO;
         }
@@ -156,7 +161,12 @@
         
         CGPoint oldContentOffset = scrollableContainerView.contentOffset;
         CGFloat newOffset = oldContentOffset.y + offsetNeededToTranslate;
-        scrollableContainerView.contentOffset = CGPointMake(oldContentOffset.x, newOffset);
+        //scrollableContainerView.contentOffset = CGPointMake(oldContentOffset.x, newOffset);
+        
+        //不触发scrollViewDidScroll的设置offset的方式
+        CGRect scrollableContainerViewBounds = scrollableContainerView.bounds;
+        scrollableContainerViewBounds.origin = CGPointMake(oldContentOffset.x, newOffset);
+        scrollableContainerView.bounds = scrollableContainerViewBounds;
     }
 }
 
