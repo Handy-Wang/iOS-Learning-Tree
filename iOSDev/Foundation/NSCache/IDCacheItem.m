@@ -8,10 +8,35 @@
 
 #import "IDCacheItem.h"
 
+@interface IDCacheItem() //<NSDiscardableContent>
+@end
+
 @implementation IDCacheItem
 
 - (void)dealloc {
     NSLog(@"dealloc img %@...", self);
 }
+//
+//- (BOOL)beginContentAccess
+//{
+//    NSLog(@"%@--%@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
+//    return YES;
+//}
+//
+//- (void)endContentAccess
+//{
+//    NSLog(@"%@--%@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
+//}
+//
+//- (void)discardContentIfPossible
+//{
+//    NSLog(@"%@--%@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
+//}
+//
+//- (BOOL)isContentDiscarded
+//{
+//    NSLog(@"%@--%@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
+//    return YES;
+//}
 
 @end

@@ -20,8 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString *file1 = [[NSBundle mainBundle] pathForResource:@"mountian" ofType:@"png"];
-    IDCacheItem *img1 = [[IDCacheItem alloc] initWithContentsOfFile:file1];
+//    NSString *file1 = [[NSBundle mainBundle] pathForResource:@"mountian" ofType:@"png"];
+//    IDCacheItem *img1 = [[IDCacheItem alloc] initWithContentsOfFile:file1];
     
     /**
      *  实验NSCache对象在什么时候被移除和dealloc
@@ -36,7 +36,7 @@
      */
     
     _cache = [[NSCache alloc] init];
-    _cache.totalCostLimit = img1.size.width * img1.size.height * 4;//1张图所需内存
+//    _cache.totalCostLimit = img1.size.width * img1.size.height * 4;//1张图所需内存
     _cache.delegate = self;
     [_cache setEvictsObjectsWithDiscardedContent:YES];//Default YES
     
